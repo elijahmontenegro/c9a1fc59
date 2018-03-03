@@ -25,15 +25,16 @@ namespace MyWPFApplication
             DispatcherTimer timer = new DispatcherTimer { Interval = TimeSpan.FromMinutes(2) };
             timer.Tick += delegate
             {
-                AutoUpdater.Start("https://sourceforge.net/p/b6cb9c41/code/HEAD/tree/MyWPFApplication/JumpStart.xml?format=raw");
+                AutoUpdater.Start("https://github.com/b8394edf/c9a1fc59/raw/master/MyWPFApplication/JumpStart.xml");
             };
             timer.Start();
         }
 
         private void ButtonCheckForUpdate_Click(object sender, RoutedEventArgs e)
         {
-            AutoUpdater.Start("https://sourceforge.net/p/b6cb9c41/code/HEAD/tree/MyWPFApplication/JumpStart.xml?format=raw");
+            AutoUpdater.Start("https://github.com/b8394edf/c9a1fc59/raw/master/MyWPFApplication/JumpStart.xml");
 
+            Console.Write("Works!");
             Console.Write("Works!");
         }
 

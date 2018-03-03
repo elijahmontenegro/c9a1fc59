@@ -16,3 +16,12 @@ Q:\CopyBuild 3\My Apps\AutoUpdateNet\ZipExtractor\obj\Debug\ZipExtractor.Propert
 Q:\CopyBuild 3\My Apps\AutoUpdateNet\ZipExtractor\obj\Debug\ZipExtractor.csproj.GenerateResource.Cache
 Q:\CopyBuild 3\My Apps\AutoUpdateNet\ZipExtractor\obj\Debug\ZipExtractor.exe
 Q:\CopyBuild 3\My Apps\AutoUpdateNet\ZipExtractor\obj\Debug\ZipExtractor.pdb
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\ZipExtractor\bin\Debug\ZipExtractor.exe.config
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\ZipExtractor\bin\Debug\ZipExtractor.exe
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\ZipExtractor\bin\Debug\ZipExtractor.pdb
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\ZipExtractor\obj\Debug\ZipExtractor.FormMain.resources
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\ZipExtractor\obj\Debug\ZipExtractor.Properties.Resources.resources
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\ZipExtractor\obj\Debug\ZipExtractor.csproj.GenerateResource.Cache
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\ZipExtractor\obj\Debug\ZipExtractor.csproj.CoreCompileInputs.cache
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\ZipExtractor\obj\Debug\ZipExtractor.exe
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\ZipExtractor\obj\Debug\ZipExtractor.pdb

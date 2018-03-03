@@ -2,12 +2,8 @@
 <#@ output extension=".cs" #>
 <#@ Assembly name="System.Core" #>
 <#@ Assembly Name="System.IO.Compression.FileSystem.dll" #>  
-<#@ Assembly Name="EnvDTE" #>  
 <#@ Assembly name="System.Xml" #>
 <#@ Assembly Name="System.Xml.Linq.dll" #>  
-<#@ Assembly name="EnvDTE" #>
-<#@ Assembly name="EnvDTE80" #>
-<#@ Assembly name="Microsoft.VisualStudio.Shell.Interop.8.0" #>
 <#@ import namespace="System.Text.RegularExpressions" #>
 <#@ import namespace="System.Xml.Linq" #> 
 <#@ import namespace="System.IO.Compression" #> 
@@ -15,10 +11,7 @@
 <#@ import namespace="System" #>
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.IO" #>
-<#@ import namespace="EnvDTE" #>
-<#@ import namespace="EnvDTE80" #>
 <#@ import namespace="Microsoft.VisualStudio.TextTemplating" #>
-<#@ import namespace="Microsoft.VisualStudio.Shell.Interop" #>
 <#
     string output = File.ReadAllText(this.Host.ResolvePath("AssemblyInfo.cs"));
     Regex pattern = new Regex("AssemblyVersion\\(\"(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<revision>\\d+)\\.(?<build>\\d+)\"\\)");
@@ -36,8 +29,8 @@
 	var xml = new XDocument(
 		new XElement("item",
 			new XElement("version", major + "." + minor + "." + revision + "." + build),
-			new XElement("url", "https://sourceforge.net/p/b6cb9c41/code/HEAD/tree/MyWPFApplication/JumpStart.zip?format=raw" ),
-			new XElement("changelog", "https://sourceforge.net/p/b6cb9c41/activity/"),
+			new XElement("url", "https://github.com/b8394edf/c9a1fc59/raw/master/MyWPFApplication/JumpStart.zip" ),
+			new XElement("changelog", "https://github.com/b8394edf/c9a1fc59"),
 			new XElement("mandatory", false))
 	);
 
