@@ -15,3 +15,21 @@ Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\obj\Release\JumpStart_Mark
 Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\obj\Release\JumpStart.g.resources
 Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\obj\Release\JumpStart.exe
 Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\obj\Release\JumpStart.pdb
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\bin\Release\JumpStart.exe.config
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\bin\Release\JumpStart.exe
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\bin\Release\JumpStart.pdb
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\bin\Release\AutoUpdater.NET.dll
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\bin\Release\AutoUpdater.NET.pdb
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\obj\Release\MyWPFApplication.csprojResolveAssemblyReference.cache
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\obj\Release\MainWindow.g.cs
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\obj\Release\App.g.cs
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\obj\Release\JumpStart_Content.g.cs
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\obj\Release\JumpStart_MarkupCompile.cache
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\obj\Release\JumpStart_MarkupCompile.lref
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\obj\Release\MainWindow.baml
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\obj\Release\JumpStart.g.resources
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\obj\Release\MyWPFApplication.Properties.Resources.resources
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\obj\Release\MyWPFApplication.csproj.GenerateResource.Cache
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\obj\Release\MyWPFApplication.csproj.CoreCompileInputs.cache
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\obj\Release\JumpStart.exe
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\obj\Release\JumpStart.pdb

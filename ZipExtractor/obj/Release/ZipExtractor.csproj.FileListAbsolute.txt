@@ -4,3 +4,10 @@ Q:\CopyBuild 3\My Apps\AutoUpdateNet\ZipExtractor\obj\Release\ZipExtractor.FormM
 Q:\CopyBuild 3\My Apps\AutoUpdateNet\ZipExtractor\obj\Release\ZipExtractor.Properties.Resources.resources
 Q:\CopyBuild 3\My Apps\AutoUpdateNet\ZipExtractor\obj\Release\ZipExtractor.csproj.GenerateResource.Cache
 Q:\CopyBuild 3\My Apps\AutoUpdateNet\ZipExtractor\obj\Release\ZipExtractor.exe
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\AutoUpdater.NET\Resources\ZipExtractor.exe.config
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\AutoUpdater.NET\Resources\ZipExtractor.exe
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\ZipExtractor\obj\Release\ZipExtractor.FormMain.resources
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\ZipExtractor\obj\Release\ZipExtractor.Properties.Resources.resources
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\ZipExtractor\obj\Release\ZipExtractor.csproj.GenerateResource.Cache
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\ZipExtractor\obj\Release\ZipExtractor.csproj.CoreCompileInputs.cache
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\ZipExtractor\obj\Release\ZipExtractor.exe
