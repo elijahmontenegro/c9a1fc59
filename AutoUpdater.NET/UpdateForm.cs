@@ -86,6 +86,7 @@ namespace AutoUpdaterDotNET
             if (!HideReleaseNotes)
             {
                 webBrowser.Navigate(AutoUpdater.ChangelogURL);
+                webBrowser.Scale(new SizeF(webBrowser.Width, webBrowser.Height));
             }
         }
 

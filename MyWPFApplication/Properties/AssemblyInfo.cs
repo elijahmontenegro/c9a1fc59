@@ -12,9 +12,9 @@ using System.Windows;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Cloud Imperium Games")]
-[assembly: AssemblyProduct("JumpStart")]
+[assembly: AssemblyProduct("JumpStart - CIG")]
 [assembly: AssemblyCopyright("Copyright © 2017 Cloud Imperium Games")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("CIG")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
 [assembly: ThemeInfo(
@@ -22,8 +22,10 @@ using System.Windows;
     ResourceDictionaryLocation.SourceAssembly
 )]
 
+//[assembly: AssemblyVersion("2.0.0.0")]
+//[assembly: AssemblyFileVersion("2.0.0.0")]
 // Version information
-[assembly: AssemblyVersion("1.0.0.6")]
-[assembly: AssemblyFileVersion("1.0.0.6")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
 [assembly: NeutralResourcesLanguageAttribute( "en-US" )]
 

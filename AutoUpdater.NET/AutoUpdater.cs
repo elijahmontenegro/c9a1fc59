@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Xml;
 using AutoUpdaterDotNET.Properties;
 using Microsoft.Win32;
+using System.Windows.Threading;
 
 namespace AutoUpdaterDotNET
 {
@@ -126,7 +127,7 @@ namespace AutoUpdaterDotNET
         /// <summary>
         ///     Set if RemindLaterAt interval should be in Minutes, Hours or Days.
         /// </summary>
-        public static RemindLaterFormat RemindLaterTimeSpan = RemindLaterFormat.Days;
+        public static RemindLaterFormat RemindLaterTimeSpan = RemindLaterFormat.Minutes;
 
         /// <summary>
         ///     A delegate type to handle how to exit the application after update is downloaded.
@@ -176,22 +177,29 @@ namespace AutoUpdaterDotNET
         /// <param name="myAssembly">Assembly to use for version checking.</param>
         public static void Start(String appCast, Assembly myAssembly = null)
         {
-            if (!Running && _remindLaterTimer == null)
+            DispatcherTimer timer = new DispatcherTimer {
+                Interval = TimeSpan.FromMinutes(RemindLaterAt)
+            };
+            timer.Tick += delegate
             {
-                Running = true;
+                if (!Running && _remindLaterTimer == null)
+                {
+                    Running = true;
 
-                AppCastURL = appCast;
+                    AppCastURL = appCast;
 
-                IsWinFormsApplication = Application.MessageLoop;
+                    IsWinFormsApplication = Application.MessageLoop;
 
-                var backgroundWorker = new BackgroundWorker();
+                    var backgroundWorker = new BackgroundWorker();
 
-                backgroundWorker.DoWork += BackgroundWorkerDoWork;
+                    backgroundWorker.DoWork += BackgroundWorkerDoWork;
 
-                backgroundWorker.RunWorkerCompleted += BackgroundWorkerOnRunWorkerCompleted;
+                    backgroundWorker.RunWorkerCompleted += BackgroundWorkerOnRunWorkerCompleted;
 
-                backgroundWorker.RunWorkerAsync(myAssembly ?? Assembly.GetEntryAssembly());
-            }
+                    backgroundWorker.RunWorkerAsync(myAssembly ?? Assembly.GetEntryAssembly());
+                }
+            };
+            timer.Start();
         }
 
         private static void BackgroundWorkerOnRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs runWorkerCompletedEventArgs)
@@ -250,6 +258,11 @@ namespace AutoUpdaterDotNET
                                     Resources.UpdateCheckFailedCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
+
+                        //if(ReportErrors)
+                        //{
+                        //    ReportErrors = false;
+                        //}
                     }
                 }
             }
