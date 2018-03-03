@@ -1,0 +1,17 @@
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\AutoUpdaterTestWPF.csprojResolveAssemblyReference.cache
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\MainWindow.g.cs
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\App.g.cs
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\AutoUpdaterTestWPF_MarkupCompile.cache
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\AutoUpdaterTestWPF_MarkupCompile.lref
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\bin\Debug\AutoUpdaterTestWPF.exe
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\bin\Debug\AutoUpdaterTestWPF.pdb
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\bin\Debug\AutoUpdater.NET.dll
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\bin\Debug\AutoUpdater.NET.pdb
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\bin\Debug\AutoUpdater.NET.xml
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\MainWindow.baml
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\AutoUpdaterTestWPF.g.resources
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\AutoUpdaterTestWPF.Properties.Resources.resources
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\AutoUpdaterTestWPF.csproj.GenerateResource.Cache
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\AutoUpdaterTestWPF.csproj.CoreCompileInputs.cache
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\AutoUpdaterTestWPF.exe
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\AutoUpdaterTestWPF.pdb

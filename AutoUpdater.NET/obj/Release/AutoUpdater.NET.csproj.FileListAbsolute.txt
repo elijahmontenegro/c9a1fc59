@@ -1,0 +1,9 @@
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\bin\Release\v4.0\AutoUpdater.NET.dll
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\bin\Release\v4.0\AutoUpdater.NET.pdb
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\obj\Release\AutoUpdaterDotNET.DownloadUpdateDialog.resources
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\obj\Release\AutoUpdaterDotNET.RemindLaterForm.resources
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\obj\Release\AutoUpdaterDotNET.UpdateForm.resources
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\obj\Release\AutoUpdaterDotNET.Properties.Resources.resources
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\obj\Release\AutoUpdater.NET.csproj.GenerateResource.Cache
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\obj\Release\AutoUpdater.NET.dll
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\obj\Release\AutoUpdater.NET.pdb

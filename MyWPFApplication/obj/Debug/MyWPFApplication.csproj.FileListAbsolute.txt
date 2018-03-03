@@ -1,0 +1,53 @@
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\bin\Debug\AutoUpdater.NET.dll
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\bin\Debug\AutoUpdater.NET.pdb
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\bin\Debug\AutoUpdater.NET.xml
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\MyWPFApplication.csprojResolveAssemblyReference.cache
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\MainWindow.g.cs
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\App.g.cs
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\MainWindow.baml
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\MyWPFApplication.csproj.GenerateResource.Cache
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\MyWPFApplication.csproj.CoreCompileInputs.cache
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\bin\Debug\MyWPFApplication.exe
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\bin\Debug\MyWPFApplication.pdb
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\MyWPFApplication_MarkupCompile.cache
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\MyWPFApplication_MarkupCompile.lref
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\MyWPFApplication.g.resources
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\MyWPFApplication.Properties.Resources.resources
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\MyWPFApplication.exe
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdaterTestWPF\obj\Debug\MyWPFApplication.pdb
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\MyWPFApplication\bin\Debug\MyWPFApplication.exe
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\MyWPFApplication\bin\Debug\MyWPFApplication.pdb
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\MyWPFApplication\bin\Debug\AutoUpdater.NET.dll
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\MyWPFApplication\bin\Debug\AutoUpdater.NET.pdb
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\MyWPFApplication\bin\Debug\AutoUpdater.NET.xml
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\MyWPFApplication\obj\Debug\MyWPFApplication.csprojResolveAssemblyReference.cache
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\MyWPFApplication\obj\Debug\MainWindow.g.cs
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\MyWPFApplication\obj\Debug\App.g.cs
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\MyWPFApplication\obj\Debug\MyWPFApplication_MarkupCompile.cache
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\MyWPFApplication\obj\Debug\MyWPFApplication_MarkupCompile.lref
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\MyWPFApplication\obj\Debug\MainWindow.baml
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\MyWPFApplication\obj\Debug\MyWPFApplication.g.resources
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\MyWPFApplication\obj\Debug\MyWPFApplication.Properties.Resources.resources
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\MyWPFApplication\obj\Debug\MyWPFApplication.csproj.GenerateResource.Cache
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\MyWPFApplication\obj\Debug\MyWPFApplication.csproj.CoreCompileInputs.cache
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\MyWPFApplication\obj\Debug\MyWPFApplication.exe
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\MyWPFApplication\obj\Debug\MyWPFApplication.pdb
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\MyWPFApplication\obj\Debug\MyWPFApplication_Content.g.cs
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\bin\Debug\AutoUpdater.NET.dll
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\bin\Debug\AutoUpdater.NET.pdb
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\bin\Debug\AutoUpdater.NET.xml
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\obj\Debug\MyWPFApplication.csprojResolveAssemblyReference.cache
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\obj\Debug\MainWindow.g.cs
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\obj\Debug\App.g.cs
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\obj\Debug\MainWindow.baml
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\obj\Debug\MyWPFApplication.Properties.Resources.resources
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\obj\Debug\MyWPFApplication.csproj.GenerateResource.Cache
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\bin\Debug\JumpStart.exe.config
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\bin\Debug\JumpStart.exe
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\bin\Debug\JumpStart.pdb
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\obj\Debug\JumpStart_Content.g.cs
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\obj\Debug\JumpStart_MarkupCompile.cache
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\obj\Debug\JumpStart_MarkupCompile.lref
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\obj\Debug\JumpStart.g.resources
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\obj\Debug\JumpStart.exe
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\MyWPFApplication\obj\Debug\JumpStart.pdb

@@ -1,0 +1,18 @@
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\ZipExtractor\bin\Debug\ZipExtractor.exe.config
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\ZipExtractor\bin\Debug\ZipExtractor.exe
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\ZipExtractor\bin\Debug\ZipExtractor.pdb
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\ZipExtractor\obj\Debug\ZipExtractor.FormMain.resources
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\ZipExtractor\obj\Debug\ZipExtractor.Properties.Resources.resources
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\ZipExtractor\obj\Debug\ZipExtractor.csproj.GenerateResource.Cache
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\ZipExtractor\obj\Debug\ZipExtractor.csproj.CoreCompileInputs.cache
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\ZipExtractor\obj\Debug\ZipExtractor.exe
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\ZipExtractor\obj\Debug\ZipExtractor.pdb
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\ZipExtractor\obj\Debug\ZipExtractor.csprojResolveAssemblyReference.cache
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\ZipExtractor\bin\Debug\ZipExtractor.exe.config
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\ZipExtractor\bin\Debug\ZipExtractor.exe
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\ZipExtractor\bin\Debug\ZipExtractor.pdb
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\ZipExtractor\obj\Debug\ZipExtractor.FormMain.resources
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\ZipExtractor\obj\Debug\ZipExtractor.Properties.Resources.resources
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\ZipExtractor\obj\Debug\ZipExtractor.csproj.GenerateResource.Cache
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\ZipExtractor\obj\Debug\ZipExtractor.exe
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\ZipExtractor\obj\Debug\ZipExtractor.pdb

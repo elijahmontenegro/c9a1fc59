@@ -1,0 +1,6 @@
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\Resources\ZipExtractor.exe.config
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\Resources\ZipExtractor.exe
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\ZipExtractor\obj\Release\ZipExtractor.FormMain.resources
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\ZipExtractor\obj\Release\ZipExtractor.Properties.Resources.resources
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\ZipExtractor\obj\Release\ZipExtractor.csproj.GenerateResource.Cache
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\ZipExtractor\obj\Release\ZipExtractor.exe

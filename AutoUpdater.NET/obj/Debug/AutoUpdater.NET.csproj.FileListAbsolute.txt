@@ -1,0 +1,24 @@
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdater.NET\obj\Debug\AutoUpdaterDotNET.DownloadUpdateDialog.resources
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdater.NET\obj\Debug\AutoUpdaterDotNET.RemindLaterForm.resources
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdater.NET\obj\Debug\AutoUpdaterDotNET.UpdateForm.resources
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdater.NET\obj\Debug\AutoUpdaterDotNET.Properties.Resources.resources
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdater.NET\obj\Debug\AutoUpdater.NET.csproj.GenerateResource.Cache
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdater.NET\bin\Debug\v4.0\AutoUpdater.NET.XML
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdater.NET\bin\Debug\v4.0\AutoUpdater.NET.dll
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdater.NET\bin\Debug\v4.0\AutoUpdater.NET.pdb
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdater.NET\obj\Debug\AutoUpdater.NET.csproj.CoreCompileInputs.cache
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdater.NET\obj\Debug\AutoUpdater.NET.dll
+C:\CIG_Files\Projects\JumpStart\AutoUpdater.NET-1.4.7\AutoUpdater.NET\obj\Debug\AutoUpdater.NET.pdb
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\bin\Debug\v4.0\AutoUpdater.NET.XML
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\bin\Debug\v4.0\AutoUpdater.NET.dll
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\bin\Debug\v4.0\AutoUpdater.NET.pdb
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\obj\Debug\AutoUpdaterDotNET.DownloadUpdateDialog.resources
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\obj\Debug\AutoUpdaterDotNET.RemindLaterForm.resources
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\obj\Debug\AutoUpdaterDotNET.UpdateForm.resources
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\obj\Debug\AutoUpdaterDotNET.Properties.Resources.resources
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\obj\Debug\AutoUpdater.NET.csproj.GenerateResource.Cache
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\obj\Debug\AutoUpdater.NET.dll
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\obj\Debug\AutoUpdater.NET.pdb
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\bin\Debug\v4.7\AutoUpdater.NET.XML
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\bin\Debug\v4.7\AutoUpdater.NET.dll
+Q:\CopyBuild 3\My Apps\AutoUpdateNet\AutoUpdater.NET\bin\Debug\v4.7\AutoUpdater.NET.pdb

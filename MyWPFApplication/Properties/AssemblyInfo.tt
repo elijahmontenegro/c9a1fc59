@@ -1,0 +1,93 @@
+﻿<#@ template hostspecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ Assembly name="System.Core" #>
+<#@ Assembly Name="System.IO.Compression.FileSystem.dll" #>  
+<#@ Assembly Name="EnvDTE" #>  
+<#@ Assembly name="System.Xml" #>
+<#@ Assembly Name="System.Xml.Linq.dll" #>  
+<#@ Assembly name="EnvDTE" #>
+<#@ Assembly name="EnvDTE80" #>
+<#@ Assembly name="Microsoft.VisualStudio.Shell.Interop.8.0" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="System.Xml.Linq" #> 
+<#@ import namespace="System.IO.Compression" #> 
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="EnvDTE" #>
+<#@ import namespace="EnvDTE80" #>
+<#@ import namespace="Microsoft.VisualStudio.TextTemplating" #>
+<#@ import namespace="Microsoft.VisualStudio.Shell.Interop" #>
+<#
+    string output = File.ReadAllText(this.Host.ResolvePath("AssemblyInfo.cs"));
+    Regex pattern = new Regex("AssemblyVersion\\(\"(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<revision>\\d+)\\.(?<build>\\d+)\"\\)");
+    MatchCollection matches = pattern.Matches(output);
+    if( matches.Count == 1 )
+    {
+        major = Convert.ToInt32(matches[0].Groups["major"].Value);
+        minor = Convert.ToInt32(matches[0].Groups["minor"].Value);
+        build = Convert.ToInt32(matches[0].Groups["build"].Value) + 1;
+        revision = Convert.ToInt32(matches[0].Groups["revision"].Value);
+        if( this.Host.ResolveParameterValue("-","-","BuildConfiguration") == "Release" )
+            revision++;
+    }
+	
+	var xml = new XDocument(
+		new XElement("item",
+			new XElement("version", major + "." + minor + "." + revision + "." + build),
+			new XElement("url", "https://sourceforge.net/p/b6cb9c41/code/HEAD/tree/MyWPFApplication/JumpStart.zip?format=raw" ),
+			new XElement("changelog", "https://sourceforge.net/p/b6cb9c41/activity/"),
+			new XElement("mandatory", false))
+	);
+
+	string propertiesDir = Path.GetDirectoryName(this.Host.TemplateFile);
+	string releaseDir = propertiesDir.Replace(@"\Properties",@"\bin\Release\");
+	string projectDir = propertiesDir.Replace(@"\Properties", "");
+
+	//TODO: Make it generate these files only if built with Release!
+	if (this.Host.ResolveParameterValue("-","-","BuildConfiguration") != "Debug")
+	{
+		string manifestPath = Path.Combine(projectDir, "JumpStart.xml");
+		File.WriteAllText(manifestPath, xml.ToString());
+
+		//var serviceProvider = Host as IServiceProvider;
+		//var dte = serviceProvider.GetService(typeof(DTE)) as DTE;
+		//File.WriteAllText(Path.Combine(projectDir, "text.txt"), this.Host.ResolveParameterValue("","","BuildConfiguration"));
+
+		string releasePath = Path.Combine(projectDir, "JumpStart.zip");
+		if(File.Exists(releasePath)){ File.Delete(releasePath); }
+		ZipFile.CreateFromDirectory(releaseDir, releasePath, CompressionLevel.Optimal, false);
+	}
+#>
+using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Resources;
+using System.Windows;
+
+// General Information
+[assembly: AssemblyTitle("JumpStart")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("Cloud Imperium Games")]
+[assembly: AssemblyProduct("JumpStart")]
+[assembly: AssemblyCopyright("Copyright © 2017 Cloud Imperium Games")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+[assembly: ComVisible(false)]
+[assembly: ThemeInfo(
+    ResourceDictionaryLocation.None,
+    ResourceDictionaryLocation.SourceAssembly
+)]
+
+// Version information
+[assembly: AssemblyVersion("<#= this.major #>.<#= this.minor #>.<#= this.revision #>.<#= this.build #>")]
+[assembly: AssemblyFileVersion("<#= this.major #>.<#= this.minor #>.<#= this.revision #>.<#= this.build #>")]
+[assembly: NeutralResourcesLanguageAttribute( "en-US" )]
+
+<#+
+    int major = 1;
+    int minor = 0;
+    int build = 0;
+    int revision = 0;
+#>
