@@ -16,8 +16,6 @@ namespace MyWPFApplication
             InitializeComponent();
             Assembly assembly = Assembly.GetEntryAssembly();
             Title = $"{assembly.GetName().Name} - Version {assembly.GetName().Version}";
-
-            
         }
 
         private void ButtonCheckForUpdate_Click(object sender, RoutedEventArgs e)
