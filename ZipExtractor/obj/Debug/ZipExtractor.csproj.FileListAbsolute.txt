@@ -33,3 +33,12 @@ Q:\CopyBuild 3\My Apps\AutoUpdateNet\c9a1fc59\ZipExtractor\obj\Debug\ZipExtracto
 Q:\CopyBuild 3\My Apps\AutoUpdateNet\c9a1fc59\ZipExtractor\obj\Debug\ZipExtractor.csproj.GenerateResource.Cache
 Q:\CopyBuild 3\My Apps\AutoUpdateNet\c9a1fc59\ZipExtractor\obj\Debug\ZipExtractor.exe
 Q:\CopyBuild 3\My Apps\AutoUpdateNet\c9a1fc59\ZipExtractor\obj\Debug\ZipExtractor.pdb
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\bin\Debug\ZipExtractor.exe.config
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\bin\Debug\ZipExtractor.exe
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\bin\Debug\ZipExtractor.pdb
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\obj\Debug\ZipExtractor.csprojResolveAssemblyReference.cache
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\obj\Debug\ZipExtractor.FormMain.resources
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\obj\Debug\ZipExtractor.Properties.Resources.resources
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\obj\Debug\ZipExtractor.csproj.GenerateResource.Cache
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\obj\Debug\ZipExtractor.exe
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\obj\Debug\ZipExtractor.pdb
