@@ -11,3 +11,10 @@ C:\CIG_Files\Projects\JumpStart\c9a1fc59\ZipExtractor\obj\Release\ZipExtractor.P
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\ZipExtractor\obj\Release\ZipExtractor.csproj.GenerateResource.Cache
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\ZipExtractor\obj\Release\ZipExtractor.csproj.CoreCompileInputs.cache
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\ZipExtractor\obj\Release\ZipExtractor.exe
+Q:\CopyBuild 3\My Apps\c9a1fc59\AutoUpdater.NET\Resources\ZipExtractor.exe.config
+Q:\CopyBuild 3\My Apps\c9a1fc59\AutoUpdater.NET\Resources\ZipExtractor.exe
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\obj\Release\ZipExtractor.FormMain.resources
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\obj\Release\ZipExtractor.Properties.Resources.resources
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\obj\Release\ZipExtractor.csproj.GenerateResource.Cache
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\obj\Release\ZipExtractor.exe
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\obj\Release\ZipExtractor.csprojResolveAssemblyReference.cache

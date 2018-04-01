@@ -30,7 +30,7 @@
 		new XElement("item",
 			new XElement("version", major + "." + minor + "." + revision + "." + build),
 			new XElement("url", "https://github.com/b8394edf/c9a1fc59/raw/master/MyWPFApplication/JumpStart.zip" ),
-			new XElement("changelog", "https://github.com/b8394edf/c9a1fc59"),
+			new XElement("changelog", "https://github.com/b8394edf/c9a1fc59/"),
 			new XElement("mandatory", false))
 	);
 
@@ -72,9 +72,6 @@ using System.Windows;
     ResourceDictionaryLocation.None,
     ResourceDictionaryLocation.SourceAssembly
 )]
-
-//[assembly: AssemblyVersion("2.0.0.0")]
-//[assembly: AssemblyFileVersion("2.0.0.0")]
 
 // Version information
 [assembly: AssemblyVersion("<#= this.major #>.<#= this.minor #>.<#= this.revision #>.<#= this.build #>")]

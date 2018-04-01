@@ -22,11 +22,8 @@ using System.Windows;
     ResourceDictionaryLocation.SourceAssembly
 )]
 
-//[assembly: AssemblyVersion("2.0.0.0")]
-//[assembly: AssemblyFileVersion("2.0.0.0")]
-
 // Version information
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.0.0.12")]
+[assembly: AssemblyFileVersion("1.0.0.12")]
 [assembly: NeutralResourcesLanguageAttribute( "en-US" )]
 

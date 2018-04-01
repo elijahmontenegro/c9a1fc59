@@ -33,3 +33,20 @@ C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\obj\Release\MyWPFAppli
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\obj\Release\MyWPFApplication.csproj.CoreCompileInputs.cache
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\obj\Release\JumpStart.exe
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\MyWPFApplication\obj\Release\JumpStart.pdb
+Q:\CopyBuild 3\My Apps\c9a1fc59\MyWPFApplication\bin\Release\JumpStart.exe.config
+Q:\CopyBuild 3\My Apps\c9a1fc59\MyWPFApplication\bin\Release\JumpStart.exe
+Q:\CopyBuild 3\My Apps\c9a1fc59\MyWPFApplication\bin\Release\JumpStart.pdb
+Q:\CopyBuild 3\My Apps\c9a1fc59\MyWPFApplication\bin\Release\AutoUpdater.NET.dll
+Q:\CopyBuild 3\My Apps\c9a1fc59\MyWPFApplication\bin\Release\AutoUpdater.NET.pdb
+Q:\CopyBuild 3\My Apps\c9a1fc59\MyWPFApplication\obj\Release\MyWPFApplication.csprojResolveAssemblyReference.cache
+Q:\CopyBuild 3\My Apps\c9a1fc59\MyWPFApplication\obj\Release\MainWindow.g.cs
+Q:\CopyBuild 3\My Apps\c9a1fc59\MyWPFApplication\obj\Release\App.g.cs
+Q:\CopyBuild 3\My Apps\c9a1fc59\MyWPFApplication\obj\Release\JumpStart_Content.g.cs
+Q:\CopyBuild 3\My Apps\c9a1fc59\MyWPFApplication\obj\Release\JumpStart_MarkupCompile.cache
+Q:\CopyBuild 3\My Apps\c9a1fc59\MyWPFApplication\obj\Release\JumpStart_MarkupCompile.lref
+Q:\CopyBuild 3\My Apps\c9a1fc59\MyWPFApplication\obj\Release\MainWindow.baml
+Q:\CopyBuild 3\My Apps\c9a1fc59\MyWPFApplication\obj\Release\JumpStart.g.resources
+Q:\CopyBuild 3\My Apps\c9a1fc59\MyWPFApplication\obj\Release\MyWPFApplication.Properties.Resources.resources
+Q:\CopyBuild 3\My Apps\c9a1fc59\MyWPFApplication\obj\Release\MyWPFApplication.csproj.GenerateResource.Cache
+Q:\CopyBuild 3\My Apps\c9a1fc59\MyWPFApplication\obj\Release\JumpStart.exe
+Q:\CopyBuild 3\My Apps\c9a1fc59\MyWPFApplication\obj\Release\JumpStart.pdb

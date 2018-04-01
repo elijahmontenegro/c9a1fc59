@@ -4,48 +4,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyWPFApplication"
-        mc:Ignorable="d" Height="400" Width="700" ResizeMode="NoResize">
-    <DockPanel HorizontalAlignment="Stretch" LastChildFill="False" VerticalAlignment="Stretch">
-        <Menu x:Name="menu" DockPanel.Dock="Top">
-            <MenuItem Header="File">
-                <MenuItem Header="Check for Update" Click="ButtonCheckForUpdate_Click"/>
-            </MenuItem>
-            <MenuItem Header="View"/>
-            <MenuItem Header="Team" IsEnabled="False"/>
-            <MenuItem Header="Settings"/>
-            <MenuItem Header="Help"/>
-        </Menu>
-        <Grid DockPanel.Dock="Top" Height="32">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Margin="1" Width="22" Height="22" Content="R" VerticalAlignment="Top" Background="Transparent" BorderThickness="0"/>
-                <ComboBox Margin="1" Height="22" VerticalAlignment="Top" HorizontalContentAlignment="Right" BorderBrush="Yellow" Background="Yellow">
-                    <ComboBoxItem Content="sc-alpha-3.1.0" HorizontalContentAlignment="Right"></ComboBoxItem>
-                    <ComboBoxItem Content="game-dev" HorizontalContentAlignment="Right"></ComboBoxItem>
-                </ComboBox>
-                <ComboBox Margin="1" Height="22" VerticalAlignment="Top" HorizontalContentAlignment="Center">
-                    <ComboBoxItem Content="123456" HorizontalContentAlignment="Center"></ComboBoxItem>
-                </ComboBox>
-                <ComboBox Margin="1" Height="22" VerticalAlignment="Top" HorizontalContentAlignment="Left">
-                    <ComboBox.Style>
-                        <Style>
-                            <Setter Property="ComboBox.Background" Value="Blue"/>
-                        </Style>
-                    </ComboBox.Style>
-                    <ComboBoxItem Content="Development" HorizontalContentAlignment="Left"></ComboBoxItem>
-                    <ComboBoxItem Content="Shipping" HorizontalContentAlignment="Left"></ComboBoxItem>
-                </ComboBox>
-            </StackPanel>
-            <StackPanel Margin="24, 1" Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Content="emontenegro" Height="22" VerticalAlignment="Top" HorizontalContentAlignment="Right" Background="Transparent" BorderThickness="0"/>
-            </StackPanel>
+        mc:Ignorable="d" Height="540" Width="480">
+    <!-- Workspace Start-->
+    <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" LastChildFill="True">
+        <Grid DockPanel.Dock="Top" Height="32" Background="Aqua"/>
+        <Grid DockPanel.Dock="Top" Height="32" Background="Yellow"/>
+        <Grid DockPanel.Dock="Left" Height="Auto" Width="32" Background="Blue"/>
+        <Grid DockPanel.Dock="Right" Height="Auto" Width="32" Background="Red" Visibility="Collapsed"/>
+        <Grid DockPanel.Dock="Bottom" Height="32" Width="Auto" Background="Green"/>
+        <Grid Height="Auto" Width="Auto" Background="Purple">
+            <TabControl Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <TabItem Header="Launch" Width="96"/>
+                <TabItem Header="Navigator" Width="96"/>
+            </TabControl>
         </Grid>
-        <TabControl x:Name="tabControl" DockPanel.Dock="Right" HorizontalContentAlignment="Stretch" Width="659">
-            <TabItem Header="Launch">
-                <Grid Background="#FFE5E5E5"/>
-            </TabItem>
-            <TabItem Header="Config Editor">
-                <Grid Background="#FFE5E5E5"/>
-            </TabItem>
-        </TabControl>
     </DockPanel>
 </Window>

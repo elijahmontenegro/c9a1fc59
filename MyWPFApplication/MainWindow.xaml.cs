@@ -4,6 +4,10 @@ using System.Reflection;
 using System.Windows;
 using AutoUpdaterDotNET;
 using System.Windows.Controls;
+
+using System.Collections.Generic;
+using System.Windows.Media;
+
 namespace MyWPFApplication
 {
     /// <summary>
