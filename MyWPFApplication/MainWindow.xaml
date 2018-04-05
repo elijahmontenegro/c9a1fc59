@@ -4,17 +4,72 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyWPFApplication"
-        mc:Ignorable="d" Height="540" Width="480">
+        mc:Ignorable="d" Height="540" Width="720">
     <!-- Workspace Start-->
     <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" LastChildFill="True">
         <Grid DockPanel.Dock="Top" Height="32" Background="Aqua"/>
         <Grid DockPanel.Dock="Top" Height="32" Background="Yellow"/>
+        <Grid DockPanel.Dock="Bottom" Height="32" Width="Auto" Background="Green" />
         <Grid DockPanel.Dock="Left" Height="Auto" Width="32" Background="Blue"/>
         <Grid DockPanel.Dock="Right" Height="Auto" Width="32" Background="Red" Visibility="Collapsed"/>
-        <Grid DockPanel.Dock="Bottom" Height="32" Width="Auto" Background="Green"/>
         <Grid Height="Auto" Width="Auto" Background="Purple">
             <TabControl Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                <TabItem Header="Launch" Width="96"/>
+                <TabItem Header="Launch" Width="96">
+                    <Grid Background="Beige" ShowGridLines="True">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="309.75*"/>
+                            <RowDefinition Height="103.25*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="510.*"/>
+                            <ColumnDefinition Width="170.*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Row="0" Column="0" Background="AliceBlue">
+                            <ListView Background="Transparent">
+                                <ListViewItem>
+                                    <StackPanel Orientation="Horizontal" >
+                                        <Image Source="" Margin="0,0,5,0" />
+                                        <TextBlock Text="Star Citizen"/>
+                                    </StackPanel>
+                                </ListViewItem>
+                                <ListViewItem>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="" Margin="0,0,5,0" />
+                                        <TextBlock Text="Dedicated Launcher"/>
+                                    </StackPanel>
+                                </ListViewItem>
+                                <ListViewItem IsSelected="True">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="" Margin="0,0,5,0" />
+                                        <TextBlock Text="Sandbox Editor"/>
+                                    </StackPanel>
+                                </ListViewItem>
+                            </ListView>
+                        </Grid>
+                        <Grid Row="0" Column="1" Background="WhiteSmoke">
+                            
+                        </Grid>
+                        <Grid Row="1" Column="0" Background="WhiteSmoke">
+
+                        </Grid>
+                        <Grid Row="1" Column="1" Background="AliceBlue">
+                            <ListView Width="120" SelectionChanged="ListView_SelectionChanged">
+                                <ListView.View>
+                                    <GridView x:Name="LaunchGrid" AllowsColumnReorder="true">
+                                        <GridView.ColumnHeaderContextMenu>
+                                            <ContextMenu>
+                                                <MenuItem Header="Ascending"/>
+                                                <MenuItem Header="Descending"/>
+                                            </ContextMenu>
+                                        </GridView.ColumnHeaderContextMenu>
+                                        <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding Path=Name}" />
+                                    </GridView>
+                                </ListView.View>
+                                <ListViewItem Content="Test"/>
+                            </ListView>
+                        </Grid>
+                    </Grid>
+                </TabItem>
                 <TabItem Header="Navigator" Width="96"/>
             </TabControl>
         </Grid>
