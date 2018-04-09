@@ -26,5 +26,21 @@ namespace MyWPFApplication
         {
             AutoUpdater.Start("https://github.com/b8394edf/c9a1fc59/raw/master/MyWPFApplication/JumpStart.xml");
         }
+
+        private void ListViewApps_OnLoaded(object sender, RoutedEventArgs e)
+        {
+            List<ListViewItem> listView_itemList = new List<ListViewItem>();
+
+            for (int i=0; i < 3; i++)
+            {
+                var listViewItem = new ListViewItem();
+                listViewItem.Content = $"test ({i})";
+                //
+                listView_itemList.Add(listViewItem);
+            }
+
+            var listView = sender as ListView;
+            listView.ItemsSource = listView_itemList;
+        }
     }
 }

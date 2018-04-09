@@ -25,25 +25,7 @@
                             <ColumnDefinition Width="170.*"/>
                         </Grid.ColumnDefinitions>
                         <Grid Row="0" Column="0" Background="AliceBlue">
-                            <ListView Background="Transparent">
-                                <ListViewItem>
-                                    <StackPanel Orientation="Horizontal" >
-                                        <Image Source="" Margin="0,0,5,0" />
-                                        <TextBlock Text="Star Citizen"/>
-                                    </StackPanel>
-                                </ListViewItem>
-                                <ListViewItem>
-                                    <StackPanel Orientation="Horizontal">
-                                        <Image Source="" Margin="0,0,5,0" />
-                                        <TextBlock Text="Dedicated Launcher"/>
-                                    </StackPanel>
-                                </ListViewItem>
-                                <ListViewItem IsSelected="True">
-                                    <StackPanel Orientation="Horizontal">
-                                        <Image Source="" Margin="0,0,5,0" />
-                                        <TextBlock Text="Sandbox Editor"/>
-                                    </StackPanel>
-                                </ListViewItem>
+                            <ListView x:Name="listViewApps" Loaded="ListViewApps_OnLoaded" Background="Transparent">
                             </ListView>
                         </Grid>
                         <Grid Row="0" Column="1" Background="WhiteSmoke">
@@ -53,20 +35,7 @@
 
                         </Grid>
                         <Grid Row="1" Column="1" Background="AliceBlue">
-                            <ListView Width="120" SelectionChanged="ListView_SelectionChanged">
-                                <ListView.View>
-                                    <GridView x:Name="LaunchGrid" AllowsColumnReorder="true">
-                                        <GridView.ColumnHeaderContextMenu>
-                                            <ContextMenu>
-                                                <MenuItem Header="Ascending"/>
-                                                <MenuItem Header="Descending"/>
-                                            </ContextMenu>
-                                        </GridView.ColumnHeaderContextMenu>
-                                        <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding Path=Name}" />
-                                    </GridView>
-                                </ListView.View>
-                                <ListViewItem Content="Test"/>
-                            </ListView>
+                            
                         </Grid>
                     </Grid>
                 </TabItem>
