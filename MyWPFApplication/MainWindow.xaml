@@ -7,15 +7,15 @@
         mc:Ignorable="d" Height="540" Width="720">
     <!-- Workspace Start-->
     <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" LastChildFill="True">
-        <Grid DockPanel.Dock="Top" Height="32" Background="Aqua"/>
+        <Grid DockPanel.Dock="Top" Height="24" Background="Aqua"/>
         <Grid DockPanel.Dock="Top" Height="32" Background="Yellow"/>
-        <Grid DockPanel.Dock="Bottom" Height="32" Width="Auto" Background="Green" />
+        <Grid DockPanel.Dock="Bottom" Height="24" Width="Auto" Background="Green" />
         <Grid DockPanel.Dock="Left" Height="Auto" Width="32" Background="Blue"/>
         <Grid DockPanel.Dock="Right" Height="Auto" Width="32" Background="Red" Visibility="Collapsed"/>
-        <Grid Height="Auto" Width="Auto" Background="Purple">
+        <Grid Height="Auto" Width="Auto" Background="WhiteSmoke">
             <TabControl Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                <TabItem Header="Launch" Width="96">
-                    <Grid Background="Beige" ShowGridLines="True">
+                <TabItem Header="Launch" Width="96" Height="24" Background="Transparent">
+                    <Grid Background="Transparent" ShowGridLines="True">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="309.75*"/>
                             <RowDefinition Height="103.25*"/>
@@ -24,8 +24,19 @@
                             <ColumnDefinition Width="510.*"/>
                             <ColumnDefinition Width="170.*"/>
                         </Grid.ColumnDefinitions>
-                        <Grid Row="0" Column="0" Background="AliceBlue">
+                        <Grid Row="0" Column="0" Background="Transparent">
                             <ListView x:Name="listViewApps" Loaded="ListViewApps_OnLoaded" Background="Transparent">
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="Height" Value="24" />
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding name}" Width="250"/>
+                                        <GridViewColumn Header="Type" DisplayMemberBinding="{Binding type}" Width="75"/>
+                                    </GridView>
+                                </ListView.View>
                             </ListView>
                         </Grid>
                         <Grid Row="0" Column="1" Background="WhiteSmoke">
@@ -39,7 +50,7 @@
                         </Grid>
                     </Grid>
                 </TabItem>
-                <TabItem Header="Navigator" Width="96"/>
+                <TabItem Header="Navigator" Width="96" Height="24" Background="Transparent"/>
             </TabControl>
         </Grid>
     </DockPanel>

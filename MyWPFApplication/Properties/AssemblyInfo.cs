@@ -23,7 +23,7 @@ using System.Windows;
 )]
 
 // Version information
-[assembly: AssemblyVersion("1.0.0.22")]
-[assembly: AssemblyFileVersion("1.0.0.22")]
+[assembly: AssemblyVersion("1.0.0.39")]
+[assembly: AssemblyFileVersion("1.0.0.39")]
 [assembly: NeutralResourcesLanguageAttribute( "en-US" )]
 
