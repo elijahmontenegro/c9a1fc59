@@ -29,25 +29,35 @@ namespace MyWPFApplication
 
         private void ListViewApps_OnLoaded(object sender, RoutedEventArgs e)
         {
-            List<JumpStartApp> listView_itemList = new List<JumpStartApp>();
+            List<ListViewItem> list = new List<ListViewItem>();
 
-            for (int i = 0; i < 3; i++)
-            {
-                var data = new JumpStartApp() { name = "", type = "" };
-                data.name = $"name ({i})";
-                data.type = $"type ({i})";
-                //
-                listView_itemList.Add(data);
+            for (int i = 1; i <= 3; i++){
+                var data = new ListViewItem() { Content = $"name ({i})" };
+                list.Add(data);
             }
 
             var listView = sender as ListView;
-            listView.ItemsSource = listView_itemList;
+            listView.ItemsSource = list;
+        }
+
+        private void ListViewOptions_OnLoaded(object sender, RoutedEventArgs e)
+        {
+            List<ListViewItem> list = new List<ListViewItem>();
+
+            for (int i = 1; i <= 6; i++){
+                var data = new ListViewItem() { Content = $"name ({i})" };
+                list.Add(data);
+            }
+
+            var listView = sender as ListView;
+            listView.ItemsSource = list;
         }
     }
 
-    class JumpStartApp
+    class JumpStartListViewItem
     {
         public string name { get; set; }
         public string type { get; set; }
+        public string last_accessed { get; set; }
     }
 }

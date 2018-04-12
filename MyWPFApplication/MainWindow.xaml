@@ -4,18 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyWPFApplication"
-        mc:Ignorable="d" Height="540" Width="720">
+        mc:Ignorable="d" Height="540" Width="540">
     <!-- Workspace Start-->
     <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" LastChildFill="True">
-        <Grid DockPanel.Dock="Top" Height="24" Background="Aqua"/>
+        <Grid DockPanel.Dock="Top" Height="32" Background="Aqua"/>
         <Grid DockPanel.Dock="Top" Height="32" Background="Yellow"/>
-        <Grid DockPanel.Dock="Bottom" Height="24" Width="Auto" Background="Green" />
+        <Grid DockPanel.Dock="Bottom" Height="32" Width="Auto" Background="Green" />
         <Grid DockPanel.Dock="Left" Height="Auto" Width="32" Background="Blue"/>
         <Grid DockPanel.Dock="Right" Height="Auto" Width="32" Background="Red" Visibility="Collapsed"/>
         <Grid Height="Auto" Width="Auto" Background="WhiteSmoke">
             <TabControl Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                 <TabItem Header="Launch" Width="96" Height="24" Background="Transparent">
-                    <Grid Background="Transparent" ShowGridLines="True">
+                    <Grid Background="Transparent" ShowGridLines="False">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="309.75*"/>
                             <RowDefinition Height="103.25*"/>
@@ -28,26 +28,27 @@
                             <ListView x:Name="listViewApps" Loaded="ListViewApps_OnLoaded" Background="Transparent">
                                 <ListView.ItemContainerStyle>
                                     <Style TargetType="ListViewItem">
-                                        <Setter Property="Height" Value="24" />
+                                        <Setter Property="Height" Value="32" />
                                     </Style>
                                 </ListView.ItemContainerStyle>
-                                <ListView.View>
-                                    <GridView>
-                                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding name}" Width="250"/>
-                                        <GridViewColumn Header="Type" DisplayMemberBinding="{Binding type}" Width="75"/>
-                                    </GridView>
-                                </ListView.View>
                             </ListView>
                         </Grid>
-                        <Grid Row="0" Column="1" Background="WhiteSmoke">
+                        <Grid Row="0" Column="1" Background="Transparent">
+                            <ListView x:Name="listViewOptions" Loaded="ListViewOptions_OnLoaded" Background="Transparent">
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="Height" Value="32" />
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                            </ListView>
+                        </Grid>
+                        <Grid Row="1" Column="0" Background="WhiteSmoke" ColumnSpan="2">
+                            <TextBlock Text="Description" FontWeight="Bold" Background="Transparent" Margin="12,12"/>
+                            <TextBlock Text="This is a description" Background="Transparent" Margin="20,32"/>
+                        </Grid>
+                        <!--<Grid Row="1" Column="1" Background="AliceBlue">
                             
-                        </Grid>
-                        <Grid Row="1" Column="0" Background="WhiteSmoke">
-
-                        </Grid>
-                        <Grid Row="1" Column="1" Background="AliceBlue">
-                            
-                        </Grid>
+                        </Grid>-->
                     </Grid>
                 </TabItem>
                 <TabItem Header="Navigator" Width="96" Height="24" Background="Transparent"/>
