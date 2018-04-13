@@ -44,10 +44,9 @@ namespace MyWPFApplication
         {
             List<ListViewItem> list = new List<ListViewItem>();
 
-            for (int i = 1; i <= 6; i++){
-                var data = new ListViewItem() { Content = $"name ({i})" };
-                list.Add(data);
-            }
+            list.Add(new ListViewItem() { Content = $"Auto Connect" });
+            list.Add(new ListViewItem() { Content = $"Launch with Page Heap" });
+            list.Add(new ListViewItem() { Content = $"Launch with Visual Studio" });
 
             var listView = sender as ListView;
             listView.ItemsSource = list;
