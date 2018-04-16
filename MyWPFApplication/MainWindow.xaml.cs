@@ -1,12 +1,8 @@
-﻿using System;
-using System.Globalization;
+﻿using AutoUpdaterDotNET;
+using System.Collections.Generic;
 using System.Reflection;
 using System.Windows;
-using AutoUpdaterDotNET;
 using System.Windows.Controls;
-
-using System.Collections.Generic;
-using System.Windows.Media;
 
 namespace MyWPFApplication
 {
@@ -19,7 +15,7 @@ namespace MyWPFApplication
         {
             InitializeComponent();
             Assembly assembly = Assembly.GetEntryAssembly();
-            Title = $"{assembly.GetName().Name} - Version {assembly.GetName().Version}";
+            Title = $"{assembly.GetName().Name} - Version {assembly.GetName().Version.Major}.{assembly.GetName().Version.Minor}.{assembly.GetName().Version.Build}";
         }
 
         private void ButtonCheckForUpdate_Click(object sender, RoutedEventArgs e)
@@ -31,25 +27,47 @@ namespace MyWPFApplication
         {
             List<ListViewItem> list = new List<ListViewItem>();
 
-            for (int i = 1; i <= 3; i++){
-                var data = new ListViewItem() { Content = $"name ({i})" };
-                list.Add(data);
-            }
+            list.Add(new ListViewItem() { Content = $"Star Citizen" });
+            list.Add(new ListViewItem() { Content = $"Sandbox Editor" });
+            list.Add(new ListViewItem() { Content = $"Dedicated Launcher" });
+            list.Add(new ListViewItem() { Content = $"DataForge" });
+            list.Add(new ListViewItem() { Content = $"Subsumption Editor" });
+            list.Add(new ListViewItem() { Content = $"3ds Max 2018" });
+
 
             var listView = sender as ListView;
             listView.ItemsSource = list;
         }
 
-        private void ListViewOptions_OnLoaded(object sender, RoutedEventArgs e)
+        private void ListViewItem_OnSelected(object sender, RoutedEventArgs e)
         {
-            List<ListViewItem> list = new List<ListViewItem>();
+            var item = (sender as ListView).SelectedItem as ListViewItem;
 
-            list.Add(new ListViewItem() { Content = $"Auto Connect" });
-            list.Add(new ListViewItem() { Content = $"Launch with Page Heap" });
-            list.Add(new ListViewItem() { Content = $"Launch with Visual Studio" });
+            if (item == null)
+                return;
 
-            var listView = sender as ListView;
-            listView.ItemsSource = list;
+            var id = item.Content as string;
+            var type = "" as string;
+            var src = listViewOptions.ItemsSource;
+            List<ListViewItem> data = new List<ListViewItem>();
+
+            if (type == "default")
+            {
+                data.Add(new ListViewItem() { Content = $"Auto Connect" });
+                data.Add(new ListViewItem() { Content = $"Launch with Page Heap" });
+                data.Add(new ListViewItem() { Content = $"Launch with Visual Studio" });
+            }
+            else if (type == "tools")
+            {
+                data.Add(new ListViewItem() { Content = $"Launch with Page Heap" });
+                data.Add(new ListViewItem() { Content = $"Launch with Visual Studio" }); // hold ctrl to select two or more options -- i.e: page heap and also visual studio
+            }
+            else
+            {
+                src = null;
+            }
+
+            listViewOptions.ItemsSource = data;
         }
     }
 

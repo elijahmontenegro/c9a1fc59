@@ -42,3 +42,4 @@ Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\obj\Debug\ZipExtractor.Properties.R
 Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\obj\Debug\ZipExtractor.csproj.GenerateResource.Cache
 Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\obj\Debug\ZipExtractor.exe
 Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\obj\Debug\ZipExtractor.pdb
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\ZipExtractor\obj\Debug\ZipExtractor.csprojResolveAssemblyReference.cache

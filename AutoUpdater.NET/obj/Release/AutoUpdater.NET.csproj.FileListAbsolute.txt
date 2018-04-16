@@ -27,3 +27,4 @@ Q:\CopyBuild 3\My Apps\c9a1fc59\AutoUpdater.NET\obj\Release\AutoUpdater.NET.cspr
 Q:\CopyBuild 3\My Apps\c9a1fc59\AutoUpdater.NET\obj\Release\AutoUpdater.NET.dll
 Q:\CopyBuild 3\My Apps\c9a1fc59\AutoUpdater.NET\obj\Release\AutoUpdater.NET.pdb
 Q:\CopyBuild 3\My Apps\c9a1fc59\AutoUpdater.NET\obj\Release\AutoUpdater.NET.csprojResolveAssemblyReference.cache
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\AutoUpdater.NET\obj\Release\AutoUpdater.NET.csprojResolveAssemblyReference.cache

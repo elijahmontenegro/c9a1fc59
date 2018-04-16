@@ -14,21 +14,21 @@
 <#@ import namespace="Microsoft.VisualStudio.TextTemplating" #>
 <#
     string output = File.ReadAllText(this.Host.ResolvePath("AssemblyInfo.cs"));
-    Regex pattern = new Regex("AssemblyVersion\\(\"(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<revision>\\d+)\\.(?<build>\\d+)\"\\)");
+    Regex pattern = new Regex("AssemblyVersion\\(\"(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<build>\\d+)\"\\)");
     MatchCollection matches = pattern.Matches(output);
     if( matches.Count == 1 )
     {
         major = Convert.ToInt32(matches[0].Groups["major"].Value);
         minor = Convert.ToInt32(matches[0].Groups["minor"].Value);
         build = Convert.ToInt32(matches[0].Groups["build"].Value) + 1;
-        revision = Convert.ToInt32(matches[0].Groups["revision"].Value);
+        //revision = Convert.ToInt32(matches[0].Groups["revision"].Value);
         if( this.Host.ResolveParameterValue("-","-","BuildConfiguration") == "Release" )
-            revision++;
+            minor++;
     }
 	
 	var xml = new XDocument(
 		new XElement("item",
-			new XElement("version", major + "." + minor + "." + revision + "." + build),
+			new XElement("version", major + "." + minor + "." + build),
 			new XElement("url", "https://github.com/b8394edf/c9a1fc59/raw/master/MyWPFApplication/JumpStart.zip" ),
 			new XElement("changelog", "https://github.com/b8394edf/c9a1fc59/"),
 			new XElement("mandatory", false))
@@ -74,13 +74,12 @@ using System.Windows;
 )]
 
 // Version information
-[assembly: AssemblyVersion("<#= this.major #>.<#= this.minor #>.<#= this.revision #>.<#= this.build #>")]
-[assembly: AssemblyFileVersion("<#= this.major #>.<#= this.minor #>.<#= this.revision #>.<#= this.build #>")]
+[assembly: AssemblyVersion("<#= this.major #>.<#= this.minor #>.<#= this.build #>")]
+[assembly: AssemblyFileVersion("<#= this.major #>.<#= this.minor #>.<#= this.build #>")]
 [assembly: NeutralResourcesLanguageAttribute( "en-US" )]
 
 <#+
     int major = 1;
     int minor = 0;
     int build = 0;
-    int revision = 0;
 #>

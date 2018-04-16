@@ -12,20 +12,18 @@
         <Grid DockPanel.Dock="Bottom" Height="32" Width="Auto" Background="Green" />
         <Grid DockPanel.Dock="Left" Height="Auto" Width="32" Background="Blue"/>
         <Grid DockPanel.Dock="Right" Height="Auto" Width="32" Background="Red" Visibility="Collapsed"/>
-        <Grid Height="Auto" Width="Auto" Background="WhiteSmoke">
-            <TabControl Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Gainsboro">
-                <TabItem Header="Launch" Width="96" Height="24" Background="Transparent">
-                    <Grid Background="Transparent" ShowGridLines="False">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="309.75*"/>
-                            <RowDefinition Height="103.25*"/>
-                        </Grid.RowDefinitions>
+        <Grid>
+            <TabControl Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <TabItem Header="Launch" Width="96" Height="24">
+                    <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="510.*"/>
-                            <ColumnDefinition Width="170.*"/>
+                            <ColumnDefinition Width="66.666666666666666666666666666667*"/> <ColumnDefinition Width="2" /> <ColumnDefinition Width="33.333333333333333333333333333333*"/>
                         </Grid.ColumnDefinitions>
-                        <Grid Row="0" Column="0" Background="Transparent">
-                            <ListView x:Name="listViewApps" Loaded="ListViewApps_OnLoaded" Background="Transparent">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="75.*"/> <RowDefinition Height="2"/> <RowDefinition Height="25.*"/>
+                        </Grid.RowDefinitions>
+                        <Grid>
+                            <ListView x:Name="listViewApps" Loaded="ListViewApps_OnLoaded" PreviewMouseLeftButtonUp="ListViewItem_OnSelected">
                                 <ListView.ItemContainerStyle>
                                     <Style TargetType="ListViewItem">
                                         <Setter Property="Height" Value="32" />
@@ -33,8 +31,9 @@
                                 </ListView.ItemContainerStyle>
                             </ListView>
                         </Grid>
-                        <Grid Row="0" Column="1" Background="Transparent">
-                            <ListView x:Name="listViewOptions" Loaded="ListViewOptions_OnLoaded" Background="Transparent">
+                        <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                        <Grid Grid.Column="2">
+                            <ListView x:Name="listViewOptions">
                                 <ListView.ItemContainerStyle>
                                     <Style TargetType="ListViewItem">
                                         <Setter Property="Height" Value="32" />
@@ -42,37 +41,14 @@
                                 </ListView.ItemContainerStyle>
                             </ListView>
                         </Grid>
-                        <Grid Row="1" Column="0" Background="WhiteSmoke" ColumnSpan="2">
-                            <TextBlock Text="Description" FontWeight="Bold" Background="Transparent" Margin="12,12"/>
-                            <TextBlock Text="This is a description" Background="Transparent" Margin="20,32"/>
+                        <GridSplitter Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"/>
+                        <Grid Grid.Row="2" Grid.ColumnSpan="3">
+                            <TextBlock Text="Description" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Grid>
-                        <!--<Grid Row="1" Column="1" Background="AliceBlue">
-                            
-                        </Grid>-->
                     </Grid>
                 </TabItem>
-                <TabItem Header="Navigator" Width="96" Height="24">
-                    <DockPanel Background="White" LastChildFill="True">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="66.666666666666666666666666666667*"/>
-                                <ColumnDefinition Width="2" />
-                                <ColumnDefinition Width="33.333333333333333333333333333333*" MaxWidth="50"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="75.*"/>
-                                <RowDefinition Height="2"/>
-                                <RowDefinition Height="25.*"/>
-                            </Grid.RowDefinitions>
-                            <TextBlock Text="Left" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Gainsboro"/>
-                            <TextBlock Grid.Column="2" Text="Right" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            <Grid Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Gainsboro"/>
-                            <Grid Grid.Row="2" Grid.ColumnSpan="3" Background="WhiteSmoke">
-                                <TextBlock Text="Description" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </Grid>
-                        </Grid>
-                    </DockPanel>
+                <TabItem Header="Navagator" Width="96" Height="24">
+                    
                 </TabItem>
             </TabControl>
         </Grid>
