@@ -33,7 +33,7 @@
                         </Grid>
                         <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                         <Grid Grid.Column="2">
-                            <ListView x:Name="listViewOptions">
+                            <ListView x:Name="listViewOptions" HorizontalContentAlignment="Center">
                                 <ListView.ItemContainerStyle>
                                     <Style TargetType="ListViewItem">
                                         <Setter Property="Height" Value="32" />

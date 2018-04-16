@@ -27,12 +27,12 @@ namespace MyWPFApplication
         {
             List<ListViewItem> list = new List<ListViewItem>();
 
-            list.Add(new ListViewItem() { Content = $"Star Citizen" });
-            list.Add(new ListViewItem() { Content = $"Sandbox Editor" });
-            list.Add(new ListViewItem() { Content = $"Dedicated Launcher" });
-            list.Add(new ListViewItem() { Content = $"DataForge" });
-            list.Add(new ListViewItem() { Content = $"Subsumption Editor" });
-            list.Add(new ListViewItem() { Content = $"3ds Max 2018" });
+            list.Add(new ListViewItem() { Content = $"Star Citizen", Tag = "CLIENT" });
+            list.Add(new ListViewItem() { Content = $"Sandbox Editor", Tag = "ENGINE" });
+            list.Add(new ListViewItem() { Content = $"Dedicated Launcher", Tag = "ENGINE" });
+            list.Add(new ListViewItem() { Content = $"DataForge", Tag = "MISC" });
+            list.Add(new ListViewItem() { Content = $"Subsumption Editor", Tag = "MISC" });
+            list.Add(new ListViewItem() { Content = $"3ds Max 2018", Tag = "EXTERNAL"});
 
 
             var listView = sender as ListView;
@@ -47,26 +47,28 @@ namespace MyWPFApplication
                 return;
 
             var id = item.Content as string;
-            var type = "" as string;
-            var src = listViewOptions.ItemsSource;
+            var type = item.Tag as string;
             List<ListViewItem> data = new List<ListViewItem>();
 
-            if (type == "default")
+            if (type == "CLIENT")
             {
                 data.Add(new ListViewItem() { Content = $"Auto Connect" });
-                data.Add(new ListViewItem() { Content = $"Launch with Page Heap" });
-                data.Add(new ListViewItem() { Content = $"Launch with Visual Studio" });
-            }
-            else if (type == "tools")
-            {
-                data.Add(new ListViewItem() { Content = $"Launch with Page Heap" });
-                data.Add(new ListViewItem() { Content = $"Launch with Visual Studio" }); // hold ctrl to select two or more options -- i.e: page heap and also visual studio
-            }
-            else
-            {
-                src = null;
             }
 
+            if (type == "CLIENT"
+              || type == "ENGINE")
+            {
+                data.Add(new ListViewItem() { Content = $"Page Heap" });
+            }
+
+            if (type == "CLIENT"
+              || type == "ENGINE"
+              || type == "MISC")
+            {
+                data.Add(new ListViewItem() { Content = $"Visual Studio" }); // hold ctrl to select two or more options -- i.e: page heap and also visual studio
+            }
+
+            listViewOptions.ItemsSource = null;
             listViewOptions.ItemsSource = data;
         }
     }
