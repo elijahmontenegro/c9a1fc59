@@ -19,3 +19,32 @@ Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\obj\Debug\WpfApplication.exe
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\obj\Debug\WpfApplication.pdb
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\bin\Debug\MaterialDesignColors.pdb
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\bin\Debug\WpfApplication.exe.config
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\bin\Debug\WpfApplication.exe
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\bin\Debug\WpfApplication.pdb
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\bin\Debug\MaterialDesignColors.dll
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\bin\Debug\MaterialDesignColors.pdb
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\obj\Debug\WpfApplication.csprojResolveAssemblyReference.cache
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\obj\Debug\MainWindow.g.cs
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\obj\Debug\App.g.cs
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\obj\Debug\WpfApplication_MarkupCompile.cache
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\obj\Debug\WpfApplication_MarkupCompile.lref
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\obj\Debug\App.baml
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\obj\Debug\MainWindow.baml
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\obj\Debug\WpfApplication.g.resources
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\obj\Debug\WpfApplication.Properties.Resources.resources
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\obj\Debug\WpfApplication.csproj.GenerateResource.Cache
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\obj\Debug\WpfApplication.csproj.CoreCompileInputs.cache
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\obj\Debug\WpfApplication.exe
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\obj\Debug\WpfApplication.pdb
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\bin\Debug\ControlzEx.dll
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\bin\Debug\MahApps.Metro.dll
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\bin\Debug\MaterialDesignThemes.MahApps.dll
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\bin\Debug\System.Windows.Interactivity.dll
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\bin\Debug\ControlzEx.pdb
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\bin\Debug\MahApps.Metro.pdb
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\bin\Debug\MahApps.Metro.xml
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\obj\Debug\GeneratedInternalTypeHelper.g.cs
