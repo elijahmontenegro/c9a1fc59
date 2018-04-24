@@ -36,6 +36,10 @@
             <SolidColorBrush x:Key="RightArrowFill" Color="{DynamicResource Primary500}"/>
             <SolidColorBrush x:Key="IdealForegroundColorBrush" Color="{DynamicResource Primary500Foreground}"/>
             <SolidColorBrush x:Key="IdealForegroundDisabledBrush" Color="{DynamicResource Primary500}" Opacity="0.4"/>
+
+            <!-- Font Stretch -->
+            <ScaleTransform x:Key="FontStretchCondensed" ScaleX="1.0" />
+            <ScaleTransform x:Key="FontStretchExpanded" ScaleX="1.0" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

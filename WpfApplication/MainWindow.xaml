@@ -17,8 +17,8 @@
         RenderOptions.BitmapScalingMode="HighQuality"
         SnapsToDevicePixels="False"
         UseLayoutRounding="True"
-        GlowBrush="Black"
-        ResizeBorderThickness="1" BorderThickness="1"
+        GlowBrush="{DynamicResource AccentColorBrush}"
+        ResizeBorderThickness="1" BorderThickness="0"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None" AllowsTransparency="True" Background="{DynamicResource MaterialDesignPaper}"
         Name="WpfApplication"
@@ -40,8 +40,8 @@
                             <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" materialDesign:RippleAssist.IsCentered="True">
                                 <ToggleButton Margin="10" Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False" x:Name="MenuToggleButton" Width="Auto" Height="Auto"/>
                                 <!--<TextBlock Margin="10,8" Text="Jira Tool" VerticalAlignment="Bottom" FontSize="16" FontWeight="Regular"/>-->
-                                <!--<TextBlock Margin="10,8" Text="Teardropz" VerticalAlignment="Bottom" FontSize="16" FontFamily="Roboto" FontWeight="Regular"/>-->
-                                <TextBlock Margin="10,8" Text="Jumping Castle" VerticalAlignment="Bottom" FontSize="16" FontFamily="Roboto" FontWeight="Regular"/>
+                                <TextBlock Margin="10,8" Text="Jump-Start" VerticalAlignment="Bottom" FontSize="16" FontFamily="Roboto" FontWeight="Regular" LayoutTransform="{StaticResource FontStretchExpanded}" />
+                                <!--<TextBlock Margin="10,8" Text="Jumping Castle" VerticalAlignment="Bottom" FontSize="16" FontFamily="Roboto" FontWeight="Regular"/>-->
                                 <materialDesign:ColorZone Name="SearchBox" Margin="10,3" Mode="Standard" CornerRadius="3" Panel.ZIndex="1" materialDesign:ShadowAssist.ShadowDepth="Depth1" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                                         Width="{Binding Path=ActualWidth, ElementName=MenuBar, Converter={converters:PercentageConverter}, ConverterParameter='0.4'}" MaxWidth="475">
                                     <Grid>
