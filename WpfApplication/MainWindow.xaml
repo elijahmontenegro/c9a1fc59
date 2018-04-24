@@ -17,12 +17,18 @@
         RenderOptions.BitmapScalingMode="HighQuality"
         SnapsToDevicePixels="False"
         UseLayoutRounding="True"
-        GlowBrush="{DynamicResource AccentColorBrush}"
-        ResizeBorderThickness="1" BorderThickness="0"
+        EnableDWMDropShadow="False"
+        ResizeBorderThickness="1"
+        BorderThickness="1"
+        BorderBrush="{DynamicResource AccentColorBrush}"
+        WindowTitleBrush="{DynamicResource AccentColorBrush}"
+        NonActiveWindowTitleBrush="White"
+        ShowIconOnTitleBar="True"
+        OverrideDefaultWindowCommandsBrush="White"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None" AllowsTransparency="True" Background="{DynamicResource MaterialDesignPaper}"
         Name="WpfApplication"
-        Width="600" Height="900" MinWidth="600" MinHeight="600 " >
+        Width="1200" Height="900" MinWidth="600" MinHeight="600 " >
     <Grid>
         <materialDesign:DialogHost Identifier="RootDialog" SnackbarMessageQueue="{Binding ElementName=MainSnackbar, Path=MessageQueue}">
             <materialDesign:DrawerHost IsLeftDrawerOpen="{Binding ElementName=MenuToggleButton, Path=IsChecked}">
@@ -39,11 +45,12 @@
                         <DockPanel>
                             <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" materialDesign:RippleAssist.IsCentered="True">
                                 <ToggleButton Margin="10" Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False" x:Name="MenuToggleButton" Width="Auto" Height="Auto"/>
+                                <TextBlock Margin="3,8" Text="Test App" VerticalAlignment="Bottom" FontSize="16" FontFamily="Roboto"    FontWeight="Regular"/>
                                 <!--<TextBlock Margin="10,8" Text="Jira Tool" VerticalAlignment="Bottom" FontSize="16" FontWeight="Regular"/>-->
-                                <TextBlock Margin="10,8" Text="Jump-Start" VerticalAlignment="Bottom" FontSize="16" FontFamily="Roboto" FontWeight="Regular" LayoutTransform="{StaticResource FontStretchExpanded}" />
+                                <!--<TextBlock Margin="10,8" Text="Jump-Start" VerticalAlignment="Bottom" FontSize="16" FontFamily="Roboto" FontWeight="Regular"/>-->
                                 <!--<TextBlock Margin="10,8" Text="Jumping Castle" VerticalAlignment="Bottom" FontSize="16" FontFamily="Roboto" FontWeight="Regular"/>-->
-                                <materialDesign:ColorZone Name="SearchBox" Margin="10,3" Mode="Standard" CornerRadius="3" Panel.ZIndex="1" materialDesign:ShadowAssist.ShadowDepth="Depth1" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
-                                        Width="{Binding Path=ActualWidth, ElementName=MenuBar, Converter={converters:PercentageConverter}, ConverterParameter='0.4'}" MaxWidth="475">
+                                <materialDesign:ColorZone Name="SearchBox" Margin="14,3" Mode="Standard" CornerRadius="3" Panel.ZIndex="1" materialDesign:ShadowAssist.ShadowDepth="Depth1" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                                        Width="{Binding Path=ActualWidth, ElementName=MenuBar, Converter={converters:PercentageConverter}, ConverterParameter='0.33'}" MaxWidth="450">
                                     <Grid>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="Auto" />
@@ -57,13 +64,15 @@
                                     </Grid>
                                 </materialDesign:ColorZone>
                             </StackPanel>
-                            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" materialDesign:RippleAssist.IsCentered="True">
-                                <materialDesign:PopupBox HorizontalAlignment="Right" PopupMode="MouseOver" Width="100">
+                            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" materialDesign:RippleAssist.IsCentered="True" Margin="-27,0">
+                                <Viewbox Width="Auto" Height="20" Stretch="Uniform">
+                                    <materialDesign:PopupBox HorizontalAlignment="Center" PlacementMode="BottomAndAlignCentres" PopupMode="Click" Width="100">
                                     <StackPanel>
                                         <Button Content="More" />
                                         <Button Content="Options" />
                                     </StackPanel>
-                                </materialDesign:PopupBox>
+                                    </materialDesign:PopupBox>
+                                </Viewbox>
                             </StackPanel>
                         </DockPanel>
                     </materialDesign:ColorZone>

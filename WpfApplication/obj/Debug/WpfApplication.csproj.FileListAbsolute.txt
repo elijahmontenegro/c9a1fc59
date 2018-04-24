@@ -48,3 +48,10 @@ C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\bin\Debug\ControlzEx.pdb
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\bin\Debug\MahApps.Metro.pdb
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\bin\Debug\MahApps.Metro.xml
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\obj\Debug\GeneratedInternalTypeHelper.g.cs
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\bin\Debug\ControlzEx.dll
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\bin\Debug\MahApps.Metro.dll
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\bin\Debug\MaterialDesignThemes.MahApps.dll
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\bin\Debug\System.Windows.Interactivity.dll
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\bin\Debug\ControlzEx.pdb
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\bin\Debug\MahApps.Metro.pdb
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\bin\Debug\MahApps.Metro.xml

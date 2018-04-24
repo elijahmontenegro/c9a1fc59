@@ -1,0 +1,9 @@
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\bin\x64\Debug\ZipExtractor.exe.config
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\bin\x64\Debug\ZipExtractor.exe
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\bin\x64\Debug\ZipExtractor.pdb
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\obj\x64\Debug\ZipExtractor.csprojResolveAssemblyReference.cache
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\obj\x64\Debug\ZipExtractor.FormMain.resources
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\obj\x64\Debug\ZipExtractor.Properties.Resources.resources
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\obj\x64\Debug\ZipExtractor.csproj.GenerateResource.Cache
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\obj\x64\Debug\ZipExtractor.exe
+Q:\CopyBuild 3\My Apps\c9a1fc59\ZipExtractor\obj\x64\Debug\ZipExtractor.pdb

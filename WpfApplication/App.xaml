@@ -38,8 +38,8 @@
             <SolidColorBrush x:Key="IdealForegroundDisabledBrush" Color="{DynamicResource Primary500}" Opacity="0.4"/>
 
             <!-- Font Stretch -->
-            <ScaleTransform x:Key="FontStretchCondensed" ScaleX="1.0" />
-            <ScaleTransform x:Key="FontStretchExpanded" ScaleX="1.0" />
+            <!--<ScaleTransform x:Key="FontStretchCondensed" ScaleX="1.0" />-->
+            <!--<ScaleTransform x:Key="FontStretchExpanded" ScaleX="1.0" />-->
         </ResourceDictionary>
     </Application.Resources>
 </Application>

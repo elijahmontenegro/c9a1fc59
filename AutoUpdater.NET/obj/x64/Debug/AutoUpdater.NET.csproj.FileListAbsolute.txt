@@ -1,0 +1,10 @@
+Q:\CopyBuild 3\My Apps\c9a1fc59\AutoUpdater.NET\bin\x64\Debug\AutoUpdater.NET.dll
+Q:\CopyBuild 3\My Apps\c9a1fc59\AutoUpdater.NET\bin\x64\Debug\AutoUpdater.NET.pdb
+Q:\CopyBuild 3\My Apps\c9a1fc59\AutoUpdater.NET\obj\x64\Debug\AutoUpdater.NET.csprojResolveAssemblyReference.cache
+Q:\CopyBuild 3\My Apps\c9a1fc59\AutoUpdater.NET\obj\x64\Debug\AutoUpdaterDotNET.DownloadUpdateDialog.resources
+Q:\CopyBuild 3\My Apps\c9a1fc59\AutoUpdater.NET\obj\x64\Debug\AutoUpdaterDotNET.RemindLaterForm.resources
+Q:\CopyBuild 3\My Apps\c9a1fc59\AutoUpdater.NET\obj\x64\Debug\AutoUpdaterDotNET.UpdateForm.resources
+Q:\CopyBuild 3\My Apps\c9a1fc59\AutoUpdater.NET\obj\x64\Debug\AutoUpdaterDotNET.Properties.Resources.resources
+Q:\CopyBuild 3\My Apps\c9a1fc59\AutoUpdater.NET\obj\x64\Debug\AutoUpdater.NET.csproj.GenerateResource.Cache
+Q:\CopyBuild 3\My Apps\c9a1fc59\AutoUpdater.NET\obj\x64\Debug\AutoUpdater.NET.dll
+Q:\CopyBuild 3\My Apps\c9a1fc59\AutoUpdater.NET\obj\x64\Debug\AutoUpdater.NET.pdb
