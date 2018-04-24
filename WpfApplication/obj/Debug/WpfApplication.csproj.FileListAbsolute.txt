@@ -18,7 +18,6 @@ Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\obj\Debug\WpfApplication.csproj.G
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\obj\Debug\WpfApplication.exe
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\obj\Debug\WpfApplication.pdb
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\bin\Debug\MaterialDesignColors.pdb
-Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\bin\Debug\WpfApplication.exe.config
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\bin\Debug\WpfApplication.exe
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApplication\bin\Debug\WpfApplication.pdb

@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:converters="clr-namespace:WpfApplication.Converters"
         mc:Ignorable="d"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -24,48 +25,55 @@
         WindowTitleBrush="{DynamicResource AccentColorBrush}"
         NonActiveWindowTitleBrush="White"
         ShowIconOnTitleBar="True"
-        OverrideDefaultWindowCommandsBrush="White"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None" AllowsTransparency="True" Background="{DynamicResource MaterialDesignPaper}"
         Name="WpfApplication"
-        Width="1200" Height="900" MinWidth="600" MinHeight="600 " >
+        Width="1200" Height="900" MinWidth="600" MinHeight="600 "
+        Deactivated="WpfApplication_Deactivated"
+        Activated="WpfApplication_Activated"
+        OverrideDefaultWindowCommandsBrush="LightGray"
+        WindowCloseButtonStyle="{DynamicResource CleanCloseWindowButtonStyle}"
+        WindowMaxButtonStyle="{DynamicResource CleanMaxWindowButtonStyle}"
+        WindowMinButtonStyle="{DynamicResource CleanMinWindowButtonStyle}">
     <Grid>
         <materialDesign:DialogHost Identifier="RootDialog" SnackbarMessageQueue="{Binding ElementName=MainSnackbar, Path=MessageQueue}">
             <materialDesign:DrawerHost IsLeftDrawerOpen="{Binding ElementName=MenuToggleButton, Path=IsChecked}">
                 <materialDesign:DrawerHost.LeftDrawerContent>
                     <materialDesign:ColorZone Mode="Light">
                         <DockPanel MinWidth="212" Background="Transparent">
-                            <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" DockPanel.Dock="Top" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20" Width="24" Height="24" IsChecked="{Binding ElementName=MenuToggleButton, Path=IsChecked, Mode=TwoWay}"/>
+                            <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" DockPanel.Dock="Top" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20" Width="20" Height="20" IsChecked="{Binding ElementName=MenuToggleButton, Path=IsChecked, Mode=TwoWay}"/>
                         </DockPanel>
                     </materialDesign:ColorZone>
                 </materialDesign:DrawerHost.LeftDrawerContent>
                 <DockPanel LastChildFill="True">
                     <!-- Menu Bar - Start-->
-                    <materialDesign:ColorZone Name="MenuBar" Height="42" Padding="6,3" DockPanel.Dock="Top" materialDesign:ShadowAssist.ShadowDepth="Depth2" Mode="PrimaryMid" materialDesign:ShadowAssist.ShadowEdges="Bottom" Width="Auto">
+                    <materialDesign:ColorZone Name="MenuBar" Height="42" Padding="6,3" DockPanel.Dock="Top" materialDesign:ShadowAssist.ShadowDepth="Depth0" Mode="PrimaryMid" materialDesign:ShadowAssist.ShadowEdges="Bottom" Width="Auto">
                         <DockPanel>
                             <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" materialDesign:RippleAssist.IsCentered="True">
                                 <ToggleButton Margin="10" Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False" x:Name="MenuToggleButton" Width="Auto" Height="Auto"/>
-                                <TextBlock Margin="3,8" Text="Test App" VerticalAlignment="Bottom" FontSize="16" FontFamily="Roboto"    FontWeight="Regular"/>
-                                <!--<TextBlock Margin="10,8" Text="Jira Tool" VerticalAlignment="Bottom" FontSize="16" FontWeight="Regular"/>-->
-                                <!--<TextBlock Margin="10,8" Text="Jump-Start" VerticalAlignment="Bottom" FontSize="16" FontFamily="Roboto" FontWeight="Regular"/>-->
-                                <!--<TextBlock Margin="10,8" Text="Jumping Castle" VerticalAlignment="Bottom" FontSize="16" FontFamily="Roboto" FontWeight="Regular"/>-->
-                                <materialDesign:ColorZone Name="SearchBox" Margin="14,3" Mode="Standard" CornerRadius="3" Panel.ZIndex="1" materialDesign:ShadowAssist.ShadowDepth="Depth1" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
-                                        Width="{Binding Path=ActualWidth, ElementName=MenuBar, Converter={converters:PercentageConverter}, ConverterParameter='0.33'}" MaxWidth="450">
+                                <!--<TextBlock Margin="5,0" Text="Test App" VerticalAlignment="Center" FontSize="16.5" FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Regular"/>-->
+                                <!--<TextBlock Margin="5,0" Text="Jira Tool" VerticalAlignment="Center" FontSize="16.5" FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Regular"/>-->
+                                <!--<TextBlock Margin="5,0" Text="Jump-Start" VerticalAlignment="Center" FontSize="16.5" FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Regular"/>-->
+                                <!--<TextBlock Margin="5,0" Text="Jumping Castle" VerticalAlignment="Center" FontSize="16.5" FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Regular"/>-->
+                                <TextBlock Margin="5,0" Text="[Placeholder]" VerticalAlignment="Center" FontSize="16.5" FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Regular"/>
+                                <materialDesign:ColorZone Name="SearchBox" Margin="15,3" Mode="Standard" CornerRadius="2" Panel.ZIndex="1" materialDesign:ShadowAssist.ShadowDepth="Depth0" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                                        Width="475" MaxWidth="475">
                                     <Grid>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="Auto" />
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="Auto" />
                                         </Grid.ColumnDefinitions>
+                                        <TextBox Margin="0" Grid.Column="1" materialDesign:HintAssist.Hint="Search" materialDesign:TextFieldAssist.DecorationVisibility="Hidden" 
+                                                 BorderThickness="0" Width="420" HorizontalAlignment="Left" HorizontalContentAlignment="Stretch" VerticalAlignment="Center"/>
                                         <Button Style="{DynamicResource MaterialDesignToolButton}">
-                                            <materialDesign:PackIcon Margin="5" Kind="Magnify" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Width="Auto" Height="Auto"/>
+                                            <materialDesign:PackIcon Margin="10,5" Kind="Magnify" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Width="Auto" Height="Auto"/>
                                         </Button>
-                                        <TextBox Margin="10,0" Grid.Column="1" materialDesign:HintAssist.Hint="Search" materialDesign:TextFieldAssist.DecorationVisibility="Hidden" BorderThickness="0" Width="{Binding Path=ActualWidth, ElementName=SearchBox, Converter={converters:PercentageConverter}, ConverterParameter='.78'}" HorizontalAlignment="Left" HorizontalContentAlignment="Stretch" VerticalAlignment="Center"/>
                                     </Grid>
                                 </materialDesign:ColorZone>
                             </StackPanel>
-                            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" materialDesign:RippleAssist.IsCentered="True" Margin="-27,0">
-                                <Viewbox Width="Auto" Height="20" Stretch="Uniform">
+                            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" materialDesign:RippleAssist.IsCentered="True" Margin="-26,0">
+                                <Viewbox Width="Auto" Height="19" Stretch="Uniform">
                                     <materialDesign:PopupBox HorizontalAlignment="Center" PlacementMode="BottomAndAlignCentres" PopupMode="Click" Width="100">
                                     <StackPanel>
                                         <Button Content="More" />

@@ -26,6 +26,16 @@ namespace WpfApplication
         {
             InitializeComponent();
         }
+
+        private void WpfApplication_Activated(object sender, EventArgs e)
+        {
+            //OverrideDefaultWindowCommandsBrush = Brushes.Red;
+        }
+
+        private void WpfApplication_Deactivated(object sender, EventArgs e)
+        {
+            OverrideDefaultWindowCommandsBrush = Brushes.Blue;
+        }
     }
 }
 
