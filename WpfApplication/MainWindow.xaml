@@ -59,12 +59,12 @@
                     <materialDesign:ColorZone Name="MenuBar" Height="48" Padding="6,3" DockPanel.Dock="Top" materialDesign:ShadowAssist.ShadowDepth="Depth1" Mode="PrimaryMid" materialDesign:ShadowAssist.ShadowEdges="Bottom" Width="Auto">
                         <DockPanel>
                             <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" materialDesign:RippleAssist.IsCentered="True">
-                                <ToggleButton Margin="10,0" Width="Auto" Height="20" Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False" x:Name="MenuToggleButton" SnapsToDevicePixels="False" />
+                                <ToggleButton Margin="10,0" Width="Auto" Height="20" Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False" x:Name="MenuToggleButton" SnapsToDevicePixels="True" />
                                 <!--<TextBlock Margin="5,0" Text="Test App" VerticalAlignment="Center" FontSize="16.5" FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Regular"/>-->
                                 <!--<TextBlock Margin="5,0" Text="Jira Tool" VerticalAlignment="Center" FontSize="16.5" FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Regular"/>-->
                                 <!--<TextBlock Margin="5,0" Text="Jump-Start" VerticalAlignment="Center" FontSize="16.5" FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Regular"/>-->
                                 <!--<TextBlock Margin="5,0" Text="Jumping Castle" VerticalAlignment="Center" FontSize="16.5" FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Regular"/>-->
-                                <TextBlock Margin="10,0" Text="Placeholder" VerticalAlignment="Center" FontSize="18" FontFamily="Noto" FontWeight="Regular" SnapsToDevicePixels="True"/>
+                                <TextBlock Margin="10,0" Text="Placeholder" VerticalAlignment="Center" FontSize="18" FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Regular" SnapsToDevicePixels="False"/>
                                 <materialDesign:ColorZone Name="SearchBox" Padding="0,-1" Margin="10,3" Mode="Standard" CornerRadius="3" Panel.ZIndex="1" materialDesign:ShadowAssist.ShadowDepth="Depth1" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                                         Width="475" MaxWidth="475">
                                     <Grid>
@@ -83,7 +83,7 @@
                                 </materialDesign:ColorZone>
                             </StackPanel>
                             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" materialDesign:RippleAssist.IsCentered="True" Margin="-27,0">
-                                <Viewbox Width="Auto" Height="20" Stretch="Uniform">
+                                <Viewbox Width="Auto" Height="20" Stretch="Uniform" SnapsToDevicePixels="True">
                                     <materialDesign:PopupBox HorizontalAlignment="Center" PlacementMode="BottomAndAlignCentres" PopupMode="Click" Width="100">
                                     <StackPanel>
                                         <Button Content="More" />
