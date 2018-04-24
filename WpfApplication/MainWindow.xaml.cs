@@ -25,6 +25,7 @@ namespace WpfApplication
         public MainWindow()
         {
             InitializeComponent();
+            this.SetValue(ToolTipService.IsEnabledProperty, false);
         }
 
         private void WpfApplication_Activated(object sender, EventArgs e)

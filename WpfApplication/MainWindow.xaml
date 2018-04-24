@@ -16,7 +16,7 @@
         FontFamily="Segoe UI Symbol"
         RenderOptions.EdgeMode="Unspecified"
         RenderOptions.BitmapScalingMode="HighQuality"
-        SnapsToDevicePixels="False"
+        SnapsToDevicePixels="True"
         UseLayoutRounding="True"
         EnableDWMDropShadow="False"
         ResizeBorderThickness="1"
@@ -47,16 +47,16 @@
                 </materialDesign:DrawerHost.LeftDrawerContent>
                 <DockPanel LastChildFill="True">
                     <!-- Menu Bar - Start-->
-                    <materialDesign:ColorZone Name="MenuBar" Height="42" Padding="6,3" DockPanel.Dock="Top" materialDesign:ShadowAssist.ShadowDepth="Depth0" Mode="PrimaryMid" materialDesign:ShadowAssist.ShadowEdges="Bottom" Width="Auto">
+                    <materialDesign:ColorZone Name="MenuBar" Height="42" Padding="6,3" DockPanel.Dock="Top" materialDesign:ShadowAssist.ShadowDepth="Depth1" Mode="PrimaryMid" materialDesign:ShadowAssist.ShadowEdges="Bottom" Width="Auto">
                         <DockPanel>
                             <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" materialDesign:RippleAssist.IsCentered="True">
-                                <ToggleButton Margin="10" Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False" x:Name="MenuToggleButton" Width="Auto" Height="Auto"/>
+                                <ToggleButton Margin="10" Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False" x:Name="MenuToggleButton" Width="Auto" Height="Auto" SnapsToDevicePixels="False" />
                                 <!--<TextBlock Margin="5,0" Text="Test App" VerticalAlignment="Center" FontSize="16.5" FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Regular"/>-->
                                 <!--<TextBlock Margin="5,0" Text="Jira Tool" VerticalAlignment="Center" FontSize="16.5" FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Regular"/>-->
                                 <!--<TextBlock Margin="5,0" Text="Jump-Start" VerticalAlignment="Center" FontSize="16.5" FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Regular"/>-->
                                 <!--<TextBlock Margin="5,0" Text="Jumping Castle" VerticalAlignment="Center" FontSize="16.5" FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Regular"/>-->
-                                <TextBlock Margin="5,0" Text="[Placeholder]" VerticalAlignment="Center" FontSize="16.5" FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Regular"/>
-                                <materialDesign:ColorZone Name="SearchBox" Margin="15,3" Mode="Standard" CornerRadius="2" Panel.ZIndex="1" materialDesign:ShadowAssist.ShadowDepth="Depth0" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                                <TextBlock Margin="5,0" Text="Placeholder" VerticalAlignment="Center" FontSize="16.5" FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Regular" SnapsToDevicePixels="True"/>
+                                <materialDesign:ColorZone Name="SearchBox" Padding="0,-1" Margin="15,3" Mode="Standard" CornerRadius="3" Panel.ZIndex="1" materialDesign:ShadowAssist.ShadowDepth="Depth1" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                                         Width="475" MaxWidth="475">
                                     <Grid>
                                         <Grid.ColumnDefinitions>
@@ -64,11 +64,12 @@
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="Auto" />
                                         </Grid.ColumnDefinitions>
-                                        <TextBox Margin="0" Grid.Column="1" materialDesign:HintAssist.Hint="Search" materialDesign:TextFieldAssist.DecorationVisibility="Hidden" 
-                                                 BorderThickness="0" Width="420" HorizontalAlignment="Left" HorizontalContentAlignment="Stretch" VerticalAlignment="Center"/>
-                                        <Button Style="{DynamicResource MaterialDesignToolButton}">
-                                            <materialDesign:PackIcon Margin="10,5" Kind="Magnify" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Width="Auto" Height="Auto"/>
+                                        <Button Style="{DynamicResource MaterialDesignToolButton}" SnapsToDevicePixels="False">
+                                            <materialDesign:PackIcon Margin="5,0" Kind="Magnify" Width="Auto" Height="16" VerticalAlignment="Center"/>
                                         </Button>
+                                        <TextBox Padding="0,0,0,0" Grid.Column="1" materialDesign:HintAssist.Hint="Search" materialDesign:TextFieldAssist.DecorationVisibility="Hidden" 
+                                                 BorderThickness="0" Width="420" Height="Auto" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                                 Text="project = RSI AND reporter = emontenegro"/>
                                     </Grid>
                                 </materialDesign:ColorZone>
                             </StackPanel>
