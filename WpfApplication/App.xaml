@@ -65,6 +65,21 @@
                     </Trigger>
                 </Style.Triggers>
             </Style>
+            
+            <Style x:Key="CustomDarkMinButtonStylee"
+               BasedOn="{StaticResource DarkMetroWindowButtonStyle}"
+               TargetType="{x:Type Button}">
+                <Setter Property="Background" Value="Green" />
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="DarkGreen" />
+                        <Setter Property="Foreground" Value="{DynamicResource WhiteBrush}" />
+                    </Trigger>
+                    <Trigger Property="IsPressed" Value="True">
+                        <Setter Property="Background" Value="Green" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

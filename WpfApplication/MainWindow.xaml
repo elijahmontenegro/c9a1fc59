@@ -19,7 +19,8 @@
         SnapsToDevicePixels="True"
         UseLayoutRounding="True"
         EnableDWMDropShadow="False"
-        ResizeBorderThickness="1"
+        ResizeBorderThickness="0"
+        ResizeMode="CanResizeWithGrip"
         BorderThickness="1"
         BorderBrush="{DynamicResource AccentColorBrush}"
         WindowTitleBrush="{DynamicResource AccentColorBrush}"
@@ -28,7 +29,7 @@
         WindowStartupLocation="CenterScreen"
         WindowStyle="None" AllowsTransparency="True" Background="{DynamicResource MaterialDesignPaper}"
         Name="WpfApplication"
-        Width="1200" Height="900" MinWidth="600" MinHeight="600 "
+        Width="900" Height="600" MinWidth="600" MinHeight="600 "
         Deactivated="WpfApplication_Deactivated"
         Activated="WpfApplication_Activated"
         OverrideDefaultWindowCommandsBrush="LightGray"
@@ -42,6 +43,14 @@
                     <materialDesign:ColorZone Mode="Light">
                         <DockPanel MinWidth="212" Background="Transparent">
                             <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" DockPanel.Dock="Top" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20" Width="20" Height="20" IsChecked="{Binding ElementName=MenuToggleButton, Path=IsChecked, Mode=TwoWay}"/>
+                            <TextBlock DockPanel.Dock="Top" FontSize="16" Margin="0,-40" Text=""  FontWeight="DemiBold" HorizontalAlignment="Center"/>
+                            <ListView FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Normal" HorizontalContentAlignment="Center">
+                                <TextBlock Text="Launch Applications"/>
+                                <TextBlock Text="Config Editor"/>
+                                <TextBlock Text="Notepad"/>
+                                <TextBlock Text="Jira Tools"/>
+                                <TextBlock Text="Workspace Manager"/>
+                            </ListView>
                         </DockPanel>
                     </materialDesign:ColorZone>
                 </materialDesign:DrawerHost.LeftDrawerContent>
