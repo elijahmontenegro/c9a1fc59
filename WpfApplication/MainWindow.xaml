@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
         mc:Ignorable="d"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="ExtraLight"
@@ -16,25 +17,28 @@
         RenderOptions.BitmapScalingMode="NearestNeighbor"
         SnapsToDevicePixels="True"
         UseLayoutRounding="True"
-        EnableDWMDropShadow="False"
         ResizeBorderThickness="0"
         ResizeMode="CanResizeWithGrip"
-        BorderThickness="1"
-        BorderBrush="{DynamicResource AccentColorBrush}"
-        WindowTitleBrush="{DynamicResource AccentColorBrush}"
-        NonActiveWindowTitleBrush="White"
         ShowIconOnTitleBar="True"
         WindowStartupLocation="CenterScreen"
-        WindowStyle="None" AllowsTransparency="True" Background="{DynamicResource MaterialDesignPaper}"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
         Name="WpfApplication"
-        Width="900" Height="600" MinWidth="600" MinHeight="600 "
+        Width="960" Height="540" MinWidth="960" MinHeight="540"
         Deactivated="WpfApplication_Deactivated"
         Activated="WpfApplication_Activated"
-        OverrideDefaultWindowCommandsBrush="{DynamicResource AccentSelectedColorBrush}"
+        BorderThickness="1"
+        WindowTitleBrush="{DynamicResource IdealWindowTitleBrush}"
+        NonActiveWindowTitleBrush="{DynamicResource IdealNonActiveWindowBrush}"
+        OverrideDefaultWindowCommandsBrush="{DynamicResource IdealWindowCommandsBrush}"
         WindowCloseButtonStyle="{DynamicResource CleanCloseWindowButtonStyle}"
         WindowMaxButtonStyle="{DynamicResource CleanMaxWindowButtonStyle}"
         WindowMinButtonStyle="{DynamicResource CleanMinWindowButtonStyle}">
-    <Grid>
+    <!--BorderBrush="{DynamicResource AccentColorBrush}"
+        GlowBrush="{DynamicResource IdealWindowTitleBrush}"
+        NonActiveGlowBrush="{DynamicResource IdealNonActiveWindowBrush}"
+        NonActiveBorderBrush="{DynamicResource IdealNonActiveWindowBrush}"
+    -->
+    <Grid Background="{DynamicResource MaterialDesignPaper}" Opacity="0.999">
         <materialDesign:DialogHost Identifier="RootDialog" SnackbarMessageQueue="{Binding ElementName=MainSnackbar, Path=MessageQueue}">
             <materialDesign:DrawerHost IsLeftDrawerOpen="{Binding ElementName=MenuToggleButton, Path=IsChecked}">
                 <materialDesign:DrawerHost.LeftDrawerContent>
@@ -65,18 +69,19 @@
                                     </Grid>
                                 </Grid>
                             </materialDesign:ColorZone>
-                            <materialDesign:ColorZone Grid.Row="1" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                                materialDesign:ShadowAssist.ShadowDepth="Depth1" materialDesign:ShadowAssist.ShadowEdges="Bottom" Padding="8" Background="{DynamicResource MaterialDesignPaper}">
-                                <ListView FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Medium" Foreground="Transparent" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
-                                    <Button Content="TEST1" Style="{StaticResource MaterialDesignFlatButton}"/>
-                                    <Button Content="TEST2" Style="{StaticResource MaterialDesignFlatButton}"/>
-                                    <Button Content="TEST3" Style="{StaticResource MaterialDesignFlatButton}"/>
-                                    <Button Content="TEST4" Style="{StaticResource MaterialDesignFlatButton}"/>
-                                    <Button Content="TEST5" Style="{StaticResource MaterialDesignFlatButton}"/>
-                                    <Button Content="TEST6" Style="{StaticResource MaterialDesignFlatButton}"/>
-                                    <Button Content="TEST7" Style="{StaticResource MaterialDesignFlatButton}"/>
-                                    <Button Content="TEST8" Style="{StaticResource MaterialDesignFlatButton}"/>
-                                    <Button Content="TEST9" Style="{StaticResource MaterialDesignFlatButton}"/>
+                            <materialDesign:ColorZone Grid.Row="1" HorizontalContentAlignment="Stretch" HorizontalAlignment="Right" VerticalAlignment="Stretch"
+                                materialDesign:ShadowAssist.ShadowDepth="Depth1" Background="{DynamicResource MaterialDesignPaper}">
+                                <ListView Margin="8" Foreground="Transparent" HorizontalAlignment="Left" HorizontalContentAlignment="Stretch">
+                                    <Button Margin="0,-4" Width="Auto" Height="Auto" Content="Launch Portal" Style="{StaticResource MaterialDesignFlatButton}"/>
+                                    <Button Margin="0,-4" Width="Auto" Height="Auto" Content="Config Editor" Style="{StaticResource MaterialDesignFlatButton}"/>
+                                    <Button Margin="0,-4" Width="Auto" Height="Auto" Content="Scratchpad" Style="{StaticResource MaterialDesignFlatButton}"/>
+                                    <Button Margin="0,-4" Width="Auto" Height="Auto" Content="JIRA Tool" Style="{StaticResource MaterialDesignFlatButton}"/>
+                                    <Button Margin="0,-4" Width="Auto" Height="Auto" Content="Catapult (Old fasion)" Style="{StaticResource MaterialDesignFlatButton}"/>
+                                    <Button Margin="0,-4" Width="Auto" Height="Auto" Content="Google Sheets" Style="{StaticResource MaterialDesignFlatButton}"/>
+                                    <Button Margin="0,-4" Width="Auto" Height="Auto" Content="Checklist Tool" Style="{StaticResource MaterialDesignFlatButton}"/>
+                                    <Button Margin="0,-4" Width="Auto" Height="Auto" Content="Flare Center" Style="{StaticResource MaterialDesignFlatButton}"/>
+                                    <Button Margin="0,-4" Width="Auto" Height="Auto" Content="Team Visualizer" Style="{StaticResource MaterialDesignFlatButton}"/>
+                                    <Button Margin="0,-4" Width="Auto" Height="Auto" Content="Daily Report" Style="{StaticResource MaterialDesignFlatAccentButton}"/>
                                 </ListView>
                             </materialDesign:ColorZone>
                         </Grid>
@@ -84,28 +89,39 @@
                 </materialDesign:DrawerHost.LeftDrawerContent>
                 <DockPanel LastChildFill="True">
                     <!-- Menu Bar - Start-->
-                    <materialDesign:ColorZone Name="MenuBar" Height="48" Padding="6,3" DockPanel.Dock="Top" materialDesign:ShadowAssist.ShadowDepth="Depth2" Mode="PrimaryMid" Width="Auto">
+                    <materialDesign:ColorZone Name="MenuBar" Height="46" Padding="6,3" DockPanel.Dock="Top" materialDesign:ShadowAssist.ShadowDepth="Depth2" Mode="PrimaryMid" Width="Auto">
                         <DockPanel>
                             <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
-                                <ToggleButton Name="MenuToggleButton" Margin="10,0" Width="Auto" Height="19" Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False" SnapsToDevicePixels="True" />
-                                <TextBlock Margin="10,0,10,9" Text="Placeholder" VerticalAlignment="Bottom" FontSize="18" FontWeight="Regular" SnapsToDevicePixels="True"/>
-                                <materialDesign:ColorZone Name="SearchBox" Padding="0,-1" Margin="10,5" Mode="Standard" CornerRadius="0" Panel.ZIndex="1" materialDesign:ShadowAssist.ShadowDepth="Depth1" Background="{DynamicResource MaterialDesignPaper}" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
-                                        Width="200" MaxWidth="400" 
+                                <ToggleButton Name="MenuToggleButton" Margin="15,0" Width="Auto" Height="20" SnapsToDevicePixels="False" Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False" SnapsToDevicePixels="True" />
+                                <TextBlock Margin="5,0,10,9" Text="Placeholder" VerticalAlignment="Bottom" FontSize="18" FontWeight="Regular" SnapsToDevicePixels="True"/>
+                                <materialDesign:ColorZone Name="SearchBox" Padding="0,-1" Margin="10,2" Mode="Standard" CornerRadius="0" Panel.ZIndex="1" materialDesign:ShadowAssist.ShadowDepth="Depth1" Background="{DynamicResource MaterialDesignPaper}" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                                        Width="200" MaxWidth="400"
                                         materialDesign:RippleAssist.ClipToBounds="False" materialDesign:RippleAssist.IsCentered="True">
-                                    <Grid>
+                                    <Grid HorizontalAlignment="Stretch">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="Auto" />
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="Auto" />
                                         </Grid.ColumnDefinitions>
                                         <Button Style="{DynamicResource MaterialDesignToolButton}">
-                                            <materialDesign:PackIcon Margin="5,0" Kind="Magnify" Width="Auto" Height="16" Foreground="{DynamicResource MaterialDesignBody}" VerticalAlignment="Center" SnapsToDevicePixels="True"/>
+                                            <materialDesign:PackIcon Margin="7.5,0,10,0" Kind="Magnify" Width="Auto" Height="16" Foreground="{DynamicResource MaterialDesignBody}" VerticalAlignment="Center" SnapsToDevicePixels="True"/>
                                         </Button>
                                         <TextBox Margin="0,0,5,0" Grid.Column="1" materialDesign:HintAssist.Hint="Search" materialDesign:TextFieldAssist.DecorationVisibility="Hidden" 
-                                                 BorderThickness="0" Width="Auto" Height="Auto" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                                 BorderThickness="1" BorderBrush="Transparent" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Center"
                                                  Text="" Foreground="{DynamicResource MaterialDesignBody}"/>
                                     </Grid>
                                 </materialDesign:ColorZone>
+                                <dragablz:TabablzControl BorderThickness="0" Width="Auto" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch">
+                                    <dragablz:TabablzControl.InterTabController>
+                                        <dragablz:InterTabController/>
+                                    </dragablz:TabablzControl.InterTabController>
+                                    <TabItem Header="TAB1">
+                                    </TabItem>
+                                    <TabItem Header="TAB2">
+                                    </TabItem>
+                                    <TabItem Header="TAB3">
+                                    </TabItem>
+                                </dragablz:TabablzControl>
                             </StackPanel>
                             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                                 <Viewbox Width="Auto" Height="20" Stretch="Fill"  Margin="-1,0"  materialDesign:RippleAssist.IsCentered="True" materialDesign:RippleAssist.RippleSizeMultiplier="0.8125">
@@ -120,18 +136,9 @@
                         </DockPanel>
                     </materialDesign:ColorZone>
                     <!-- Menu Bar - End-->
-                    <Grid Height="Auto" Width="Auto" Background="Transparent">
-                        <controls:MetroAnimatedTabControl Margin="16">
-                            <controls:MetroTabItem Header="TAB1">
-                                <Button Content="BUTTON" Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="100"/>
-                            </controls:MetroTabItem>
-                            <controls:MetroTabItem Header="TAB2">
-                                <Button Content="BUTTON" Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="100"/>
-                            </controls:MetroTabItem>
-                            <controls:MetroTabItem Header="TAB3">
-                                <Button Content="BUTTON" Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="100"/>
-                            </controls:MetroTabItem>
-                        </controls:MetroAnimatedTabControl>
+                    <Grid Height="Auto" Width="Auto">
+                        <!--TODO: Make this a seperate window-->
+                        
                     </Grid>
                 </DockPanel>
             </materialDesign:DrawerHost>

@@ -30,12 +30,16 @@ namespace WpfApplication
 
         private void WpfApplication_Activated(object sender, EventArgs e)
         {
-            //OverrideDefaultWindowCommandsBrush = Brushes.Red;
+            var myBrush = TryFindResource("IdealWindowCommandsBrush") as SolidColorBrush;
+
+            myBrush = Brushes.Red;
         }
 
         private void WpfApplication_Deactivated(object sender, EventArgs e)
         {
-            OverrideDefaultWindowCommandsBrush = Brushes.Blue;
+            var myBrush = TryFindResource("IdealWindowCommandsBrush") as SolidColorBrush;
+
+            myBrush = Brushes.Blue;
         }
     }
 }

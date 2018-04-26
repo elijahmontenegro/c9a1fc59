@@ -9,7 +9,6 @@ Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\obj\Debug\WpfApplication.csprojRe
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\obj\Debug\MainWindow.g.cs
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\obj\Debug\App.g.cs
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\obj\Debug\WpfApplication_MarkupCompile.cache
-Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\obj\Debug\WpfApplication_MarkupCompile.lref
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\obj\Debug\App.baml
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\obj\Debug\MainWindow.baml
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\obj\Debug\WpfApplication.g.resources
@@ -53,3 +52,6 @@ Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\bin\Debug\System.Windows.Interact
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\bin\Debug\ControlzEx.pdb
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\bin\Debug\MahApps.Metro.pdb
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\bin\Debug\MahApps.Metro.xml
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\bin\Debug\Dragablz.dll
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\bin\Debug\Dragablz.pdb
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApplication\bin\Debug\Dragablz.xml
