@@ -13,7 +13,7 @@
         TextOptions.TextRenderingMode="ClearType"
         FontFamily="Segoe UI Symbol"
         RenderOptions.EdgeMode="Unspecified"
-        RenderOptions.BitmapScalingMode="HighQuality"
+        RenderOptions.BitmapScalingMode="NearestNeighbor"
         SnapsToDevicePixels="True"
         UseLayoutRounding="True"
         EnableDWMDropShadow="False"
@@ -38,55 +38,82 @@
         <materialDesign:DialogHost Identifier="RootDialog" SnackbarMessageQueue="{Binding ElementName=MainSnackbar, Path=MessageQueue}">
             <materialDesign:DrawerHost IsLeftDrawerOpen="{Binding ElementName=MenuToggleButton, Path=IsChecked}">
                 <materialDesign:DrawerHost.LeftDrawerContent>
-                    <materialDesign:ColorZone Mode="Light">
-                        <DockPanel MinWidth="212" Background="Transparent">
-                            <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" DockPanel.Dock="Top" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20" Width="20" Height="20" IsChecked="{Binding ElementName=MenuToggleButton, Path=IsChecked, Mode=TwoWay}"/>
-                            <TextBlock DockPanel.Dock="Top" FontSize="16" Margin="0,-40" Text=""  FontWeight="DemiBold" HorizontalAlignment="Center"/>
-                            <ListView FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Normal" HorizontalContentAlignment="Center">
-                                <TextBlock Text="Launch Applications"/>
-                                <TextBlock Text="Config Editor"/>
-                                <TextBlock Text="Notepad"/>
-                                <TextBlock Text="Jira Tools"/>
-                                <TextBlock Text="Workspace Manager"/>
-                            </ListView>
-                        </DockPanel>
+                    <materialDesign:ColorZone Mode="Light" Width="240" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Grid Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="120"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <materialDesign:ColorZone Background="{DynamicResource IdealHeaderBrush}" Panel.ZIndex="1" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                materialDesign:ShadowAssist.ShadowDepth="Depth2" materialDesign:ShadowAssist.ShadowEdges="Bottom" CornerRadius="0" Padding="16">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="24.*"/>
+                                        <RowDefinition Height="16.*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid Grid.Row="0">
+                                        <Button Visibility="Collapsed" Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionButton}" materialDesign:ShadowAssist.ShadowDepth="Depth1" Width="48" Height="48" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                        materialDesign:RippleAssist.IsCentered="True" VerticalContentAlignment="Bottom" Padding="0,9,0,0">
+                                            <materialDesign:PackIcon Kind="Account" Width="Auto" Height="48"/>
+                                        </Button>
+                                    </Grid>
+                                    <Grid Grid.Row="1">
+                                        <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto">
+                                            <TextBlock DockPanel.Dock="Top" Text="Place Holder" FontWeight="Medium" FontFamily="{DynamicResource MaterialDesignFont}" FontSize="14"/>
+                                            <TextBlock DockPanel.Dock="Bottom" VerticalAlignment="Bottom" Text="placeholder@email.com" FontWeight="Regular" FontFamily="{DynamicResource MaterialDesignFont}" FontSize="13"/>
+                                        </DockPanel>
+                                    </Grid>
+                                </Grid>
+                            </materialDesign:ColorZone>
+                            <materialDesign:ColorZone Grid.Row="1" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                materialDesign:ShadowAssist.ShadowDepth="Depth1" materialDesign:ShadowAssist.ShadowEdges="Bottom" Padding="8" Background="{DynamicResource MaterialDesignPaper}">
+                                <ListView FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Medium" Foreground="Transparent" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                                    <Button Content="TEST1" Style="{StaticResource MaterialDesignFlatButton}"/>
+                                    <Button Content="TEST2" Style="{StaticResource MaterialDesignFlatButton}"/>
+                                    <Button Content="TEST3" Style="{StaticResource MaterialDesignFlatButton}"/>
+                                    <Button Content="TEST4" Style="{StaticResource MaterialDesignFlatButton}"/>
+                                    <Button Content="TEST5" Style="{StaticResource MaterialDesignFlatButton}"/>
+                                    <Button Content="TEST6" Style="{StaticResource MaterialDesignFlatButton}"/>
+                                    <Button Content="TEST7" Style="{StaticResource MaterialDesignFlatButton}"/>
+                                    <Button Content="TEST8" Style="{StaticResource MaterialDesignFlatButton}"/>
+                                    <Button Content="TEST9" Style="{StaticResource MaterialDesignFlatButton}"/>
+                                </ListView>
+                            </materialDesign:ColorZone>
+                        </Grid>
                     </materialDesign:ColorZone>
                 </materialDesign:DrawerHost.LeftDrawerContent>
                 <DockPanel LastChildFill="True">
                     <!-- Menu Bar - Start-->
-                    <materialDesign:ColorZone Name="MenuBar" Height="48" Padding="6,3" DockPanel.Dock="Top" materialDesign:ShadowAssist.ShadowDepth="Depth3" Mode="PrimaryMid" materialDesign:ShadowAssist.ShadowEdges="Bottom" Width="Auto">
+                    <materialDesign:ColorZone Name="MenuBar" Height="48" Padding="6,3" DockPanel.Dock="Top" materialDesign:ShadowAssist.ShadowDepth="Depth2" Mode="PrimaryMid" Width="Auto">
                         <DockPanel>
-                            <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" materialDesign:RippleAssist.IsCentered="True">
-                                <ToggleButton Margin="10,0" Width="Auto" Height="19" Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False" x:Name="MenuToggleButton" SnapsToDevicePixels="True" />
-                                <!--<TextBlock Margin="5,0" Text="Test App" VerticalAlignment="Center" FontSize="16.5" FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Regular"/>-->
-                                <!--<TextBlock Margin="5,0" Text="Jira Tool" VerticalAlignment="Center" FontSize="16.5" FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Regular"/>-->
-                                <!--<TextBlock Margin="5,0" Text="Jump-Start" VerticalAlignment="Center" FontSize="16.5" FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Regular"/>-->
-                                <!--<TextBlock Margin="5,0" Text="Jumping Castle" VerticalAlignment="Center" FontSize="16.5" FontFamily="{DynamicResource MaterialDesignFont}" FontWeight="Regular"/>-->
-                                <TextBlock Margin="10,0,10,9" Text="Placeholder" VerticalAlignment="Bottom" FontSize="20" FontWeight="Regular" SnapsToDevicePixels="True"/>
-                                <materialDesign:ColorZone Name="SearchBox" Padding="0,-1" Margin="10,3" Mode="Standard" CornerRadius="3" Panel.ZIndex="1" materialDesign:ShadowAssist.ShadowDepth="Depth2" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
-                                        Width="475" MaxWidth="475">
+                            <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
+                                <ToggleButton Name="MenuToggleButton" Margin="10,0" Width="Auto" Height="19" Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False" SnapsToDevicePixels="True" />
+                                <TextBlock Margin="10,0,10,9" Text="Placeholder" VerticalAlignment="Bottom" FontSize="18" FontWeight="Regular" SnapsToDevicePixels="True"/>
+                                <materialDesign:ColorZone Name="SearchBox" Padding="0,-1" Margin="10,5" Mode="Standard" CornerRadius="0" Panel.ZIndex="1" materialDesign:ShadowAssist.ShadowDepth="Depth1" Background="{DynamicResource MaterialDesignPaper}" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                                        Width="200" MaxWidth="400" 
+                                        materialDesign:RippleAssist.ClipToBounds="False" materialDesign:RippleAssist.IsCentered="True">
                                     <Grid>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="Auto" />
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="Auto" />
                                         </Grid.ColumnDefinitions>
-                                        <Button Style="{DynamicResource MaterialDesignToolButton}" SnapsToDevicePixels="True">
-                                            <materialDesign:PackIcon Margin="5,0" Kind="Magnify" Width="Auto" Height="16" Foreground="{DynamicResource AccentSelectedColorBrush}" VerticalAlignment="Center" SnapsToDevicePixels="True"/>
+                                        <Button Style="{DynamicResource MaterialDesignToolButton}">
+                                            <materialDesign:PackIcon Margin="5,0" Kind="Magnify" Width="Auto" Height="16" Foreground="{DynamicResource MaterialDesignBody}" VerticalAlignment="Center" SnapsToDevicePixels="True"/>
                                         </Button>
-                                        <TextBox Padding="5,0,0,0" Grid.Column="1" materialDesign:HintAssist.Hint="Search" materialDesign:TextFieldAssist.DecorationVisibility="Hidden" 
-                                                 BorderThickness="0" Width="420" Height="Auto" HorizontalAlignment="Left" VerticalAlignment="Center"
-                                                 Text="project = RSI AND reporter = emontenegro"/>
+                                        <TextBox Margin="0,0,5,0" Grid.Column="1" materialDesign:HintAssist.Hint="Search" materialDesign:TextFieldAssist.DecorationVisibility="Hidden" 
+                                                 BorderThickness="0" Width="Auto" Height="Auto" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                                 Text="" Foreground="{DynamicResource MaterialDesignBody}"/>
                                     </Grid>
                                 </materialDesign:ColorZone>
                             </StackPanel>
-                            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" materialDesign:RippleAssist.IsCentered="True" Margin="-27,0">
-                                <Viewbox Width="Auto" Height="20" Stretch="Uniform" SnapsToDevicePixels="True">
-                                    <materialDesign:PopupBox HorizontalAlignment="Center" PlacementMode="BottomAndAlignCentres" PopupMode="Click" Width="100">
-                                    <StackPanel>
-                                        <Button Content="More" />
-                                        <Button Content="Options" />
-                                    </StackPanel>
+                            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                                <Viewbox Width="Auto" Height="20" Stretch="Fill"  Margin="-1,0"  materialDesign:RippleAssist.IsCentered="True" materialDesign:RippleAssist.RippleSizeMultiplier="0.8125">
+                                    <materialDesign:PopupBox PopupMode="Click" Width="Auto" Height="Auto" PlacementMode="BottomAndAlignCentres">
+                                        <StackPanel>
+                                            <Button Content="More" />
+                                            <Button Content="Options" />
+                                        </StackPanel>
                                     </materialDesign:PopupBox>
                                 </Viewbox>
                             </StackPanel>
@@ -94,6 +121,17 @@
                     </materialDesign:ColorZone>
                     <!-- Menu Bar - End-->
                     <Grid Height="Auto" Width="Auto" Background="Transparent">
+                        <controls:MetroAnimatedTabControl Margin="16">
+                            <controls:MetroTabItem Header="TAB1">
+                                <Button Content="BUTTON" Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="100"/>
+                            </controls:MetroTabItem>
+                            <controls:MetroTabItem Header="TAB2">
+                                <Button Content="BUTTON" Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="100"/>
+                            </controls:MetroTabItem>
+                            <controls:MetroTabItem Header="TAB3">
+                                <Button Content="BUTTON" Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="100"/>
+                            </controls:MetroTabItem>
+                        </controls:MetroAnimatedTabControl>
                     </Grid>
                 </DockPanel>
             </materialDesign:DrawerHost>
