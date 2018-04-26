@@ -92,9 +92,77 @@
                     <materialDesign:ColorZone Name="MenuBar" Height="46" Padding="6,3" DockPanel.Dock="Top" materialDesign:ShadowAssist.ShadowDepth="Depth2" Mode="PrimaryMid" Width="Auto">
                         <DockPanel>
                             <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
-                                <ToggleButton Name="MenuToggleButton" Margin="15,0" Width="Auto" Height="20" SnapsToDevicePixels="False" Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False" SnapsToDevicePixels="True" />
+                                <ToggleButton Name="MenuToggleButton" Margin="15,0" Width="Auto" Height="20" SnapsToDevicePixels="False" Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False"/>
                                 <TextBlock Margin="5,0,10,9" Text="Placeholder" VerticalAlignment="Bottom" FontSize="18" FontWeight="Regular" SnapsToDevicePixels="True"/>
-                                <materialDesign:ColorZone Name="SearchBox" Padding="0,-1" Margin="10,2" Mode="Standard" CornerRadius="0" Panel.ZIndex="1" materialDesign:ShadowAssist.ShadowDepth="Depth1" Background="{DynamicResource MaterialDesignPaper}" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                                <materialDesign:ColorZone Name="ComboBox" Padding="0,-1,0,-1" Margin="10,5,2.5,5" Mode="Standard" CornerRadius="0" Panel.ZIndex="1" materialDesign:ShadowAssist.ShadowDepth="Depth1" Background="{DynamicResource MaterialDesignPaper}" 
+                                        HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                                        Width="112" MaxWidth="400" 
+                                        materialDesign:RippleAssist.ClipToBounds="False" materialDesign:RippleAssist.IsCentered="True">
+                                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <Button Style="{DynamicResource MaterialDesignToolButton}">
+                                            <materialDesign:PackIcon Margin="7.5,0,0,0" Kind="Numeric0BoxMultipleOutline" Width="Auto" Height="16" Foreground="{DynamicResource MaterialDesignBody}" VerticalAlignment="Center" SnapsToDevicePixels="True"/>
+                                        </Button>
+                                        <ComboBox Grid.Column="1" BorderThickness="0" Margin="-10,0,0,0" 
+                                                 Width="Auto" Height="Auto" materialDesign:HintAssist.Hint="Stream" HorizontalContentAlignment="Stretch"
+                                                 HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center"
+                                                 Foreground="{DynamicResource MaterialDesignBody}">
+                                            <ComboBoxItem Content="game-dev"/>
+                                            <ComboBoxItem Content="sc-alpha-3.1.0"/>
+                                        </ComboBox>
+                                    </Grid>
+                                </materialDesign:ColorZone>
+                                <materialDesign:ColorZone Name="ComboBox2" Padding="0,-1,0,-1" Margin="5,5,2.5,5" Mode="Standard" CornerRadius="0" Panel.ZIndex="1" materialDesign:ShadowAssist.ShadowDepth="Depth1" Background="{DynamicResource MaterialDesignPaper}" 
+                                        HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                                        Width="112" MaxWidth="400" 
+                                        materialDesign:RippleAssist.ClipToBounds="False" materialDesign:RippleAssist.IsCentered="True">
+                                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <Button Style="{DynamicResource MaterialDesignToolButton}">
+                                            <materialDesign:PackIcon Margin="7.5,0,0,0" Kind="Numeric1BoxMultipleOutline" Width="Auto" Height="16" Foreground="{DynamicResource MaterialDesignBody}" VerticalAlignment="Center" SnapsToDevicePixels="True"/>
+                                        </Button>
+                                        <ComboBox Grid.Column="1" BorderThickness="0" Margin="-10,0,0,0" 
+                                                 Width="Auto" Height="Auto" materialDesign:HintAssist.Hint="Build ID" HorizontalContentAlignment="Stretch"
+                                                 HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center"
+                                                 Foreground="{DynamicResource MaterialDesignBody}">
+                                            <ComboBoxItem Content="123456"/>
+                                            <ComboBoxItem Content="654321"/>
+                                            <ComboBoxItem Content="123654"/>
+                                            <ComboBoxItem Content="654123"/>
+                                        </ComboBox>
+                                    </Grid>
+                                </materialDesign:ColorZone>
+                                <materialDesign:ColorZone Name="ComboBox3" Padding="0,-1,0,-1" Margin="5,5,20,5" Mode="Standard" CornerRadius="0" Panel.ZIndex="1" materialDesign:ShadowAssist.ShadowDepth="Depth1" Background="{DynamicResource MaterialDesignPaper}" 
+                                        HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                                        Width="112" MaxWidth="400" 
+                                        materialDesign:RippleAssist.ClipToBounds="False" materialDesign:RippleAssist.IsCentered="True">
+                                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <Button Style="{DynamicResource MaterialDesignToolButton}">
+                                            <materialDesign:PackIcon Margin="7.5,0,0,0" Kind="Numeric2BoxMultipleOutline" Width="Auto" Height="16" Foreground="{DynamicResource MaterialDesignBody}" VerticalAlignment="Center" SnapsToDevicePixels="True"/>
+                                        </Button>
+                                        <ComboBox Grid.Column="1" BorderThickness="0" Margin="-10,0,0,0" 
+                                                 Width="Auto" Height="Auto" materialDesign:HintAssist.Hint="Config" HorizontalContentAlignment="Stretch"
+                                                 HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center"
+                                                 Foreground="{DynamicResource MaterialDesignBody}">
+                                            <ComboBoxItem Content="Shipping"/>
+                                            <ComboBoxItem Content="Development"/>
+                                        </ComboBox>
+                                    </Grid>
+                                </materialDesign:ColorZone>
+                                <materialDesign:ColorZone Visibility="Collapsed" Name="SearchBox" Padding="0,-1" Margin="10,2" Mode="Standard" CornerRadius="0" Panel.ZIndex="1" materialDesign:ShadowAssist.ShadowDepth="Depth1" Background="{DynamicResource MaterialDesignPaper}" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                                         Width="200" MaxWidth="400"
                                         materialDesign:RippleAssist.ClipToBounds="False" materialDesign:RippleAssist.IsCentered="True">
                                     <Grid HorizontalAlignment="Stretch">
