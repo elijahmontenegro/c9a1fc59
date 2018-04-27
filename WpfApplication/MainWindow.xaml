@@ -23,7 +23,7 @@
         WindowStartupLocation="CenterScreen"
         WindowStyle="None" AllowsTransparency="True" Background="Transparent"
         Name="WpfApplication"
-        Width="960" Height="540" MinWidth="960" MinHeight="540"
+        Width="640" Height="480" MinWidth="640" MinHeight="480"
         Deactivated="WpfApplication_Deactivated"
         Activated="WpfApplication_Activated"
         BorderThickness="1"
@@ -179,17 +179,6 @@
                                                  Text="" Foreground="{DynamicResource MaterialDesignBody}"/>
                                     </Grid>
                                 </materialDesign:ColorZone>
-                                <dragablz:TabablzControl BorderThickness="0" Width="Auto" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch">
-                                    <dragablz:TabablzControl.InterTabController>
-                                        <dragablz:InterTabController/>
-                                    </dragablz:TabablzControl.InterTabController>
-                                    <TabItem Header="TAB1">
-                                    </TabItem>
-                                    <TabItem Header="TAB2">
-                                    </TabItem>
-                                    <TabItem Header="TAB3">
-                                    </TabItem>
-                                </dragablz:TabablzControl>
                             </StackPanel>
                             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                                 <Viewbox Width="Auto" Height="20" Stretch="Fill"  Margin="-1,0"  materialDesign:RippleAssist.IsCentered="True" materialDesign:RippleAssist.RippleSizeMultiplier="0.8125">
@@ -206,7 +195,21 @@
                     <!-- Menu Bar - End-->
                     <Grid Height="Auto" Width="Auto">
                         <!--TODO: Make this a seperate window-->
-                        
+                        <materialDesign:ColorZone VerticalAlignment="Bottom" Mode="PrimaryMid" materialDesign:ShadowAssist.ShadowDepth="Depth5" materialDesign:ShadowAssist.ShadowEdges="Top"
+                                                  HorizontalContentAlignment="Stretch" >
+                            <dragablz:TabablzControl BorderThickness="0" Width="Auto" HorizontalAlignment="Stretch"
+                                                     FontFamily="Agency FB" FontWeight="ExtraBlack" FontSize="18" SnapsToDevicePixels="False">
+                                <dragablz:TabablzControl.InterTabController>
+                                    <dragablz:InterTabController/>
+                                </dragablz:TabablzControl.InterTabController>
+                                <TabItem Header="LAUNCH PORTAL">
+                                </TabItem>
+                                <TabItem Header="CONFIG EDITOR">
+                                </TabItem>
+                                <TabItem Header="DAILY REPORT">
+                                </TabItem>
+                            </dragablz:TabablzControl>
+                        </materialDesign:ColorZone>
                     </Grid>
                 </DockPanel>
             </materialDesign:DrawerHost>

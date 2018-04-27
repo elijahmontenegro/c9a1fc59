@@ -38,7 +38,7 @@ namespace WpfApplication
         private void WpfApplication_Deactivated(object sender, EventArgs e)
         {
             var myBrush = TryFindResource("IdealWindowCommandsBrush") as SolidColorBrush;
-
+            
             myBrush = Brushes.Blue;
         }
     }
