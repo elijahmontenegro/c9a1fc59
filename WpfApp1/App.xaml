@@ -13,6 +13,7 @@
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <Style TargetType="{x:Type WpfUserControls:MyComboBox}" BasedOn="{StaticResource {x:Type ComboBox}}"/>
+            <Style TargetType="{x:Type WpfUserControls:MyComboBoxItem}" BasedOn="{StaticResource {x:Type ComboBoxItem}}"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

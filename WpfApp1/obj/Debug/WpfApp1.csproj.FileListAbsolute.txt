@@ -1,7 +1,6 @@
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\bin\Debug\WpfApp1.exe.config
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\bin\Debug\WpfApp1.exe
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\bin\Debug\WpfApp1.pdb
-C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\obj\Debug\WpfApp1.csprojResolveAssemblyReference.cache
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\obj\Debug\MainWindow.g.cs
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\obj\Debug\App.g.cs
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\obj\Debug\GeneratedInternalTypeHelper.g.cs
@@ -21,3 +20,4 @@ C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\bin\Debug\MaterialDesignThemes.
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\obj\Debug\App.baml
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\obj\Debug\WpfApp1.csprojResolveAssemblyReference.cache

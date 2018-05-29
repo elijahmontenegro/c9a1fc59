@@ -32,10 +32,10 @@ namespace WpfApp1.Controls
             /////////////////////////////////////////////////////////////////////////////////
             // Content Support
             /////////////////////////////////////////////////////////////////////////////////
-            m_ContentProperty = DependencyProperty.Register("ContentProperty", typeof(object), typeof(MyComboBox), null);
+            m_ContentProperty = DependencyProperty.Register("Content", typeof(object), typeof(MyComboBox), null);
         }
 
-        public object ContentProperty
+        public object Content
         {
             get { return GetValue(m_ContentProperty); }
             set { SetValue(m_ContentProperty, value); }

@@ -76,6 +76,7 @@
     <Compile Include="Controls\JumpComboBox.xaml.cs">
       <DependentUpon>JumpComboBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MyComboBoxItem.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
