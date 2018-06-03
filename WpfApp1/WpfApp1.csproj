@@ -69,6 +69,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Controls\JumpComboBox.cs" />
+    <Compile Include="Controls\JumpSideAppBar.cs" />
+    <Compile Include="Controls\JumpTopAppBar.cs" />
     <Compile Include="Controls\MyComboBox.cs" />
     <Compile Include="Controls\MyComboBoxItem.cs" />
     <Compile Include="MainWindow.xaml.cs">

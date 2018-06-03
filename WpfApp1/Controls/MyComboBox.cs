@@ -23,7 +23,7 @@ namespace WpfApp1.Controls
         {
             /////////////////////////////////////////////////////////////////////////////////
             // Content Support
-            m_ContentProperty = DependencyProperty.Register("Content", typeof(object), typeof(MyComboBox), null);
+            m_ContentProperty = DependencyProperty.Register(nameof(Content), typeof(object), typeof(MyComboBox), null);
 
             /////////////////////////////////////////////////////////////////////////////////
             // EventManager
@@ -39,17 +39,6 @@ namespace WpfApp1.Controls
         private static void OnLoaded(object sender, RoutedEventArgs e)
         {
             var _this = (sender as JumpComboBox);
-
-            //var _style = new Style(typeof(JumpComboBox));
-            //SetterBaseCollection _setters = _style.Setters;
-            //{
-            //    _setters.Add(new Setter(HeightProperty, Convert.ToDouble(32)));
-            //    _setters.Add(new Setter(MinWidthProperty, Convert.ToDouble(312)));
-            //    _setters.Add(new Setter(HorizontalContentAlignmentProperty, HorizontalAlignment.Stretch));
-            //    _setters.Add(new Setter(VerticalContentAlignmentProperty, VerticalAlignment.S));
-            //}
-
-            //_this.Style = _style;
         }
     }
 }

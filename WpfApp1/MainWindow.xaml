@@ -4,11 +4,34 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
         xmlns:local="clr-namespace:WpfApp1.Controls"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="509" Width="1207"
+        WindowStartupLocation="Manual"
+        Left="-1204" Top="896"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontSize="11"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="ClearType"
+        FontFamily="Segoe UI Symbol"
+        RenderOptions.EdgeMode="Unspecified"
+        RenderOptions.BitmapScalingMode="NearestNeighbor">
     <Grid>
-        <local:JumpComboBox>
-            <local:MyComboBoxItem Content="ComboBoxItem1"/>
-            <local:MyComboBoxItem Content="ComboBoxItem2"/>
-        </local:JumpComboBox>
+        <local:JumpTopAppBar>
+            <local:JumpComboBox>
+                <local:MyComboBoxItem Content="game-dev"/>
+                <local:MyComboBoxItem Content="sc-alpha-3.2.0"/>
+            </local:JumpComboBox>
+            <local:JumpComboBox>
+                <local:MyComboBoxItem Content="123456"/>
+                <local:MyComboBoxItem Content="654321"/>
+                <local:MyComboBoxItem Content="456321"/>
+                <local:MyComboBoxItem Content="654123"/>
+            </local:JumpComboBox>
+            <local:JumpComboBox>
+                <local:MyComboBoxItem Content="Development"/>
+                <local:MyComboBoxItem Content="Shipping"/>
+            </local:JumpComboBox>
+        </local:JumpTopAppBar>
+        <local:JumpSideAppBar>
+        </local:JumpSideAppBar>
     </Grid>
 </Window>

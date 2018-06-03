@@ -15,12 +15,20 @@ using System.Windows.Shapes;
 
 namespace WpfApp1.Controls
 {
-    public class MyComboBoxItem : ComboBoxItem
+    public class MyComboBoxItem : ContentControl
     {
         static MyComboBoxItem()
         {
-            HorizontalContentAlignmentProperty.OverrideMetadata(typeof(ComboBoxItem), new FrameworkPropertyMetadata(HorizontalAlignment.Center));
-            VerticalContentAlignmentProperty.OverrideMetadata(typeof(ComboBoxItem), new FrameworkPropertyMetadata(VerticalAlignment.Center));
+            HorizontalAlignmentProperty.OverrideMetadata(typeof(MyComboBoxItem), new FrameworkPropertyMetadata(HorizontalAlignment.Left));
+            VerticalAlignmentProperty.OverrideMetadata(typeof(MyComboBoxItem), new FrameworkPropertyMetadata(VerticalAlignment.Center));
+
+            EventManager.RegisterClassHandler(typeof(MyComboBoxItem), LoadedEvent, new RoutedEventHandler(OnLoaded));
+        }
+
+        public static void OnLoaded(object sender, RoutedEventArgs e)
+        {
+            var _this = (sender as MyComboBoxItem);
+            //_this.VisualOffset = new Vector(0, 0);
         }
     }
 }

@@ -19,3 +19,23 @@ C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\bin\Debug\MaterialDesignThemes.
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\obj\Debug\App.baml
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\obj\Debug\WpfApp1.csprojResolveAssemblyReference.cache
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\bin\Debug\WpfApp1.exe.config
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\bin\Debug\WpfApp1.exe
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\bin\Debug\WpfApp1.pdb
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\bin\Debug\MaterialDesignColors.dll
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.dll
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\obj\Debug\WpfApp1.csprojResolveAssemblyReference.cache
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\obj\Debug\MainWindow.g.cs
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\obj\Debug\App.g.cs
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\obj\Debug\App.baml
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\obj\Debug\MainWindow.baml
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\obj\Debug\WpfApp1.g.resources
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\obj\Debug\WpfApp1.exe
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\obj\Debug\WpfApp1.pdb
