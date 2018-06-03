@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:WpfApp1.Controls"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <local:JumpComboBox />
+        <local:JumpComboBox>
+            <local:MyComboBoxItem Content="ComboBoxItem1"/>
+            <local:MyComboBoxItem Content="ComboBoxItem2"/>
+        </local:JumpComboBox>
     </Grid>
 </Window>

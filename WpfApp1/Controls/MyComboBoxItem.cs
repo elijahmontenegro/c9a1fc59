@@ -19,10 +19,8 @@ namespace WpfApp1.Controls
     {
         static MyComboBoxItem()
         {
-            /////////////////////////////////////////////////////////////////////////////////
-            // Default Values
-            /////////////////////////////////////////////////////////////////////////////////
+            HorizontalContentAlignmentProperty.OverrideMetadata(typeof(ComboBoxItem), new FrameworkPropertyMetadata(HorizontalAlignment.Center));
+            VerticalContentAlignmentProperty.OverrideMetadata(typeof(ComboBoxItem), new FrameworkPropertyMetadata(VerticalAlignment.Center));
         }
-
     }
 }

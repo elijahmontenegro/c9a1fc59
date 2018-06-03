@@ -13,8 +13,6 @@ C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\obj\Debug\WpfApp1.csproj.Genera
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\obj\Debug\WpfApp1.exe
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\obj\Debug\WpfApp1.pdb
-C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\obj\Debug\Controls\JumpComboBox.g.cs
-C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\obj\Debug\Controls\JumpComboBox.baml
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\bin\Debug\MaterialDesignColors.dll
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.dll
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb

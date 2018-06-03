@@ -22,17 +22,12 @@ namespace WpfApp1.Controls
         static MyComboBox()
         {
             /////////////////////////////////////////////////////////////////////////////////
-            // Default Values
-            /////////////////////////////////////////////////////////////////////////////////
-            HeightProperty.OverrideMetadata(typeof(MyComboBox), new FrameworkPropertyMetadata(Convert.ToDouble(48)));
-            WidthProperty.OverrideMetadata(typeof(MyComboBox), new FrameworkPropertyMetadata(Convert.ToDouble(128)));
-            HorizontalContentAlignmentProperty.OverrideMetadata(typeof(MyComboBox), new FrameworkPropertyMetadata(HorizontalAlignment.Center));
-            VerticalContentAlignmentProperty.OverrideMetadata(typeof(MyComboBox), new FrameworkPropertyMetadata(VerticalAlignment.Center));
+            // Content Support
+            m_ContentProperty = DependencyProperty.Register("Content", typeof(object), typeof(MyComboBox), null);
 
             /////////////////////////////////////////////////////////////////////////////////
-            // Content Support
-            /////////////////////////////////////////////////////////////////////////////////
-            m_ContentProperty = DependencyProperty.Register("Content", typeof(object), typeof(MyComboBox), null);
+            // EventManager
+            EventManager.RegisterClassHandler(typeof(JumpComboBox), LoadedEvent, new RoutedEventHandler(OnLoaded));
         }
 
         public object Content
@@ -41,5 +36,20 @@ namespace WpfApp1.Controls
             set { SetValue(m_ContentProperty, value); }
         }
 
+        private static void OnLoaded(object sender, RoutedEventArgs e)
+        {
+            var _this = (sender as JumpComboBox);
+
+            //var _style = new Style(typeof(JumpComboBox));
+            //SetterBaseCollection _setters = _style.Setters;
+            //{
+            //    _setters.Add(new Setter(HeightProperty, Convert.ToDouble(32)));
+            //    _setters.Add(new Setter(MinWidthProperty, Convert.ToDouble(312)));
+            //    _setters.Add(new Setter(HorizontalContentAlignmentProperty, HorizontalAlignment.Stretch));
+            //    _setters.Add(new Setter(VerticalContentAlignmentProperty, VerticalAlignment.S));
+            //}
+
+            //_this.Style = _style;
+        }
     }
 }
