@@ -51,8 +51,10 @@ namespace WpfApp1.Controls
                 Height = _this.ActualHeight,
                 HorizontalAlignment = HorizontalAlignment.Stretch,
                 VerticalAlignment = VerticalAlignment.Center,
+                SnapsToDevicePixels = true,
             };
                       
+            ShadowAssist.SetShadowEdges(ColorZone1, ShadowEdges.Right);
             ShadowAssist.SetShadowDepth(ColorZone1, ShadowDepth.Depth1);
 
             foreach (var c in _this.Children.Cast<UIElement>().ToList().AsReadOnly())
@@ -71,7 +73,8 @@ namespace WpfApp1.Controls
                 HorizontalContentAlignment = HorizontalAlignment.Center,
                 VerticalAlignment = VerticalAlignment.Center,
                 VerticalContentAlignment = VerticalAlignment.Center,
-                Style = _this.FindResource("MaterialDesignRaisedButton") as Style,
+                Style = _this.FindResource("MaterialDesignFloatingActionButton") as Style,
+                //Style = _this.FindResource("MaterialDesignRaisedDarkButton") as Style,
                 //Background = Brushes.Transparent,
             };
 
@@ -85,21 +88,22 @@ namespace WpfApp1.Controls
                 Width = 16,
                 Height = 16,
                 Kind = PackIconKind.Menu,
+                Foreground = _this.FindResource("MaterialDesignBody") as Brush,
             };
 
             Button1.Content = PackIcon1;
 
             var TextBlock1 = new TextBlock()
             {
-                Margin = new Thickness(2, 0, 4, 1),
+                Margin = new Thickness(2, 0, 7, 0),
                 //Height = Convert.ToDouble(_this.ActualHeight),
                 HorizontalAlignment = HorizontalAlignment.Center,
                 VerticalAlignment = VerticalAlignment.Center,
                 Text = "Placeholder",
-                FontFamily = new FontFamily("Segoe UI Symbol"),
+                FontFamily = new FontFamily("Roboto"),
                 FontSize = 13,
                 //Background = Brushes.Yellow,
-                Foreground = _this.FindResource("MaterialDesignPaper") as Brush,
+                Foreground = _this.FindResource("MaterialDesignBody") as Brush,
             };
 
             StackPanel1.Children.Insert(0, TextBlock1);

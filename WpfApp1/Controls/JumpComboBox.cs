@@ -25,7 +25,7 @@ namespace WpfApp1.Controls
         static JumpComboBox()
         {
             // Specify veritical margins in the root Stackpanel.
-            MarginProperty.OverrideMetadata(typeof(JumpComboBox), new FrameworkPropertyMetadata(new Thickness(2, 8, 2, 8)));
+            MarginProperty.OverrideMetadata(typeof(JumpComboBox), new FrameworkPropertyMetadata(new Thickness(2, 6, 2, 6)));
             HorizontalAlignmentProperty.OverrideMetadata(typeof(JumpComboBox), new FrameworkPropertyMetadata(HorizontalAlignment.Stretch));
             VerticalAlignmentProperty.OverrideMetadata(typeof(JumpComboBox), new FrameworkPropertyMetadata(VerticalAlignment.Stretch));
             BackgroundProperty.OverrideMetadata(typeof(JumpComboBox), new FrameworkPropertyMetadata(Brushes.Transparent));
@@ -45,8 +45,10 @@ namespace WpfApp1.Controls
                 Mode = ColorZoneMode.Light,
                 HorizontalAlignment = HorizontalAlignment.Stretch,
                 VerticalAlignment = VerticalAlignment.Stretch,
+                SnapsToDevicePixels = true,
             };
 
+            ShadowAssist.SetShadowEdges(ColorZone1, ShadowEdges.Right);
             ShadowAssist.SetShadowDepth(ColorZone1, ShadowDepth.Depth1);
 
             var StackPanel1 = new StackPanel()
@@ -67,7 +69,7 @@ namespace WpfApp1.Controls
                 VerticalAlignment = VerticalAlignment.Center,
                 HorizontalContentAlignment = HorizontalAlignment.Center,
                 VerticalContentAlignment = VerticalAlignment.Center,
-                Kind = PackIconKind.FormatListNumbers,
+                Kind = PackIconKind.ViewList,
                 Background = Brushes.Transparent,
             };
 
@@ -76,12 +78,13 @@ namespace WpfApp1.Controls
             var MyComboBox1 = new MyComboBox()
             {
                 Margin = new Thickness(1.5, 0, 12, 0),
-                Padding = new Thickness(0, 0, 0, 0),
+                Padding = new Thickness(4, 0, 0, 2),
                 HorizontalContentAlignment = HorizontalAlignment.Left,
                 VerticalContentAlignment = VerticalAlignment.Center,
                 HorizontalAlignment = HorizontalAlignment.Stretch,
                 VerticalAlignment = VerticalAlignment.Stretch,
                 Background = Brushes.Transparent,
+                SnapsToDevicePixels = true,
             };
 
             var srcList = _this.Children.Cast<UIElement>().ToList().AsReadOnly();
