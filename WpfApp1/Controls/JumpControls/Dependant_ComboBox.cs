@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 
 namespace WpfApp1.Controls
 {
-    public class TopAppBar_MenuButton : Control
+    public class Dependant_ComboBox : Control
     {
-        static TopAppBar_MenuButton()
+        static Dependant_ComboBox()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(TopAppBar_MenuButton), new FrameworkPropertyMetadata(typeof(TopAppBar_MenuButton)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(Dependant_ComboBox), new FrameworkPropertyMetadata(typeof(Dependant_ComboBox)));
         }
     }
 }

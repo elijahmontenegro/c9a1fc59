@@ -68,11 +68,20 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controls\JumpComboBox.cs" />
-    <Compile Include="Controls\JumpSideAppBar.cs" />
-    <Compile Include="Controls\JumpTopAppBar.cs" />
-    <Compile Include="Controls\MyComboBox.cs" />
-    <Compile Include="Controls\MyComboBoxItem.cs" />
+    <Compile Include="Controls\JumpControls\SideAppBar.cs" />
+    <Compile Include="Controls\MaterialControls\JumpComboBox.cs" />
+    <Compile Include="Controls\MaterialControls\JumpSideAppBar.cs" />
+    <Compile Include="Controls\MaterialControls\JumpTopAppBar.cs" />
+    <Compile Include="Controls\MaterialControls\MyComboBox.cs" />
+    <Compile Include="Controls\MaterialControls\MyComboBoxItem.cs" />
+    <Compile Include="Controls\JumpControls\Dependant_ComboBox.cs" />
+    <Compile Include="Controls\JumpControls\TopAppBar_Notifications.cs" />
+    <Compile Include="Controls\JumpControls\TopAppBar_Apps.cs" />
+    <Compile Include="Controls\JumpControls\TopAppBar_Help.cs" />
+    <Compile Include="Controls\JumpControls\TopAppBar.cs" />
+    <Compile Include="Controls\JumpControls\TopAppBar_UserProfile.cs" />
+    <Compile Include="Controls\JumpControls\TopAppBar_Header.cs" />
+    <Compile Include="Controls\JumpControls\TopAppBar_MenuButton.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -105,5 +114,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
