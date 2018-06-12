@@ -74,6 +74,7 @@ namespace WpfApp1.Controls
                 VerticalAlignment = VerticalAlignment.Center,
                 VerticalContentAlignment = VerticalAlignment.Center,
                 Style = _this.FindResource("MaterialDesignFloatingActionButton") as Style,
+                Foreground = _this.FindResource("MaterialDesignPaper") as Brush,
                 //Style = _this.FindResource("MaterialDesignRaisedDarkButton") as Style,
                 //Background = Brushes.Transparent,
             };
@@ -88,7 +89,7 @@ namespace WpfApp1.Controls
                 Width = 16,
                 Height = 16,
                 Kind = PackIconKind.Menu,
-                Foreground = _this.FindResource("MaterialDesignBody") as Brush,
+                Foreground = _this.FindResource("MaterialDesignPaper") as Brush,
             };
 
             Button1.Content = PackIcon1;
@@ -103,7 +104,7 @@ namespace WpfApp1.Controls
                 FontFamily = new FontFamily("Roboto"),
                 FontSize = 13,
                 //Background = Brushes.Yellow,
-                Foreground = _this.FindResource("MaterialDesignBody") as Brush,
+                Foreground = _this.FindResource("MaterialDesignPaper") as Brush,
             };
 
             StackPanel1.Children.Insert(0, TextBlock1);
