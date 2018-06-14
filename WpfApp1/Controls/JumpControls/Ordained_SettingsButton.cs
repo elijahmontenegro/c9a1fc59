@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 
 namespace WpfApp1.Controls
 {
-    public class Dependant_ComboBox : Control
+    public class Ordained_SettingsButton : Control
     {
-        static Dependant_ComboBox()
+        static Ordained_SettingsButton()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(Dependant_ComboBox), new FrameworkPropertyMetadata(typeof(Dependant_ComboBox)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(Ordained_SettingsButton), new FrameworkPropertyMetadata(typeof(Ordained_SettingsButton)));
         }
     }
 }

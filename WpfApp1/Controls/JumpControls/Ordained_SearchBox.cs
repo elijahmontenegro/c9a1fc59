@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 
 namespace WpfApp1.Controls
 {
-    public class TopAppBar_USerProfile : Control
+    public class Ordained_SearchBox : Control
     {
-        static TopAppBar_USerProfile()
+        static Ordained_SearchBox()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(TopAppBar_USerProfile), new FrameworkPropertyMetadata(typeof(TopAppBar_USerProfile)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(Ordained_SearchBox), new FrameworkPropertyMetadata(typeof(Ordained_SearchBox)));
         }
     }
 }

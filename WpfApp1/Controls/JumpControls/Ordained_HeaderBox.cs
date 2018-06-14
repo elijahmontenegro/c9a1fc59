@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 
 namespace WpfApp1.Controls
 {
-    public class TopAppBar_MenuButton : Control
+    public class Ordained_HeaderBox : Control
     {
-        static TopAppBar_MenuButton()
+        static Ordained_HeaderBox()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(TopAppBar_MenuButton), new FrameworkPropertyMetadata(typeof(TopAppBar_MenuButton)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(Ordained_HeaderBox), new FrameworkPropertyMetadata(typeof(Ordained_HeaderBox)));
         }
     }
 }
