@@ -13,13 +13,13 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp1.Controls
-{
-    public class TopAppBar_ToggleButton : Control
+namespace Dragablz
+{    
+    public class DragablzIcon : Control
     {
-        static TopAppBar_ToggleButton()
+        static DragablzIcon()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(TopAppBar_ToggleButton), new FrameworkPropertyMetadata(typeof(TopAppBar_ToggleButton)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(DragablzIcon), new FrameworkPropertyMetadata(typeof(DragablzIcon)));
         }
     }
 }

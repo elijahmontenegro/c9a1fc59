@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace WpfApp1.Controls
 {
-    public class Ordained_HeaderBox : Control
+    public class Ordained_HeaderBox : TextBlock
     {
         static Ordained_HeaderBox()
         {

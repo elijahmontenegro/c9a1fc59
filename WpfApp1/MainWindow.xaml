@@ -8,7 +8,7 @@
         WindowStartupLocation="Manual"
         WindowStyle="ToolWindow"
         Left="-1204" Top="896"
-        Background="{StaticResource MaterialDesignPaper}"
+        Background="{DynamicResource MaterialDesignPaper}"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontSize="11"
         TextOptions.TextFormattingMode="Ideal" 
@@ -17,23 +17,11 @@
         RenderOptions.EdgeMode="Unspecified"
         RenderOptions.BitmapScalingMode="NearestNeighbor">
     <Grid>
-        <local:JumpTopAppBar>
-            <local:JumpComboBox>
-                <local:MyComboBoxItem Content="game-dev"/>
-                <local:MyComboBoxItem Content="sc-alpha-3.2.0"/>
-            </local:JumpComboBox>
-            <local:JumpComboBox>
-                <local:MyComboBoxItem Content="123456"/>
-                <local:MyComboBoxItem Content="654321"/>
-                <local:MyComboBoxItem Content="456321"/>
-                <local:MyComboBoxItem Content="654123"/>
-            </local:JumpComboBox>
-            <local:JumpComboBox>
-                <local:MyComboBoxItem Content="Development"/>
-                <local:MyComboBoxItem Content="Shipping"/>
-            </local:JumpComboBox>
-        </local:JumpTopAppBar>
-        <local:JumpSideAppBar>
-        </local:JumpSideAppBar>
+        <local:TopAppBar>
+            <local:TopAppBar_Navigation />
+        </local:TopAppBar>
+        <local:SideAppBar>
+            <local:SideAppBar_Button />
+        </local:SideAppBar>
     </Grid>
 </Window>

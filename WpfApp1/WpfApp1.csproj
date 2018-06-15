@@ -68,20 +68,24 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controls\JumpControls\SideAppBar_Button.cs" />
+    <Compile Include="Controls\JumpControls\Ordained_SettingsButton.cs" />
+    <Compile Include="Controls\JumpControls\Ordained_HelpButton.cs" />
+    <Compile Include="Controls\JumpControls\Ordained_SearchBox.cs" />
     <Compile Include="Controls\JumpControls\SideAppBar.cs" />
+    <Compile Include="Controls\JumpControls\TopAppBar_Navigation.cs" />
     <Compile Include="Controls\MaterialControls\JumpComboBox.cs" />
     <Compile Include="Controls\MaterialControls\JumpSideAppBar.cs" />
     <Compile Include="Controls\MaterialControls\JumpTopAppBar.cs" />
     <Compile Include="Controls\MaterialControls\MyComboBox.cs" />
     <Compile Include="Controls\MaterialControls\MyComboBoxItem.cs" />
-    <Compile Include="Controls\JumpControls\Dependant_ComboBox.cs" />
-    <Compile Include="Controls\JumpControls\TopAppBar_Notifications.cs" />
-    <Compile Include="Controls\JumpControls\TopAppBar_Apps.cs" />
-    <Compile Include="Controls\JumpControls\TopAppBar_Help.cs" />
+    <Compile Include="Controls\JumpControls\Ordained_ComboBox.cs" />
+    <Compile Include="Controls\JumpControls\TopAppBar_MessagesButton.cs" />
+    <Compile Include="Controls\JumpControls\TopAppBar_AppsButton.cs" />
     <Compile Include="Controls\JumpControls\TopAppBar.cs" />
-    <Compile Include="Controls\JumpControls\TopAppBar_UserProfile.cs" />
-    <Compile Include="Controls\JumpControls\TopAppBar_Header.cs" />
-    <Compile Include="Controls\JumpControls\TopAppBar_MenuButton.cs" />
+    <Compile Include="Controls\JumpControls\TopAppBar_UserAccountButton.cs" />
+    <Compile Include="Controls\JumpControls\Ordained_HeaderBox.cs" />
+    <Compile Include="Controls\JumpControls\TopAppBar_HomeButton.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

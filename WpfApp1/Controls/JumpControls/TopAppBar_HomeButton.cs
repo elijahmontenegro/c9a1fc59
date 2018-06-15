@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace WpfApp1.Controls
 {
-    public class TopAppBar_HomeButton : Control
+    public class TopAppBar_HomeButton : Button
     {
         static TopAppBar_HomeButton()
         {
