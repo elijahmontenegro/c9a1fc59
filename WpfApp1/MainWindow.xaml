@@ -22,6 +22,11 @@
         </local:TopAppBar>
         <local:SideAppBar>
             <local:SideAppBar_Button />
+            <local:SideAppBar_Button />
+            <local:SideAppBar_Button />
+            <local:SideAppBar_Button />
+            <local:SideAppBar_Button />
+            <local:SideAppBar_Button />
         </local:SideAppBar>
     </Grid>
 </Window>

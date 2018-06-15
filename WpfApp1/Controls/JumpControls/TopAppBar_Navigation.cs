@@ -59,8 +59,8 @@ namespace WpfApp1.Controls
                     Background = Brushes.Transparent,
                     HorizontalAlignment = HorizontalAlignment.Center,
                     VerticalAlignment = VerticalAlignment.Center,
-                    Width = 18,
-                    Height = 18,
+                    Width = 20,
+                    Height = 20,
                     Kind = PackIconKind.Menu,
                     Foreground = _this.FindResource("MaterialDesignPaper") as Brush,
                 },
@@ -68,7 +68,6 @@ namespace WpfApp1.Controls
 
             RippleAssist.SetIsCentered(Button1, true);
             RippleAssist.SetClipToBounds(Button1, true);
-            //RippleAssist.SetRippleSizeMultiplier(Button1, 0.70f);
             ShadowAssist.SetShadowDepth(Button1, ShadowDepth.Depth0);
 
             _this.Children.Add(Button1);
