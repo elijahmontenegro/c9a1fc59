@@ -18,7 +18,7 @@ using MaterialDesignThemes.Wpf;
 namespace WpfApp1.Controls
 {
     public class TopAppBar
-        : Grid
+        : AppBar
     {
         bool CheckIfHandlerShouldExecute = true;
 
@@ -48,8 +48,8 @@ namespace WpfApp1.Controls
             if (_this.CheckIfHandlerShouldExecute == false)
                 return;
 
-            StackPanel StackPanel1 = new StackPanel() {
-                Margin = new Thickness(2, 4, 2, 4),
+            _this.m_StackPanel1 = new StackPanel() {
+                Margin = new Thickness(0),
                 Orientation = Orientation.Horizontal,
                 Height = _this.ActualHeight,
                 HorizontalAlignment = HorizontalAlignment.Stretch,
@@ -57,27 +57,27 @@ namespace WpfApp1.Controls
                 Background = Brushes.Transparent,
             };
 
-            ColorZone ColorZone1 = new ColorZone() {
+            _this.m_ColorZone1 = new ColorZone() {
                 Mode = ColorZoneMode.PrimaryMid,
                 Height = _this.ActualHeight,
                 HorizontalAlignment = HorizontalAlignment.Stretch,
                 VerticalAlignment = VerticalAlignment.Center,
-                SnapsToDevicePixels = true,
+                //SnapsToDevicePixels = true,
             };
 
             //ShadowAssist.SetShadowDepth(ColorZone1, ShadowDepth.Depth1);
 
-            SetZIndex(ColorZone1, 0);
-            SetZIndex(StackPanel1, 0);
+            SetZIndex(_this.m_ColorZone1, 0);
+            SetZIndex(_this.m_StackPanel1, 0);
 
             foreach (var c in _this.Children.Cast<UIElement>().ToList().AsReadOnly())
             {
                 _this.Children.Remove(c);
-                StackPanel1.Children.Add(c);
+                _this.m_StackPanel1.Children.Add(c);
             }
 
-            _this.Children.Add(ColorZone1);
-            _this.Children.Add(StackPanel1);
+            _this.Children.Add(_this.m_ColorZone1);
+            _this.Children.Add(_this.m_StackPanel1);
 
             _this.CheckIfHandlerShouldExecute = false;
         }

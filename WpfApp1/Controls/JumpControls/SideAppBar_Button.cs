@@ -20,12 +20,24 @@ namespace WpfApp1.Controls
     public class SideAppBar_Button
         : Grid
     {
-        bool CheckIfHandlerShouldExecute = true;
+        bool m_CheckIfHandlerShouldExecute = true;
+
+        public static readonly DependencyProperty m_IconProperty;
 
         static SideAppBar_Button()
         {
             DefaultStyleKeyProperty
                 .OverrideMetadata(typeof(SideAppBar_Button), new FrameworkPropertyMetadata(typeof(SideAppBar_Button)));
+            MarginProperty
+                .OverrideMetadata(typeof(SideAppBar_Button), new FrameworkPropertyMetadata(new Thickness(0, 0, 0, 0)));
+            BackgroundProperty
+                .OverrideMetadata(typeof(SideAppBar_Button), new FrameworkPropertyMetadata(Brushes.Transparent));
+
+            /////////////////////////////////////////////////////////////////////////////////
+            /// Custom Properties:
+            /////////////////////////////////////////////////////////////////////////////////
+            m_IconProperty
+                = DependencyProperty.Register(nameof(Icon), typeof(PackIconKind), typeof(Icon), new PropertyMetadata(default(PackIconKind)));
 
             /////////////////////////////////////////////////////////////////////////////////
             /// Routed Events:
@@ -33,46 +45,82 @@ namespace WpfApp1.Controls
             EventManager.RegisterClassHandler(typeof(SideAppBar_Button), SizeChangedEvent, new RoutedEventHandler(OnLoad));
         }
 
+        public PackIconKind Icon
+        {
+            get { return (PackIconKind) GetValue(m_IconProperty); }
+            set { SetValue(m_IconProperty, value); }
+        }
+
         private static void OnLoad(object sender, RoutedEventArgs e)
         {
             var _this = (sender as SideAppBar_Button);
-
-            if (_this.CheckIfHandlerShouldExecute == false)
+            if (_this.m_CheckIfHandlerShouldExecute == false)
                 return;
 
             var Button1 = new Button()
             {
-                Margin = new Thickness(0, 4, 0, 4),
+                Margin = new Thickness(0),
                 Padding = new Thickness(0),
-                Width = 32,
-                Height = 32,
-                HorizontalAlignment = HorizontalAlignment.Center,
-                HorizontalContentAlignment = HorizontalAlignment.Center,
-                VerticalAlignment = VerticalAlignment.Center,
-                VerticalContentAlignment = VerticalAlignment.Center,
+                HorizontalAlignment = HorizontalAlignment.Stretch,
+                HorizontalContentAlignment = HorizontalAlignment.Stretch,
+                VerticalAlignment = VerticalAlignment.Stretch,
+                VerticalContentAlignment = VerticalAlignment.Stretch,
                 Foreground = _this.FindResource("MaterialDesignPaper") as Brush,
-                //Style = _this.FindResource("MaterialDesignFloatingActionDarkButton") as Style,
-                Style = _this.FindResource("MaterialDesignRaisedDarkButton") as Style,
-                //Background = Brushes.Transparent,
                 Content = new PackIcon()
                 {
-                    Background = Brushes.Transparent,
                     HorizontalAlignment = HorizontalAlignment.Center,
                     VerticalAlignment = VerticalAlignment.Center,
-                    Width = 24,
-                    Height = 24,
-                    Kind = PackIconKind.Bug,
+                    Width = 16,
+                    Height = 16,
+                    Kind = _this.Icon,
                     Foreground = _this.FindResource("MaterialDesignPaper") as Brush,
                 },
+                //Background = Brushes.Transparent,
             };
+            RippleAssist.SetClipToBounds(Button1, true);
+
+            if (((_this.GetUIParentCore() as StackPanel).Parent as AppBar).m_ColorZone1.Mode == ColorZoneMode.PrimaryMid)
+            {
+                Button1.Width = 32;
+                Button1.Height = 32;
+                _this.Margin = new Thickness(0, 4, 4, 4);
+                Button1.Style = _this.FindResource("MaterialDesignFloatingActionButton") as Style;
+                Button1.Content = new PackIcon()
+                {
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    VerticalAlignment = VerticalAlignment.Center,
+                    Width = 15.5,
+                    Height = 15.5,
+                    Kind = _this.Icon,
+                    Foreground = _this.FindResource("MaterialDesignPaper") as Brush,
+                };
+            }
+            else
+            {
+                _this.Margin = new Thickness(4, 4, 4, 4);
+                //Button1.Width = 32;
+                Button1.Height = 32;
+                Button1.Style = _this.FindResource("MaterialDesignRaisedDarkButton") as Style;
+                Button1.Content = new PackIcon()
+                {
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    VerticalAlignment = VerticalAlignment.Center,
+                    Width = 17.5,
+                    Height = 17.5,
+                    Kind = _this.Icon,
+                    Foreground = _this.FindResource("MaterialDesignPaper") as Brush,
+                };
+            }
+            //Button1.Style = _this.FindResource("MaterialDesignRaisedLightButton") as Style;
+
+            //MessageBox.Show($"Button1.ActualWidth {Button1.ActualWidth}");
 
             RippleAssist.SetIsCentered(Button1, true);
-            RippleAssist.SetClipToBounds(Button1, true);
             ShadowAssist.SetShadowDepth(Button1, ShadowDepth.Depth0);
 
             _this.Children.Add(Button1);
 
-            _this.CheckIfHandlerShouldExecute = false;
+            _this.m_CheckIfHandlerShouldExecute = false;
         }
     }
 }

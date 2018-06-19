@@ -68,6 +68,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controls\JumpControls\AppBar.cs" />
+    <Compile Include="Controls\JumpControls\TopAppBar_Button.cs" />
     <Compile Include="Controls\JumpControls\SideAppBar_Button.cs" />
     <Compile Include="Controls\JumpControls\Ordained_SettingsButton.cs" />
     <Compile Include="Controls\JumpControls\Ordained_HelpButton.cs" />
@@ -86,6 +88,7 @@
     <Compile Include="Controls\JumpControls\TopAppBar_UserAccountButton.cs" />
     <Compile Include="Controls\JumpControls\Ordained_HeaderBox.cs" />
     <Compile Include="Controls\JumpControls\TopAppBar_HomeButton.cs" />
+    <Compile Include="Controls\UIHelpers.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
