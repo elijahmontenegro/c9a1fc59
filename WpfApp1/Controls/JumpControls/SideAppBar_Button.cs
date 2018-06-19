@@ -66,34 +66,31 @@ namespace WpfApp1.Controls
                 VerticalAlignment = VerticalAlignment.Stretch,
                 VerticalContentAlignment = VerticalAlignment.Stretch,
                 Foreground = _this.FindResource("MaterialDesignPaper") as Brush,
-                Content = new PackIcon()
-                {
-                    HorizontalAlignment = HorizontalAlignment.Center,
-                    VerticalAlignment = VerticalAlignment.Center,
-                    Width = 16,
-                    Height = 16,
-                    Kind = _this.Icon,
-                    Foreground = _this.FindResource("MaterialDesignPaper") as Brush,
-                },
                 //Background = Brushes.Transparent,
             };
+
             RippleAssist.SetClipToBounds(Button1, true);
+            RippleAssist.SetIsCentered(Button1, true);
+            ShadowAssist.SetShadowDepth(Button1, ShadowDepth.Depth0);
 
             if (((_this.GetUIParentCore() as StackPanel).Parent as AppBar).m_ColorZone1.Mode == ColorZoneMode.PrimaryMid)
             {
                 Button1.Width = 32;
                 Button1.Height = 32;
                 _this.Margin = new Thickness(0, 4, 4, 4);
-                Button1.Style = _this.FindResource("MaterialDesignFloatingActionButton") as Style;
-                Button1.Content = new PackIcon()
+                //Button1.Style = _this.FindResource("MaterialDesignFloatingActionButton") as Style;
+                Button1.Style = _this.FindResource("MaterialDesignRaisedButton") as Style;
+                var PackIcon1 = new PackIcon()
                 {
                     HorizontalAlignment = HorizontalAlignment.Center,
                     VerticalAlignment = VerticalAlignment.Center,
-                    Width = 15.5,
-                    Height = 15.5,
+                    Width = 20,
+                    Height = 20,
                     Kind = _this.Icon,
                     Foreground = _this.FindResource("MaterialDesignPaper") as Brush,
                 };
+                RippleAssist.SetRippleSizeMultiplier(Button1, 0.5f);
+                Button1.Content = PackIcon1;
             }
             else
             {
@@ -101,22 +98,21 @@ namespace WpfApp1.Controls
                 //Button1.Width = 32;
                 Button1.Height = 32;
                 Button1.Style = _this.FindResource("MaterialDesignRaisedDarkButton") as Style;
-                Button1.Content = new PackIcon()
+                var PackIcon1 = new PackIcon()
                 {
                     HorizontalAlignment = HorizontalAlignment.Center,
                     VerticalAlignment = VerticalAlignment.Center,
-                    Width = 17.5,
-                    Height = 17.5,
+                    Width = 20,
+                    Height = 20,
                     Kind = _this.Icon,
                     Foreground = _this.FindResource("MaterialDesignPaper") as Brush,
                 };
+                RippleAssist.SetRippleSizeMultiplier(Button1, 0.875f);
+                Button1.Content = PackIcon1;
             }
             //Button1.Style = _this.FindResource("MaterialDesignRaisedLightButton") as Style;
 
             //MessageBox.Show($"Button1.ActualWidth {Button1.ActualWidth}");
-
-            RippleAssist.SetIsCentered(Button1, true);
-            ShadowAssist.SetShadowDepth(Button1, ShadowDepth.Depth0);
 
             _this.Children.Add(Button1);
 

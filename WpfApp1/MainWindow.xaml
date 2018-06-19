@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
         xmlns:local="clr-namespace:WpfApp1.Controls"
-        Title="MainWindow" Height="509" Width="511"
+        Title="MainWindow" Height="509" Width="511" MinWidth="56"
         WindowStartupLocation="Manual"
         WindowStyle="ToolWindow"
         Left="-1204" Top="896"
@@ -19,8 +19,19 @@
     <Grid>
         <local:TopAppBar>
             <local:TopAppBar_Navigation />
-            <local:SideAppBar_Button Icon="Dropbox"/>
-            <local:SideAppBar_Button Icon="Face"/>
+            <local:JumpComboBox>
+                <local:MyComboBoxItem Content="game-dev"/>
+                <local:MyComboBoxItem Content="sc-alpha-3.2.0v"/>
+            </local:JumpComboBox>
+            <local:JumpComboBox>
+                <local:MyComboBoxItem Content="123456"/>
+                <local:MyComboBoxItem Content="654321"/>
+            </local:JumpComboBox>
+            <local:JumpComboBox>
+                <local:MyComboBoxItem Content="Development"/>
+                <local:MyComboBoxItem Content="Shipping"/>
+            </local:JumpComboBox>
+            <local:TopAppBar_UserAccountButton />
         </local:TopAppBar>
         <local:SideAppBar>
             <local:SideAppBar_Button Icon="Folder"/>

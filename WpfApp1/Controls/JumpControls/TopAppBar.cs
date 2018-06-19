@@ -62,10 +62,10 @@ namespace WpfApp1.Controls
                 Height = _this.ActualHeight,
                 HorizontalAlignment = HorizontalAlignment.Stretch,
                 VerticalAlignment = VerticalAlignment.Center,
-                //SnapsToDevicePixels = true,
+                SnapsToDevicePixels = true,
             };
 
-            //ShadowAssist.SetShadowDepth(ColorZone1, ShadowDepth.Depth1);
+            ShadowAssist.SetShadowDepth(_this.m_ColorZone1, ShadowDepth.Depth0);
 
             SetZIndex(_this.m_ColorZone1, 0);
             SetZIndex(_this.m_StackPanel1, 0);

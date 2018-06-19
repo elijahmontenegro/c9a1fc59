@@ -63,8 +63,8 @@ namespace WpfApp1.Controls
                 {
                     HorizontalAlignment = HorizontalAlignment.Center,
                     VerticalAlignment = VerticalAlignment.Center,
-                    Width = 18,
-                    Height = 18,
+                    Width = 22,
+                    Height = 22,
                     Kind = PackIconKind.Menu,
                     Foreground = _this.FindResource("MaterialDesignPaper") as Brush,
                 },
