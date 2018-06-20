@@ -67,7 +67,7 @@ namespace WpfApp1.Controls
                 SnapsToDevicePixels = true,
             };
 
-            //ShadowAssist.SetShadowEdges(_this.m_ColorZone1, ShadowEdges.Right);
+            ShadowAssist.SetShadowEdges(_this.m_ColorZone1, ShadowEdges.Right);
             ShadowAssist.SetShadowDepth(_this.m_ColorZone1, ShadowDepth.Depth0);
 
             SetZIndex(_this.m_ColorZone1, 0);

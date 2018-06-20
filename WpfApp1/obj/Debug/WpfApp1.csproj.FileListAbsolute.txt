@@ -39,3 +39,10 @@ Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.r
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\obj\Debug\WpfApp1.exe
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\obj\Debug\WpfApp1.pdb
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\bin\Debug\ControlzEx.dll
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\bin\Debug\MahApps.Metro.dll
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\bin\Debug\MaterialDesignThemes.MahApps.dll
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\bin\Debug\System.Windows.Interactivity.dll
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\bin\Debug\ControlzEx.pdb
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\bin\Debug\MahApps.Metro.pdb
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\bin\Debug\MahApps.Metro.xml

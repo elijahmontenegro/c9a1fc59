@@ -21,6 +21,7 @@ namespace WpfApp1.Controls
         : Grid
     {
         public StackPanel m_StackPanel1;
+        public StackPanel m_StackPanel2;
         public ColorZone m_ColorZone1;
     }
 }

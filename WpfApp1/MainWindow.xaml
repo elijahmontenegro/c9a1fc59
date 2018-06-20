@@ -1,25 +1,37 @@
-﻿<Window x:Class="WpfApp1.MainWindow"
+﻿<metro:MetroWindow x:Class="WpfApp1.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
         xmlns:local="clr-namespace:WpfApp1.Controls"
-        Title="MainWindow" Height="509" Width="511" MinWidth="56"
+        xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+        Name="WpfApplication" Title="Untitled" Height="509" Width="511" MinWidth="48"
         WindowStartupLocation="Manual"
-        WindowStyle="ToolWindow"
         Left="-1204" Top="896"
-        Background="{DynamicResource MaterialDesignPaper}"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="ExtraLight"
         TextElement.FontSize="11"
-        TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="ClearType"
         FontFamily="Segoe UI Symbol"
         RenderOptions.EdgeMode="Unspecified"
-        RenderOptions.BitmapScalingMode="NearestNeighbor">
+        RenderOptions.BitmapScalingMode="NearestNeighbor"
+        UseLayoutRounding="True"
+        ResizeBorderThickness="8"
+        ResizeMode="CanResize"
+        ShowIconOnTitleBar="True"
+        ShowSystemMenuOnRightClick="False"
+        WindowStyle="None" AllowsTransparency="True" Background="{DynamicResource MaterialDesignPaper}"
+        BorderThickness="2"
+        WindowTitleBrush="{DynamicResource IdealWindowTitleBrush}"
+        OverrideDefaultWindowCommandsBrush="{DynamicResource IdealWindowCommandsBrush}"
+        WindowCloseButtonStyle="{DynamicResource CleanCloseWindowButtonStyle}"
+        WindowMaxButtonStyle="{DynamicResource CleanMaxWindowButtonStyle}"
+        WindowMinButtonStyle="{DynamicResource CleanMinWindowButtonStyle}"
+        >
     <Grid>
         <local:TopAppBar>
             <local:TopAppBar_Navigation />
-            <local:JumpComboBox>
+            <!--<local:JumpComboBox>
                 <local:MyComboBoxItem Content="game-dev"/>
                 <local:MyComboBoxItem Content="sc-alpha-3.2.0v"/>
             </local:JumpComboBox>
@@ -30,7 +42,7 @@
             <local:JumpComboBox>
                 <local:MyComboBoxItem Content="Development"/>
                 <local:MyComboBoxItem Content="Shipping"/>
-            </local:JumpComboBox>
+            </local:JumpComboBox>-->
             <local:TopAppBar_UserAccountButton />
         </local:TopAppBar>
         <local:SideAppBar>
@@ -39,4 +51,4 @@
             <local:SideAppBar_Button Icon="Bug"/>
         </local:SideAppBar>
     </Grid>
-</Window>
+</metro:MetroWindow>

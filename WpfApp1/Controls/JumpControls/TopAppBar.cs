@@ -54,7 +54,19 @@ namespace WpfApp1.Controls
                 Height = _this.ActualHeight,
                 HorizontalAlignment = HorizontalAlignment.Stretch,
                 VerticalAlignment = VerticalAlignment.Center,
-                Background = Brushes.Transparent,
+                //Background = Brushes.Blue,
+            };
+
+            _this.m_StackPanel2 = new StackPanel()
+            {
+                Margin = new Thickness(0,0,4,0),
+                Orientation = Orientation.Horizontal,
+                FlowDirection = FlowDirection.RightToLeft,
+                //Width = _this.ActualWidth * 0.25f,
+                Height = _this.ActualHeight,
+                HorizontalAlignment = HorizontalAlignment.Stretch,
+                VerticalAlignment = VerticalAlignment.Center,
+                //Background = Brushes.Red,
             };
 
             _this.m_ColorZone1 = new ColorZone() {
@@ -65,19 +77,26 @@ namespace WpfApp1.Controls
                 SnapsToDevicePixels = true,
             };
 
+            ShadowAssist.SetShadowEdges(_this.m_ColorZone1, ShadowEdges.Bottom);
             ShadowAssist.SetShadowDepth(_this.m_ColorZone1, ShadowDepth.Depth0);
 
             SetZIndex(_this.m_ColorZone1, 0);
             SetZIndex(_this.m_StackPanel1, 0);
+            SetZIndex(_this.m_StackPanel2, 0);
 
             foreach (var c in _this.Children.Cast<UIElement>().ToList().AsReadOnly())
             {
                 _this.Children.Remove(c);
-                _this.m_StackPanel1.Children.Add(c);
+
+                if (c.GetType() != typeof(TopAppBar_UserAccountButton))
+                    _this.m_StackPanel1.Children.Add(c);
+                else if(c.GetType() == typeof(TopAppBar_UserAccountButton))
+                    _this.m_StackPanel2.Children.Add(c);
             }
 
             _this.Children.Add(_this.m_ColorZone1);
             _this.Children.Add(_this.m_StackPanel1);
+            _this.Children.Add(_this.m_StackPanel2);
 
             _this.CheckIfHandlerShouldExecute = false;
         }

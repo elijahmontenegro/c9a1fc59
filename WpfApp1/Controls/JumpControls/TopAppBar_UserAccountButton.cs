@@ -24,7 +24,9 @@ namespace WpfApp1.Controls
         static TopAppBar_UserAccountButton()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(TopAppBar_UserAccountButton), new FrameworkPropertyMetadata(typeof(TopAppBar_UserAccountButton)));
-
+            //BackgroundProperty.OverrideMetadata(typeof(TopAppBar_UserAccountButton), new FrameworkPropertyMetadata(Brushes.Red));
+            WidthProperty.OverrideMetadata(typeof(TopAppBar_UserAccountButton), new FrameworkPropertyMetadata(Convert.ToDouble(32)));
+            HeightProperty.OverrideMetadata(typeof(TopAppBar_UserAccountButton), new FrameworkPropertyMetadata(Convert.ToDouble(32)));
             /////////////////////////////////////////////////////////////////////////////////
             /// Routed Events:
             /////////////////////////////////////////////////////////////////////////////////
@@ -38,52 +40,79 @@ namespace WpfApp1.Controls
             if (_this.m_CheckIfHandlerShouldExecute == false)
                 return;
 
-            var Button1 = new PopupBox()
+            var PopupBox1 = new PopupBox()
             {
-                Name = "UserAccountButton_Button1",
-                Margin = new Thickness(0),
-                Padding = new Thickness(0),
-                HorizontalAlignment = HorizontalAlignment.Stretch,
-                HorizontalContentAlignment = HorizontalAlignment.Stretch,
-                VerticalAlignment = VerticalAlignment.Stretch,
-                VerticalContentAlignment = VerticalAlignment.Stretch,
-                Foreground = _this.FindResource("MaterialDesignPaper") as Brush,
-                //Background = Brushes.Transparent,
+               //Style = _this.FindResource("MaterialDesignToolPopupBox") as Style,
+               ClipToBounds = false,
+               StaysOpen = true,
+               Name = "UserAccountButton_Button1",
+               Margin = new Thickness(0),
+               Padding = new Thickness(0),
+               HorizontalAlignment = HorizontalAlignment.Stretch,
+               HorizontalContentAlignment = HorizontalAlignment.Center,
+               VerticalAlignment = VerticalAlignment.Stretch,
+               VerticalContentAlignment = VerticalAlignment.Center,
+               Foreground = _this.FindResource("MaterialDesignPaper") as Brush,
+               PopupMode = PopupBoxPopupMode.Click,
+               UnfurlOrientation = Orientation.Horizontal,
+               PlacementMode = PopupBoxPlacementMode.BottomAndAlignRightEdges,
+               FlowDirection = FlowDirection.LeftToRight,
             };
 
-            EventManager.RegisterClassHandler(typeof(Button), MouseDownEvent, new RoutedEventHandler(Button_OnMouseDown));
+            //EventManager.RegisterClassHandler(typeof(Button), MouseDownEvent, new RoutedEventHandler(Button_OnMouseDown));
 
             var PackIcon1 = new PackIcon()
             {
-                HorizontalAlignment = HorizontalAlignment.Center,
-                VerticalAlignment = VerticalAlignment.Center,
-                Width = 20,
-                Height = 20,
-                Kind = PackIconKind.Account,
-                Foreground = _this.FindResource("MaterialDesignPaper") as Brush,
-            };
-
-            Button1.ToggleContent = PackIcon1;
+               HorizontalAlignment = HorizontalAlignment.Center,
+               VerticalAlignment = VerticalAlignment.Center,
+               Width = 20,
+               Height = 20,
+               Kind = PackIconKind.AccountBox,
+               Foreground = _this.FindResource("MaterialDesignPaper") as Brush,
+            }; PopupBox1.ToggleContent = PackIcon1;
 
             var Card1 = new Card()
             {
-                Width = 192,
-                Height = 128,
-                IsEnabled = true,
-                Visibility = Visibility.Visible,
+               Width = 256,
+               Height = 256,
+               Background = _this.FindResource("MaterialDesignPaper") as Brush,
+            }; PopupBox1.PopupContent = Card1;
+            
+            ShadowAssist.SetShadowDepth(PopupBox1.PopupContent as UIElement, ShadowDepth.Depth0);
+            ShadowAssist.SetShadowDepth(Card1, ShadowDepth.Depth0);
+            ShadowAssist.SetShadowDepth(PopupBox1, ShadowDepth.Depth0);
+            RippleAssist.SetRippleSizeMultiplier(PopupBox1, 0.5f);
+            RippleAssist.SetClipToBounds(PopupBox1, false);
+            RippleAssist.SetIsCentered(PopupBox1, true);
+            RippleAssist.SetIsDisabled(PopupBox1, true);
+
+            var Grid1 = new Grid();
+            RowDefinition r2 = new RowDefinition();
+            RowDefinition r1 = new RowDefinition();
+            r1.Height = new GridLength(64, GridUnitType.Pixel);
+            Grid1.RowDefinitions.Add(r1);
+            var TextBlock1 = new TextBlock()
+            {
+                Padding = new Thickness(16),
+                TextAlignment = TextAlignment.Left,
+                FontSize = 12,
+                Text = "Place Holder",
+                Background = Brushes.WhiteSmoke,
             };
-            Button1.PopupContent = Card1;
+            var TextBlock2 = new TextBlock()
+            {
+                Text = "Text2",
+                Background = Brushes.Green,
+            };
+            TextBlock1.SetValue(Grid.RowProperty, 0);
+            TextBlock2.SetValue(Grid.RowProperty, 1);
+            Grid1.Children.Add(TextBlock1);
+           // Grid1.Children.Add(TextBlock2);
 
-            RippleAssist.SetClipToBounds(PackIcon1, true);
-            RippleAssist.SetClipToBounds(_this, true);
-            RippleAssist.SetClipToBounds(Button1, true);
-            RippleAssist.SetRippleSizeMultiplier(_this, 0.875f);
-            RippleAssist.SetRippleSizeMultiplier(PackIcon1, 0.875f);
-            RippleAssist.SetRippleSizeMultiplier(Button1, 0.875f);
-            RippleAssist.SetIsCentered(Button1, true);
-            ShadowAssist.SetShadowDepth(Button1, ShadowDepth.Depth0);
+            //Grid.SetRow(uc, TheGrid.RowDefinitions.Count - 1);
+            Card1.Content = Grid1;
 
-            _this.Children.Add(Button1);
+            _this.Children.Add(PopupBox1);
 
             _this.m_CheckIfHandlerShouldExecute = false;
         }
