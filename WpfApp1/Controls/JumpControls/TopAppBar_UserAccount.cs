@@ -16,26 +16,26 @@ using MaterialDesignThemes.Wpf;
 
 namespace WpfApp1.Controls
 {
-    public class TopAppBar_UserAccountButton
+    public class TopAppBar_UserAccount
         : Grid
     {
         bool m_CheckIfHandlerShouldExecute = true;
 
-        static TopAppBar_UserAccountButton()
+        static TopAppBar_UserAccount()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(TopAppBar_UserAccountButton), new FrameworkPropertyMetadata(typeof(TopAppBar_UserAccountButton)));
-            //BackgroundProperty.OverrideMetadata(typeof(TopAppBar_UserAccountButton), new FrameworkPropertyMetadata(Brushes.Red));
-            WidthProperty.OverrideMetadata(typeof(TopAppBar_UserAccountButton), new FrameworkPropertyMetadata(Convert.ToDouble(32)));
-            HeightProperty.OverrideMetadata(typeof(TopAppBar_UserAccountButton), new FrameworkPropertyMetadata(Convert.ToDouble(32)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(TopAppBar_UserAccount), new FrameworkPropertyMetadata(typeof(TopAppBar_UserAccount)));
+            //BackgroundProperty.OverrideMetadata(typeof(TopAppBar_UserAccount), new FrameworkPropertyMetadata(Brushes.Red));
+            WidthProperty.OverrideMetadata(typeof(TopAppBar_UserAccount), new FrameworkPropertyMetadata(Convert.ToDouble(32)));
+            HeightProperty.OverrideMetadata(typeof(TopAppBar_UserAccount), new FrameworkPropertyMetadata(Convert.ToDouble(32)));
             /////////////////////////////////////////////////////////////////////////////////
             /// Routed Events:
             /////////////////////////////////////////////////////////////////////////////////
-            EventManager.RegisterClassHandler(typeof(TopAppBar_UserAccountButton), SizeChangedEvent, new RoutedEventHandler(OnLoad));
+            EventManager.RegisterClassHandler(typeof(TopAppBar_UserAccount), SizeChangedEvent, new RoutedEventHandler(OnLoad));
         }
 
         private static void OnLoad(object sender, RoutedEventArgs e)
         {
-            var _this = (sender as TopAppBar_UserAccountButton);
+            var _this = (sender as TopAppBar_UserAccount);
 
             if (_this.m_CheckIfHandlerShouldExecute == false)
                 return;

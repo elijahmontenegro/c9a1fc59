@@ -29,7 +29,7 @@ namespace WpfApp1.Controls
             DefaultStyleKeyProperty
                 .OverrideMetadata(typeof(TopAppBar_Button), new FrameworkPropertyMetadata(typeof(TopAppBar_Button)));
             MarginProperty
-                .OverrideMetadata(typeof(SideAppBar_Button), new FrameworkPropertyMetadata(new Thickness(0, 4, 0, 4)));
+                .OverrideMetadata(typeof(AppBar_Button), new FrameworkPropertyMetadata(new Thickness(0, 4, 0, 4)));
 
             /////////////////////////////////////////////////////////////////////////////////
             /// Custom Properties:

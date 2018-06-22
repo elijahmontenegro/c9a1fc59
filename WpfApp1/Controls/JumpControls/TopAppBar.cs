@@ -88,9 +88,9 @@ namespace WpfApp1.Controls
             {
                 _this.Children.Remove(c);
 
-                if (c.GetType() != typeof(TopAppBar_UserAccountButton))
+                if (c.GetType() != typeof(TopAppBar_UserAccount))
                     _this.m_StackPanel1.Children.Add(c);
-                else if(c.GetType() == typeof(TopAppBar_UserAccountButton))
+                else if(c.GetType() == typeof(TopAppBar_UserAccount))
                     _this.m_StackPanel2.Children.Add(c);
             }
 

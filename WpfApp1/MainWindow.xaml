@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
         xmlns:local="clr-namespace:WpfApp1.Controls"
         xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
-        Name="WpfApplication" Title="Untitled" Height="509" Width="511" MinWidth="48"
+        Name="WpfApplication" Title="" Height="509" Width="511" MinWidth="48"
         WindowStartupLocation="Manual"
         Left="-1204" Top="896"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -14,41 +14,33 @@
         TextOptions.TextRenderingMode="ClearType"
         FontFamily="Segoe UI Symbol"
         RenderOptions.EdgeMode="Unspecified"
-        RenderOptions.BitmapScalingMode="NearestNeighbor"
+        RenderOptions.BitmapScalingMode="HighQuality"
         UseLayoutRounding="True"
         ResizeBorderThickness="8"
         ResizeMode="CanResize"
         ShowIconOnTitleBar="True"
         ShowSystemMenuOnRightClick="False"
         WindowStyle="None" AllowsTransparency="True" Background="{DynamicResource MaterialDesignPaper}"
-        BorderThickness="2"
+        BorderThickness="1"
         WindowTitleBrush="{DynamicResource IdealWindowTitleBrush}"
         OverrideDefaultWindowCommandsBrush="{DynamicResource IdealWindowCommandsBrush}"
         WindowCloseButtonStyle="{DynamicResource CleanCloseWindowButtonStyle}"
         WindowMaxButtonStyle="{DynamicResource CleanMaxWindowButtonStyle}"
         WindowMinButtonStyle="{DynamicResource CleanMinWindowButtonStyle}"
+        TitlebarHeight="24" TitleAlignment="Stretch"
         >
     <Grid>
         <local:TopAppBar>
             <local:TopAppBar_Navigation />
-            <!--<local:JumpComboBox>
-                <local:MyComboBoxItem Content="game-dev"/>
-                <local:MyComboBoxItem Content="sc-alpha-3.2.0v"/>
-            </local:JumpComboBox>
-            <local:JumpComboBox>
-                <local:MyComboBoxItem Content="123456"/>
-                <local:MyComboBoxItem Content="654321"/>
-            </local:JumpComboBox>
-            <local:JumpComboBox>
-                <local:MyComboBoxItem Content="Development"/>
-                <local:MyComboBoxItem Content="Shipping"/>
-            </local:JumpComboBox>-->
-            <local:TopAppBar_UserAccountButton />
+            <local:TopAppBar_UserAccount />
+            <local:AppBar_Button Icon="Recycle"/>
+            <local:AppBar_Button Icon="FolderOpen"/>
+            <local:AppBar_Button Icon="Bug"/>
         </local:TopAppBar>
         <local:SideAppBar>
-            <local:SideAppBar_Button Icon="Folder"/>
-            <local:SideAppBar_Button Icon="FolderOpen"/>
-            <local:SideAppBar_Button Icon="Bug"/>
+            <local:AppBar_Button Icon="Recycle"/>
+            <local:AppBar_Button Icon="FolderOpen"/>
+            <local:AppBar_Button Icon="Bug"/>
         </local:SideAppBar>
     </Grid>
 </metro:MetroWindow>

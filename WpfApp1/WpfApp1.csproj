@@ -82,8 +82,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Controls\JumpControls\AppBar.cs" />
+    <Compile Include="Controls\JumpControls\AppBarButton.cs" />
     <Compile Include="Controls\JumpControls\TopAppBar_Button.cs" />
-    <Compile Include="Controls\JumpControls\SideAppBar_Button.cs" />
+    <Compile Include="Controls\JumpControls\AppBar_Button.cs" />
     <Compile Include="Controls\JumpControls\Ordained_SettingsButton.cs" />
     <Compile Include="Controls\JumpControls\Ordained_HelpButton.cs" />
     <Compile Include="Controls\JumpControls\Ordained_SearchBox.cs" />
@@ -98,7 +99,7 @@
     <Compile Include="Controls\JumpControls\TopAppBar_MessagesButton.cs" />
     <Compile Include="Controls\JumpControls\TopAppBar_AppsButton.cs" />
     <Compile Include="Controls\JumpControls\TopAppBar.cs" />
-    <Compile Include="Controls\JumpControls\TopAppBar_UserAccountButton.cs" />
+    <Compile Include="Controls\JumpControls\TopAppBar_UserAccount.cs" />
     <Compile Include="Controls\JumpControls\Ordained_HeaderBox.cs" />
     <Compile Include="Controls\JumpControls\TopAppBar_HomeButton.cs" />
     <Compile Include="Controls\UIHelpers.cs" />
