@@ -12,61 +12,32 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Controls.Primitives;
+using System.Windows.Threading;
 using MaterialDesignThemes.Wpf;
 
 namespace WpfApp1.Controls
 {
-    public class AppBar_Button : Grid
+    public class AppBar_Button 
+        : Button
     {
-        AppBarButton m_Button;
         bool m_CheckIfHandlerShouldExecute = true;
+        public PackIcon m_PackIcon;
         public static readonly DependencyProperty m_IconProperty;
+        bool m_bMouseDown = false;
+        bool m_bMouseLeave = false;
 
         static AppBar_Button()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(AppBar_Button), new FrameworkPropertyMetadata(typeof(AppBar_Button)));
-            MarginProperty.OverrideMetadata(typeof(AppBar_Button), new FrameworkPropertyMetadata(new Thickness(0, 0, 0, 0)));
-            BackgroundProperty.OverrideMetadata(typeof(AppBar_Button), new FrameworkPropertyMetadata(Brushes.Transparent));
-
-            /////////////////////////////////////////////////////////////////////////////////
-            /// Custom Properties:
-            /////////////////////////////////////////////////////////////////////////////////
-            m_IconProperty = DependencyProperty.Register(nameof(Icon), typeof(PackIconKind), typeof(Icon), new PropertyMetadata(default(PackIconKind)));
-
-            /////////////////////////////////////////////////////////////////////////////////
-            /// Routed Events:
-            /////////////////////////////////////////////////////////////////////////////////
+            // Routed Events
             EventManager.RegisterClassHandler(typeof(AppBar_Button), SizeChangedEvent, new RoutedEventHandler(OnLoad));
+
+            // Custom Properties
+            m_IconProperty = DependencyProperty.Register(nameof(Icon), typeof(PackIconKind), typeof(Icon), new PropertyMetadata(default(PackIconKind)));
         }
-
-        //private static void OnMouseEnter(object sender, RoutedEventArgs e)
-        //{
-        //    var _this = (sender as AppBarButton);
-
-        //    //if(!_this.m_MouseDown)
-        //    //    _this.m_PackIcon.Foreground = _this.FindResource("AccentColorBrush4") as Brush;
-        //    RippleAssist.SetFeedback(_this, Brushes.White);
-        //}
-
-        //private static void OnMouseLeave(object sender, RoutedEventArgs e)
-        //{
-        //    var _this = (sender as AppBarButton);
-
-        //    //_this.m_PackIcon.Foreground = _this.FindResource("MaterialDesignPaper") as Brush;
-        //}
-
-        //private static void OnMouseDown(object sender, RoutedEventArgs e)
-        //{
-        //    var _this = (sender as AppBarButton);
-
-        //    //_this.m_MouseDown = true;
-        //    //_this.m_PackIcon.Foreground = _this.FindResource("MaterialDesignPaper") as Brush;
-        //}
 
         public PackIconKind Icon
         {
-            get { return (PackIconKind) GetValue(m_IconProperty); }
+            get { return (PackIconKind)GetValue(m_IconProperty); }
             set { SetValue(m_IconProperty, value); }
         }
 
@@ -77,40 +48,108 @@ namespace WpfApp1.Controls
             if (This.m_CheckIfHandlerShouldExecute == false)
                 return;
 
-            var Button1 = new AppBarButton();
-            var TopAppBar1 = (This.GetUIParentCore() as StackPanel).Parent as AppBar;
+            /////////////////////////////////////////////////////////////////////////////////
 
-            Button1.m_PackIcon.HorizontalAlignment = HorizontalAlignment.Center;
-            Button1.m_PackIcon.VerticalAlignment = VerticalAlignment.Center;
-            Button1.m_PackIcon.Width = 24;
-            Button1.m_PackIcon.Height = 24;
-            Button1.m_PackIcon.Foreground = This.FindResource("MaterialDesignPaper") as Brush;
-            Button1.m_PackIcon.Kind = This.Icon;
+            // Routed Events 
+            EventManager.RegisterClassHandler(typeof(AppBar_Button), MouseEnterEvent, new RoutedEventHandler(OnMouseEnter));
+            EventManager.RegisterClassHandler(typeof(AppBar_Button), MouseLeaveEvent, new RoutedEventHandler(OnMouseLeave));
+            EventManager.RegisterClassHandler(typeof(AppBar_Button), MouseDownEvent, new RoutedEventHandler(OnMouseDown));
+            EventManager.RegisterClassHandler(typeof(AppBar_Button), MouseUpEvent, new RoutedEventHandler(OnMouseUp));
+            // Routed Events End
 
-            if (TopAppBar1.m_ColorZone1.Mode == ColorZoneMode.PrimaryMid)
-            {
-                Button1.Width = 32;
-                Button1.Height = 32;
+            // Default Properties
+            This.Margin = new Thickness(0);
+            This.Padding = new Thickness(0);
+            This.HorizontalContentAlignment = HorizontalAlignment.Center;
+            This.VerticalContentAlignment = VerticalAlignment.Center;
+            This.Foreground = This.FindResource("MaterialDesignPaper") as Brush;
+            // Default Properties End
+
+            // Icon
+            This.m_PackIcon = new PackIcon() {
+                Kind = This.Icon,
+                Foreground = This.FindResource("MaterialDesignPaper") as Brush,
+            };
+            
+            RippleAssist.SetClipToBounds(This, true);
+            RippleAssist.SetIsCentered(This, true);
+            ShadowAssist.SetShadowDepth(This, ShadowDepth.Depth0);
+
+            This.Content = This.m_PackIcon;
+            // Icon End
+
+            // Mode
+            var Root = (This.Parent as StackPanel).Parent as AppBar;
+
+            if ( Root.m_ColorZone1.Mode == ColorZoneMode.PrimaryMid ) {
                 This.Margin = new Thickness(0, 4, 4, 4);
-                Button1.Style = This.FindResource("MaterialDesignFloatingActionButton") as Style;
+                This.m_PackIcon.Width = 20;
+                This.m_PackIcon.Height = 20;
+                This.Width  = 32;
+                This.Height = 32;
+                This.Style = This.FindResource("MaterialDesignFloatingActionButton") as Style;
 
-                RippleAssist.SetRippleSizeMultiplier(Button1, 1.75f);
+                RippleAssist.SetRippleSizeMultiplier(This, 1.75f);
             }
-            else
-            {
-                This.Margin = new Thickness(4, 4, 4, 4);
-                Button1.Height = 32;
-                Button1.Style = This.FindResource("MaterialDesignRaisedDarkButton") as Style;
+            else if( Root.m_ColorZone1.Mode == ColorZoneMode.PrimaryDark ) {
+                This.Margin = new Thickness(0);
+                This.m_PackIcon.Width = 24;
+                This.m_PackIcon.Height = 24;
+                This.Height = 32;
+                This.Style = This.FindResource("MaterialDesignRaisedDarkButton") as Style;
 
-                RippleAssist.SetIsCentered(Button1, false);
-                RippleAssist.SetRippleSizeMultiplier(Button1, 1.50f);
+                RippleAssist.SetIsCentered(This, false);
+                RippleAssist.SetRippleSizeMultiplier(This, 1.50f);
             }
+            // Mode End
 
-            This.m_Button = Button1;
-
-            This.Children.Add(This.m_Button);
-
+            /////////////////////////////////////////////////////////////////////////////////
             This.m_CheckIfHandlerShouldExecute = false;
+        }
+
+        private static void OnMouseEnter(object sender, RoutedEventArgs e)
+        {
+            var This = (sender as AppBar_Button);
+
+            if(This.m_bMouseDown == false)
+                This.m_PackIcon.Foreground = This.FindResource("AccentColorBrush4") as Brush;
+            This.m_bMouseLeave = false;
+        }
+
+        private static void OnMouseLeave(object sender, RoutedEventArgs e)
+        {
+            var This = (sender as AppBar_Button);
+
+            This.m_PackIcon.Foreground = This.FindResource("MaterialDesignPaper") as Brush;
+
+            This.m_bMouseLeave = true;
+        }
+
+        private static void OnMouseDown(object sender, RoutedEventArgs e)
+        {
+            var This = (sender as AppBar_Button);
+
+            This.m_PackIcon.Foreground = This.FindResource("MaterialDesignPaper") as Brush;
+
+            This.m_bMouseDown = true;
+        }
+
+        private static void OnMouseUp(object sender, RoutedEventArgs e)
+        {
+            var This = (sender as AppBar_Button);
+
+            var t = new DispatcherTimer {
+                Interval = TimeSpan.FromMilliseconds(333.33)
+            };
+            t.Start();
+            t.Tick += (s, a) =>
+            {   t.Stop();
+
+                if(This.m_bMouseLeave == false)
+                    This.m_PackIcon.Foreground = This.FindResource("AccentColorBrush4") as Brush;
+
+                This.m_bMouseDown = false;
+            };
         }
     }
 }

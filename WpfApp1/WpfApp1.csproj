@@ -82,9 +82,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Controls\JumpControls\AppBar.cs" />
-    <Compile Include="Controls\JumpControls\AppBarButton.cs" />
-    <Compile Include="Controls\JumpControls\TopAppBar_Button.cs" />
     <Compile Include="Controls\JumpControls\AppBar_Button.cs" />
+    <Compile Include="Controls\JumpControls\TopAppBar_Button.cs" />
     <Compile Include="Controls\JumpControls\Ordained_SettingsButton.cs" />
     <Compile Include="Controls\JumpControls\Ordained_HelpButton.cs" />
     <Compile Include="Controls\JumpControls\Ordained_SearchBox.cs" />

@@ -46,3 +46,10 @@ Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\bin\Debug\System.Windows.Interactivity.d
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\bin\Debug\ControlzEx.pdb
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\bin\Debug\MahApps.Metro.pdb
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\bin\Debug\MahApps.Metro.xml
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\bin\Debug\ControlzEx.dll
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\bin\Debug\MahApps.Metro.dll
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\bin\Debug\MaterialDesignThemes.MahApps.dll
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\bin\Debug\System.Windows.Interactivity.dll
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\bin\Debug\ControlzEx.pdb
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\bin\Debug\MahApps.Metro.pdb
+C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\bin\Debug\MahApps.Metro.xml
