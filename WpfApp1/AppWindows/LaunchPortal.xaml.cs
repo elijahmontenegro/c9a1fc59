@@ -12,14 +12,18 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MahApps.Metro.Controls;
 
-namespace WpfApp1.Controls
+namespace WpfApp1.AppWindows
 {
-    public class TopAppBar_ShowAppsButton : Control
+    /// <summary>
+    /// Interaction logic for LaunchPortal.xaml
+    /// </summary>
+    public partial class LaunchPortal : MetroContentControl
     {
-        static TopAppBar_ShowAppsButton()
+        public LaunchPortal()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(TopAppBar_ShowAppsButton), new FrameworkPropertyMetadata(typeof(TopAppBar_ShowAppsButton)));
+            InitializeComponent();
         }
     }
 }

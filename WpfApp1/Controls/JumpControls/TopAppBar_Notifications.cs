@@ -16,24 +16,25 @@ using MaterialDesignThemes.Wpf;
 
 namespace WpfApp1.Controls
 {
-    public class TopAppBar_UserAccount
+    public class TopAppBar_Notifications 
         : Grid
     {
         bool m_CheckIfHandlerShouldExecute = true;
 
-        static TopAppBar_UserAccount()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(TopAppBar_UserAccount), new FrameworkPropertyMetadata(typeof(TopAppBar_UserAccount)));
+        static TopAppBar_Notifications()
+       {
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(TopAppBar_Notifications), new FrameworkPropertyMetadata(typeof(TopAppBar_Notifications)));
+            //Name = "UserAccountButton_Button1",
 
             /////////////////////////////////////////////////////////////////////////////////
             /// Routed Events:
             /////////////////////////////////////////////////////////////////////////////////
-            EventManager.RegisterClassHandler(typeof(TopAppBar_UserAccount), SizeChangedEvent, new RoutedEventHandler(OnLoad));
+            EventManager.RegisterClassHandler(typeof(TopAppBar_Notifications), SizeChangedEvent, new RoutedEventHandler(OnLoad));
         }
 
         private static void OnLoad(object sender, RoutedEventArgs e)
         {
-            var This = (sender as TopAppBar_UserAccount);
+            var This = (sender as TopAppBar_Notifications);
 
             if (This.m_CheckIfHandlerShouldExecute == false)
                 return;
@@ -43,11 +44,11 @@ namespace WpfApp1.Controls
             // PopupBox Button
             var PopupBox1 = new PopupBox()
             {
+                Name = "TopAppBar_Notifications_PopupBox1",
                 //Style = _this.FindResource("MaterialDesignToolPopupBox") as Style,
                 //Width = 32, Height = 32,
                 ClipToBounds = true,
                 StaysOpen = true,
-                Name = "UserAccountButton_Button1",
                 Margin = new Thickness(0),
                 Padding = new Thickness(0),
                 HorizontalAlignment = HorizontalAlignment.Stretch,
@@ -62,7 +63,7 @@ namespace WpfApp1.Controls
                 UseLayoutRounding = true,
             };
 
-            //EventManager.RegisterClassHandler(typeof(Button), MouseDownEvent, new RoutedEventHandler(Button_OnMouseDown));
+            EventManager.RegisterClassHandler(typeof(PopupBox), PopupBox.OpenedEvent, new RoutedEventHandler(OnMouseDown));
 
             var PackIcon1 = new PackIcon()
             {
@@ -70,10 +71,10 @@ namespace WpfApp1.Controls
                 VerticalAlignment = VerticalAlignment.Center,
                 Width = 18,
                 Height = 18,
-                Kind = PackIconKind.AccountCardDetails,
+                Kind = PackIconKind.Bell,
                 Foreground = This.FindResource("MaterialDesignPaper") as Brush,
             }; PopupBox1.ToggleContent = PackIcon1;
-
+            
             ShadowAssist.SetShadowDepth(PopupBox1, ShadowDepth.Depth0);
             RippleAssist.SetRippleSizeMultiplier(PopupBox1, 0.5f);
             RippleAssist.SetClipToBounds(PopupBox1, false);
@@ -92,90 +93,79 @@ namespace WpfApp1.Controls
 
             var HeaderStackPanel1 = new StackPanel()
             {
-                Orientation = Orientation.Horizontal,
-                Background = Brushes.WhiteSmoke,
-                //Background = Brushes.Gold,
-            };
-
-            var GridAvatar1 = new Grid()
-            {
-                Margin = new Thickness(4,4,2,4),
-                Width = 64, Height = 64,
-                Background = Brushes.Black,
-            };
-
-            HeaderStackPanel1.Children.Add(GridAvatar1);
-
-            var UsernameStackPanel1 = new StackPanel()
-            {
                 HorizontalAlignment = HorizontalAlignment.Stretch,
                 Orientation = Orientation.Vertical,
-                Margin = new Thickness(2, 4, 4, 4),
-                //Background = Brushes.Blue,
+                Background = Brushes.WhiteSmoke,
             };
 
-            HeaderStackPanel1.Children.Add(UsernameStackPanel1);
-            
             var TextBlock1 = new TextBlock()
             {
-                Padding = new Thickness(4, 4, 4, 2),
-                TextAlignment = TextAlignment.Left,
-                FontSize = 12,
-                Text = "Place Holder",
+                FontFamily = new FontFamily("Roboto"),
+                Padding = new Thickness(96,9,96,9),
+                TextAlignment = TextAlignment.Center,
+                FontSize = 13,
+                Opacity = 0.75f,
+                Text = Application.Current.MainWindow.Title == "" ? "Notifications" : Application.Current.MainWindow.Title,
                 //Background = Brushes.Purple,
             };
 
-            var TextBlock2 = new TextBlock()
-            {
-                Padding = new Thickness(4, 2, 4, 4),
-                TextAlignment = TextAlignment.Left,
-                FontSize = 12,
-                Text = "placeholder@placeholder.com",
-                TextWrapping = TextWrapping.WrapWithOverflow,
-                //Background = Brushes.Green,
-            };
-
-            UsernameStackPanel1.Children.Add(TextBlock1);
-            UsernameStackPanel1.Children.Add(TextBlock2);
-
-            var ButtonsStackPanel1 = new StackPanel()
-            {
-                Orientation = Orientation.Horizontal,
-                FlowDirection = FlowDirection.RightToLeft,
-            };
+            HeaderStackPanel1.Children.Add(TextBlock1);
 
             var Button1 = new Button()
             {
                 Style = This.FindResource("MaterialDesignToolButton") as Style,
-                //Style = This.FindResource("MaterialDesignRaisedDarkButton") as Style,
-                HorizontalAlignment = HorizontalAlignment.Center,
-                VerticalAlignment = VerticalAlignment.Center,
-                Content = new TextBlock()
+                Height = 16,
+                Content = new PackIcon()
                 {
-                    Text = "Sign out",
+                    HorizontalAlignment = HorizontalAlignment.Center,
                     VerticalAlignment = VerticalAlignment.Center,
-                    TextAlignment = TextAlignment.Center,
-                    FontSize = 11,
-                    Padding = new Thickness(4),
+                    Width = 11, Height = 11,
+                    Kind = PackIconKind.ArrowCollapseDown,
+                    Margin = new Thickness(0, 0, 0, 0),
+                    Padding = new Thickness(0, 0, 0, 0),
                 },
-                Height = 24,
-                Margin = new Thickness(4,4,0,4),
+                Padding = new Thickness(0, 0, 0, 0),
+                Margin = new Thickness(0, 0, 0, 0),
+                Background = Brushes.Gainsboro,
             };
 
+            ShadowAssist.SetShadowEdges(Button1.Content as PackIcon, ShadowEdges.Top);
+            ShadowAssist.SetShadowDepth(Button1, ShadowDepth.Depth1);
+            ShadowAssist.SetShadowEdges(Button1, ShadowEdges.Top);
+            ShadowAssist.SetShadowDepth(Button1, ShadowDepth.Depth1);
             RippleAssist.SetIsDisabled(Button1, false);
-            RippleAssist.SetIsCentered(Button1, false);
+            RippleAssist.SetIsCentered(Button1, true);
             RippleAssist.SetClipToBounds(Button1, true);
-            RippleAssist.SetRippleSizeMultiplier(Button1, 1.0f);
-            ShadowAssist.SetShadowDepth(Button1, ShadowDepth.Depth0);
+            RippleAssist.SetRippleSizeMultiplier(Button1, 12.0f);
 
-            ButtonsStackPanel1.Children.Add(Button1);
+            var ListView1 = new StackPanel()
+            {
+                Orientation = Orientation.Vertical,
+                Background = Brushes.WhiteSmoke,
+            };
+
+            ListView1.Children.Add(new TextBlock()
+            {
+                FontSize = 11,
+                Opacity = 0.75f,
+                Text = "All caught up!",
+                //Width = 80, Height = 40,
+                TextAlignment = TextAlignment.Center,
+                HorizontalAlignment = HorizontalAlignment.Stretch,
+                VerticalAlignment = VerticalAlignment.Stretch,
+                Margin = new Thickness(0, 96, 0, 96),
+            });
+
+            ShadowAssist.SetShadowEdges(ListView1, ShadowEdges.Bottom);
+            ShadowAssist.SetShadowDepth(ListView1, ShadowDepth.Depth1);
+            ShadowAssist.SetDarken(ListView1, true);
 
             PrimaryStackPanel1.Children.Add(HeaderStackPanel1);
-            PrimaryStackPanel1.Children.Add(ButtonsStackPanel1);
+            PrimaryStackPanel1.Children.Add(ListView1);
+            PrimaryStackPanel1.Children.Add(Button1);
             // Card End
 
             PopupBox1.PopupContent = PrimaryStackPanel1;
-            (PopupBox1.PopupContent as FrameworkElement).ClipToBounds = true;
 
             This.Children.Add(PopupBox1);
 
@@ -183,12 +173,17 @@ namespace WpfApp1.Controls
             This.m_CheckIfHandlerShouldExecute = false;
         }
 
-        private static void Button_OnMouseDown(object sender, RoutedEventArgs e)
+        private static void OnMouseDown(object sender, RoutedEventArgs e)
         {
-            var _this = (sender as Button);
+            var This = (sender as PopupBox);
 
-            if (_this.Name != "UserAccountButton_Button1")
+            if (This.Name != "TopAppBar_Notifications_PopupBox1")
                 return;
+
+            var PrimaryStackPanel1 = This.PopupContent as StackPanel;
+
+            var ListView1 = PrimaryStackPanel1.Children[1] as StackPanel;
+
 
         }
     }

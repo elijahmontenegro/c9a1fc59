@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace WpfApp1.Controls
 {
-    public class UIHelpers
+    public static class UIHelpers
     {
         public static T FindChild<T>(string childName, DependencyObject parent = null)
            where T : DependencyObject
@@ -59,6 +59,33 @@ namespace WpfApp1.Controls
             }
 
             return foundChild;
+        }
+
+        public static List<T> GetChildrenAsList<T>(this DependencyObject parent)
+           where T : DependencyObject
+        {
+            if (parent == null) return null;
+
+            List<T> foundChildList = new List<T>();
+
+            var childrenCount = VisualTreeHelper.GetChildrenCount(parent);
+            for (var i = 0; i < childrenCount; i++)
+            {
+                var child = VisualTreeHelper.GetChild(parent, i);
+                var childType = child as T;
+                if (childType == null)
+                {
+                    foundChildList = GetChildrenAsList<T>(child);
+                    if (foundChildList != null) break;
+                }
+                else
+                {
+                    foundChildList.Add((T)child);
+                    break;
+                }
+            }
+
+            return foundChildList;
         }
     }
 }

@@ -21,7 +21,6 @@
         ShowSystemMenuOnRightClick="False"
         WindowStyle="None" AllowsTransparency="True" Background="{DynamicResource MaterialDesignPaper}"
         BorderThickness="1"
-        WindowTitleBrush="{DynamicResource IdealWindowTitleBrush}"
         OverrideDefaultWindowCommandsBrush="{DynamicResource IdealWindowCommandsBrush}"
         WindowCloseButtonStyle="{DynamicResource CleanCloseWindowButtonStyle}"
         WindowMaxButtonStyle="{DynamicResource CleanMaxWindowButtonStyle}"
@@ -29,17 +28,7 @@
         TitlebarHeight="24" TitleAlignment="Stretch"
         >
     <Grid>
-        <local:TopAppBar>
-            <local:TopAppBar_Navigation />
-            <local:TopAppBar_UserAccount />
-            <local:AppBar_Button Icon="Recycle"/>
-            <local:AppBar_Button Icon="FolderOpen"/>
-            <local:AppBar_Button Icon="Bug"/>
+        <local:TopAppBar Header="Welcome Place Holder!">
         </local:TopAppBar>
-        <local:SideAppBar>
-            <local:AppBar_Button Icon="Recycle"/>
-            <local:AppBar_Button Icon="FolderOpen"/>
-            <local:AppBar_Button Icon="Bug"/>
-        </local:SideAppBar>
     </Grid>
 </metro:MetroWindow>

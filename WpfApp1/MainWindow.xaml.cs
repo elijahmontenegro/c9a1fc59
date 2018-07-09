@@ -24,7 +24,12 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-            ToolTipService.IsEnabledProperty.OverrideMetadata(typeof(DependencyObject), new FrameworkPropertyMetadata(false));
+            //if (ReadLocalValue(ToolTipService.IsEnabledProperty) == DependencyProperty.UnsetValue)
+            //    ToolTipService.IsEnabledProperty.OverrideMetadata(typeof(DependencyObject), new FrameworkPropertyMetadata(true));
+            //if(ReadLocalValue(ToolTipService.InitialShowDelayProperty) == DependencyProperty.UnsetValue)
+            //    ToolTipService.InitialShowDelayProperty.OverrideMetadata(typeof(DependencyObject), new FrameworkPropertyMetadata(0));
+            //if(ReadLocalValue(ToolTipService.VerticalOffsetProperty) == DependencyProperty.UnsetValue)
+            //    ToolTipService.VerticalOffsetProperty.OverrideMetadata(typeof(DependencyObject), new FrameworkPropertyMetadata(Convert.ToDouble(-8)));
             //(WindowButtonCommands.IsEnabledProperty as DependencyObject).SetValue(ToolTipService.IsEnabledProperty, false);
         }
     }

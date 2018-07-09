@@ -21,6 +21,8 @@ namespace WpfApp1.Controls
         : AppBar
     {
         bool CheckIfHandlerShouldExecute = true;
+        public static readonly DependencyProperty m_HeaderProperty;
+
 
         static TopAppBar()
         {
@@ -35,10 +37,18 @@ namespace WpfApp1.Controls
             VerticalAlignmentProperty
                 .OverrideMetadata(typeof(TopAppBar), new FrameworkPropertyMetadata(VerticalAlignment.Top));
 
+            m_HeaderProperty = DependencyProperty.Register(nameof(Header), typeof(string), typeof(TopAppBar), null);
+
             /////////////////////////////////////////////////////////////////////////////////
             /// Routed Events:
             /////////////////////////////////////////////////////////////////////////////////
             EventManager.RegisterClassHandler(typeof(TopAppBar), SizeChangedEvent, new RoutedEventHandler(OnLoaded));
+        }
+
+        public string Header
+        {
+            get { return (string)GetValue(m_HeaderProperty); }
+            set { SetValue(m_HeaderProperty, value); }
         }
 
         private static void OnLoaded(object sender, RoutedEventArgs e)
@@ -84,14 +94,60 @@ namespace WpfApp1.Controls
             SetZIndex(_this.m_StackPanel1, 0);
             SetZIndex(_this.m_StackPanel2, 0);
 
+            var TopAppBar_Navigation1 = new TopAppBar_Navigation();
+            var TopAppBar_UserAccount1 = new TopAppBar_UserAccount()
+            {
+                Width = 26,
+                Height = 26,
+                Margin = new Thickness(4, 4, 0, 4),
+                ClipToBounds = true,
+            };
+            var TopAppBar_Notifications1 = new TopAppBar_Notifications()
+            {
+                Width = 26,
+                Height = 26,
+                Margin = new Thickness(4, 4, 0, 4),
+                ClipToBounds = true,
+            };
+            var TopAppBar_Message1 = new TopAppBar_Message()
+            {
+                Width = 26,
+                Height = 26,
+                Margin = new Thickness(4, 4, 0, 4),
+                ClipToBounds = true,
+            };
+            var TopAppBar_Apps1 = new TopAppBar_Apps()
+            {
+                Width = 26,
+                Height = 26,
+                Margin = new Thickness(4, 4, 0, 4),
+                ClipToBounds = true,
+            };
+
+            _this.m_StackPanel2.Children.Add(TopAppBar_UserAccount1);
+            _this.m_StackPanel2.Children.Add(TopAppBar_Notifications1);
+            _this.m_StackPanel2.Children.Add(TopAppBar_Message1);
+            _this.m_StackPanel2.Children.Add(TopAppBar_Apps1);
+
+            _this.m_StackPanel1.Children.Add(TopAppBar_Navigation1);
+
+            var TextBlock1 = new TextBlock()
+            {
+                Padding = new Thickness(0,0,0,0),
+                Text = _this.Header,
+                FontSize = 14.5,
+                FontWeight = FontWeights.Regular,
+                Margin = new Thickness(0, 4, 9, 4),
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center,
+                Foreground = _this.FindResource("MaterialDesignPaper") as Brush,
+            };
+            _this.m_StackPanel1.Children.Add(TextBlock1);
+
             foreach (var c in _this.Children.Cast<UIElement>().ToList().AsReadOnly())
             {
                 _this.Children.Remove(c);
-
-                if (c.GetType() != typeof(TopAppBar_UserAccount))
-                    _this.m_StackPanel1.Children.Add(c);
-                else if(c.GetType() == typeof(TopAppBar_UserAccount))
-                    _this.m_StackPanel2.Children.Add(c);
+                _this.m_StackPanel1.Children.Add(c);
             }
 
             _this.Children.Add(_this.m_ColorZone1);

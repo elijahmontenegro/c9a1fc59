@@ -1,0 +1,21 @@
+﻿<metro:MetroContentControl x:Class="WpfApp1.AppWindows.LaunchPortal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+             xmlns:local="clr-namespace:WpfApp1.Controls"
+             xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+             >
+    <Grid>
+        <local:TopAppBar Header="Jump Start">
+            <local:AppBar_Button Icon="Recycle"/>
+            <local:AppBar_Button Icon="FolderOpen"/>
+            <local:AppBar_Button Icon="Bug"/>
+        </local:TopAppBar>
+        <local:SideAppBar>
+            <local:AppBar_Button Icon="Recycle"/>
+            <local:AppBar_Button Icon="FolderOpen"/>
+            <local:AppBar_Button Icon="Bug"/>
+        </local:SideAppBar>
+    </Grid>
+</metro:MetroContentControl>

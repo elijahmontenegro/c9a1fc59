@@ -82,19 +82,21 @@ namespace WpfApp1.Controls
             var Root = (This.Parent as StackPanel).Parent as AppBar;
 
             if ( Root.m_ColorZone1.Mode == ColorZoneMode.PrimaryMid ) {
+                //This.Margin = new Thickness(0, 2, 2, 2);
                 This.Margin = new Thickness(0, 4, 4, 4);
-                This.m_PackIcon.Width = 20;
-                This.m_PackIcon.Height = 20;
-                This.Width  = 32;
-                This.Height = 32;
+                This.m_PackIcon.Width = 18;
+                This.m_PackIcon.Height = 18;
+                This.Width  = 28;
+                This.Height = 28;
                 This.Style = This.FindResource("MaterialDesignFloatingActionButton") as Style;
 
-                RippleAssist.SetRippleSizeMultiplier(This, 1.75f);
+                RippleAssist.SetIsCentered(This, false);
+                RippleAssist.SetRippleSizeMultiplier(This, 1.50f);
             }
             else if( Root.m_ColorZone1.Mode == ColorZoneMode.PrimaryDark ) {
                 This.Margin = new Thickness(0);
-                This.m_PackIcon.Width = 24;
-                This.m_PackIcon.Height = 24;
+                This.m_PackIcon.Width = 20;
+                This.m_PackIcon.Height = 20;
                 This.Height = 32;
                 This.Style = This.FindResource("MaterialDesignRaisedDarkButton") as Style;
 

@@ -28,7 +28,7 @@ namespace WpfApp1.Controls
             DefaultStyleKeyProperty
                 .OverrideMetadata(typeof(TopAppBar_Navigation), new FrameworkPropertyMetadata(typeof(TopAppBar_Navigation)));
             MarginProperty
-                .OverrideMetadata(typeof(TopAppBar_Navigation), new FrameworkPropertyMetadata(new Thickness(4)));
+                .OverrideMetadata(typeof(TopAppBar_Navigation), new FrameworkPropertyMetadata(new Thickness(4,4,4,4)));
             BackgroundProperty
                 .OverrideMetadata(typeof(TopAppBar_Navigation), new FrameworkPropertyMetadata(Brushes.Transparent));
 
@@ -41,7 +41,7 @@ namespace WpfApp1.Controls
         private static void OnLoad(object sender, RoutedEventArgs e)
         {
             var _this = (sender as TopAppBar_Navigation);
-
+            
             if (_this.m_CheckIfHandlerShouldExecute == false)
                 return;
 
@@ -63,8 +63,8 @@ namespace WpfApp1.Controls
                 {
                     HorizontalAlignment = HorizontalAlignment.Center,
                     VerticalAlignment = VerticalAlignment.Center,
-                    Width = 22,
-                    Height = 22,
+                    Width = 17,
+                    Height = 17,
                     Kind = PackIconKind.Menu,
                     Foreground = _this.FindResource("MaterialDesignPaper") as Brush,
                 },
@@ -95,7 +95,8 @@ namespace WpfApp1.Controls
                 return;
             var _parent = (_this.Parent as TopAppBar_Navigation);
             var SideAppBar1 = UIHelpers.FindChild<SideAppBar>("SideAppBar1");
-
+            if (SideAppBar1 == null)
+                return;
             if (SideAppBar1.Visibility == Visibility.Visible)
             {
                 var fDuration = 0.2f;
