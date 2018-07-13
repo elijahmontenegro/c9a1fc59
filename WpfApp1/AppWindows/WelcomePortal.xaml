@@ -1,0 +1,14 @@
+﻿<metro:MetroContentControl x:Class="WpfApp1.AppWindows.WelcomePortal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+             xmlns:local="clr-namespace:WpfApp1.Controls"
+             xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+             TransitionsEnabled="False"
+             >
+    <Grid>
+        <local:TopAppBar Header="Welcome Place Holder!">
+        </local:TopAppBar>
+    </Grid>
+</metro:MetroContentControl>
