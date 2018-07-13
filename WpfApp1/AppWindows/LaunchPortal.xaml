@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
              xmlns:local="clr-namespace:WpfApp1.Controls"
              xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+             TransitionsEnabled="False"
              >
     <Grid>
         <local:TopAppBar Header="Jump Start">

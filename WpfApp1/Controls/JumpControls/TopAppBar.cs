@@ -137,7 +137,7 @@ namespace WpfApp1.Controls
                 Text = _this.Header,
                 FontSize = 14.5,
                 FontWeight = FontWeights.Regular,
-                Margin = new Thickness(0, 4, 9, 4),
+                Margin = new Thickness(0, 4, 8, 4),
                 HorizontalAlignment = HorizontalAlignment.Center,
                 VerticalAlignment = VerticalAlignment.Center,
                 Foreground = _this.FindResource("MaterialDesignPaper") as Brush,

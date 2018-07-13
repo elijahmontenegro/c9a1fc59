@@ -28,7 +28,6 @@
         TitlebarHeight="24" TitleAlignment="Stretch"
         >
     <Grid>
-        <local:TopAppBar Header="Welcome Place Holder!">
-        </local:TopAppBar>
+        
     </Grid>
 </metro:MetroWindow>

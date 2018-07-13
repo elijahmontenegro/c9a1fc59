@@ -55,3 +55,5 @@ C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\bin\Debug\MahApps.Metro.pdb
 C:\CIG_Files\Projects\JumpStart\c9a1fc59\WpfApp1\bin\Debug\MahApps.Metro.xml
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\obj\Debug\AppWindows\LaunchPortal.g.cs
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\obj\Debug\AppWindows\LaunchPortal.baml
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\obj\Debug\AppWindows\WelcomePortal.g.cs
+Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\obj\Debug\AppWindows\WelcomePortal.baml

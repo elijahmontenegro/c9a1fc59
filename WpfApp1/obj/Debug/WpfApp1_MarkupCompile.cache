@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 Q:\CopyBuild 3\My Apps\c9a1fc59\WpfApp1\App.xaml
-21568663562
+3-1051412492
 
-28-349827005
+29-1911666450
 19-415024953
-AppWindows\LaunchPortal.xaml;MainWindow.xaml;
+AppWindows\WelcomePortal.xaml;AppWindows\LaunchPortal.xaml;MainWindow.xaml;
 
 False
 

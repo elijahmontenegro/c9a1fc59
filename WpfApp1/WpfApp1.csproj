@@ -73,6 +73,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AppWindows\WelcomePortal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="AppWindows\LaunchPortal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -84,6 +88,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppWindows\WelcomePortal.xaml.cs">
+      <DependentUpon>WelcomePortal.xaml</DependentUpon>
     </Compile>
     <Compile Include="AppWindows\LaunchPortal.xaml.cs">
       <DependentUpon>LaunchPortal.xaml</DependentUpon>

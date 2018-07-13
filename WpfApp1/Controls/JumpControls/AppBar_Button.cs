@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using MaterialDesignThemes.Wpf;
+using System.Windows.Media.Animation;
 
 namespace WpfApp1.Controls
 {
@@ -104,6 +105,22 @@ namespace WpfApp1.Controls
                 RippleAssist.SetRippleSizeMultiplier(This, 1.50f);
             }
             // Mode End
+
+            // Init animation
+            //var fade = new DoubleAnimation()
+            //{
+            //    From = 0,
+            //    To = 1,
+            //    Duration = TimeSpan.FromSeconds(0.33333333333333333333333333333333f),
+            //};
+
+            //Storyboard.SetTarget(fade, This);
+            //Storyboard.SetTargetProperty(fade, new PropertyPath(OpacityProperty));
+
+            //var storyboard = new Storyboard();
+            //storyboard.Children.Add(fade);
+
+            //storyboard.Begin();
 
             /////////////////////////////////////////////////////////////////////////////////
             This.m_CheckIfHandlerShouldExecute = false;

@@ -31,6 +31,8 @@ namespace WpfApp1
             //if(ReadLocalValue(ToolTipService.VerticalOffsetProperty) == DependencyProperty.UnsetValue)
             //    ToolTipService.VerticalOffsetProperty.OverrideMetadata(typeof(DependencyObject), new FrameworkPropertyMetadata(Convert.ToDouble(-8)));
             //(WindowButtonCommands.IsEnabledProperty as DependencyObject).SetValue(ToolTipService.IsEnabledProperty, false);
+
+            this.Content = new AppWindows.WelcomePortal();
         }
     }
 }

@@ -142,7 +142,7 @@ namespace WpfApp1.Controls
             var ListView1 = new StackPanel()
             {
                 MinWidth = 96, MinHeight = 192,
-                //Orientation = Orientation.Vertical,
+                Orientation = Orientation.Horizontal,
                 FlowDirection = FlowDirection.LeftToRight,
                 //HorizontalContentAlignment = HorizontalAlignment.Left,
                 //VerticalContentAlignment = VerticalAlignment.Top,
@@ -183,14 +183,40 @@ namespace WpfApp1.Controls
                 ToolTip = "Launch Portal"
             };
 
-            EventManager.RegisterClassHandler(typeof(Button), MouseDownEvent, new RoutedEventHandler(OnMouseDown));
-
-
             RippleAssist.SetClipToBounds(Button_App1, true);
             RippleAssist.SetIsCentered(Button_App1, true);
             ShadowAssist.SetShadowDepth(Button_App1, ShadowDepth.Depth1);
-
             ListView1.Children.Add(Button_App1);
+
+            var Button_App0 = new Button()
+            {
+                Name = "TopAppBar_Apps_App0_Button",
+                Style = This.FindResource("MaterialDesignFlatButton") as Style,
+                Margin = new Thickness(4),
+                Padding = new Thickness(0),
+                Width = 48,
+                Height = 48,
+                HorizontalAlignment = HorizontalAlignment.Left,
+                VerticalAlignment = VerticalAlignment.Top,
+                Content = new PackIcon()
+                {
+                    Width = 32,
+                    Height = 32,
+                    Padding = new Thickness(0),
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    VerticalAlignment = VerticalAlignment.Center,
+                    Margin = new Thickness(0),
+                    //Foreground = This.FindResource("MaterialDesignPaper") as Brush,
+                    Kind = PackIconKind.Home,
+                },
+                ToolTip = "Home"
+            };
+            RippleAssist.SetClipToBounds(Button_App0, true);
+            RippleAssist.SetIsCentered(Button_App0, true);
+            ShadowAssist.SetShadowDepth(Button_App0, ShadowDepth.Depth1);
+            ListView1.Children.Add(Button_App0);
+
+            EventManager.RegisterClassHandler(typeof(Button), MouseUpEvent, new RoutedEventHandler(OnAppChangedMouseUp));
 
             PrimaryStackPanel1.Children.Add(HeaderStackPanel1);
             PrimaryStackPanel1.Children.Add(ListView1);
@@ -225,16 +251,25 @@ namespace WpfApp1.Controls
             This.m_CheckIfHandlerShouldExecute = false;
         }
 
-        private static void OnMouseDown(object sender, RoutedEventArgs e)
+        private static void OnAppChangedMouseUp(object sender, RoutedEventArgs e)
         {
             var This = (sender as Button);
 
-            if (This.Name != "TopAppBar_Apps_App1_Button")
-                return;
 
-            Window.GetWindow(This).Content = new AppWindows.LaunchPortal();
+            if (This.Name == "TopAppBar_Apps_App1_Button")
+            {
+                Application.Current.MainWindow.Content = null;
+                if (!Application.Current.MainWindow.HasContent)
+                    Application.Current.MainWindow.Content = new AppWindows.LaunchPortal();
+            }
 
-
+            if (This.Name == "TopAppBar_Apps_App0_Button")
+            {
+                Application.Current.MainWindow.Content = null;
+                
+                if (!Application.Current.MainWindow.HasContent)
+                    Application.Current.MainWindow.Content = new AppWindows.WelcomePortal();
+            }
         }
 
         private static void OnPopupOpened(object sender, RoutedEventArgs e)

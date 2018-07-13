@@ -18,6 +18,7 @@ using System.Windows.Media.Animation;
 
 namespace WpfApp1.Controls
 {
+
     public class TopAppBar_Navigation 
         : Grid
     {
@@ -47,7 +48,7 @@ namespace WpfApp1.Controls
 
             var Button1 = new Button()
             {
-                Name = "Button1",
+                Name = "TopAppBar_Navigation_Button1",
                 Margin = new Thickness(0),
                 Padding = new Thickness(0),
                 Width = 40,
@@ -63,14 +64,14 @@ namespace WpfApp1.Controls
                 {
                     HorizontalAlignment = HorizontalAlignment.Center,
                     VerticalAlignment = VerticalAlignment.Center,
-                    Width = 17,
-                    Height = 17,
+                    Width = 18,
+                    Height = 18,
                     Kind = PackIconKind.Menu,
                     Foreground = _this.FindResource("MaterialDesignPaper") as Brush,
                 },
             };
 
-            EventManager.RegisterClassHandler(typeof(Button), MouseDownEvent, new RoutedEventHandler(Button_OnMouseDown));
+            Button1.AddHandler(MouseDownEvent, new MouseButtonEventHandler(SideAppBar.OnMouseDown), true);
 
             RippleAssist.SetIsCentered(Button1, true);
             RippleAssist.SetClipToBounds(Button1, true);
@@ -80,85 +81,6 @@ namespace WpfApp1.Controls
             _this.Children.Add(Button1);
 
             _this.m_CheckIfHandlerShouldExecute = false;
-        }
-
-        private void Story_CompletedCollapsed(object sender, EventArgs e)
-        {
-            var _this = (sender as SideAppBar);
-            _this.Visibility = Visibility.Collapsed;
-        }
-
-        private static void Button_OnMouseDown(object sender, RoutedEventArgs e)
-        {
-            var _this = (sender as Button);
-            if (_this.Name != "Button1")
-                return;
-            var _parent = (_this.Parent as TopAppBar_Navigation);
-            var SideAppBar1 = UIHelpers.FindChild<SideAppBar>("SideAppBar1");
-            if (SideAppBar1 == null)
-                return;
-            if (SideAppBar1.Visibility == Visibility.Visible)
-            {
-                var fDuration = 0.2f;
-                var fade = new DoubleAnimation() {
-                    From = 1,
-                    To = 0,
-                    Duration = TimeSpan.FromSeconds(fDuration),
-                };
-                
-                Storyboard.SetTarget(fade, SideAppBar1);
-                Storyboard.SetTargetProperty(fade, new PropertyPath(Button.OpacityProperty));
-
-                var sb = new Storyboard();
-                sb.Children.Add(fade);
-
-                sb.Completed += (s, a) =>
-                {
-                    SideAppBar1.Visibility = Visibility.Collapsed;
-                };
-
-                sb.Begin();
-                
-                double newX = -40;
-                Vector offset = VisualTreeHelper.GetOffset(SideAppBar1);
-                var top = offset.Y;
-                var left = offset.X;
-                TranslateTransform trans = new TranslateTransform();
-                SideAppBar1.RenderTransform = trans;
-                DoubleAnimation anim2 = new DoubleAnimation(0, newX - left, TimeSpan.FromSeconds(fDuration));
-                trans.BeginAnimation(TranslateTransform.XProperty, anim2);
-            }
-
-            else 
-            if(SideAppBar1.Visibility != Visibility.Visible)
-            {
-                var fDuration = 0.2f;
-                var fade = new DoubleAnimation()
-                {
-                    From = 0,
-                    To = 1,
-                    Duration = TimeSpan.FromSeconds(fDuration),
-                };
-
-                Storyboard.SetTarget(fade, SideAppBar1);
-                Storyboard.SetTargetProperty(fade, new PropertyPath(Button.OpacityProperty));
-
-                var sb = new Storyboard();
-                sb.Children.Add(fade);
-
-                sb.Begin();
-
-                SideAppBar1.Visibility = Visibility.Visible;
-
-                double newX = 0;
-                Vector offset = VisualTreeHelper.GetOffset(SideAppBar1);
-                var top = offset.Y;
-                var left = offset.X;
-                TranslateTransform trans = new TranslateTransform();
-                SideAppBar1.RenderTransform = trans;
-                DoubleAnimation anim2 = new DoubleAnimation(-40, newX - left, TimeSpan.FromSeconds(fDuration));
-                trans.BeginAnimation(TranslateTransform.XProperty, anim2);
-            }
         }
     }
 }
